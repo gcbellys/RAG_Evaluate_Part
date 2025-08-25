@@ -1,0 +1,654 @@
+[
+  {
+    "query": "in-stent restenosis of a mid right coronary artery stent",
+    "expected_organs": [
+      "Artery (Arteria)"
+    ],
+    "expected_a_locations": [
+      "Mid Right Coronary Artery",
+      "Right Coronary Artery"
+    ],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "right main coronary artery stent placement",
+        "units": [
+          {
+            "u_id": "u_38034",
+            "u_unit": {
+              "d_diagnosis": "cardiovascular: hypotension",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Right Coronary Artery",
+                  "Left Anterior Descending Artery (LAD)",
+                  "Circumflex Artery"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "cardiovascular: hypotension"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "severe in stent restenosis of the rca",
+        "units": [
+          {
+            "u_id": "u_12639",
+            "u_unit": {
+              "d_diagnosis": "Coronary atherosclerosis of native coronary artery",
+              "o_organ": {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Right Coronary Artery",
+                  "Left Anterior Descending Artery (LAD)",
+                  "Circumflex Artery"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Coronary atherosclerosis of native coronary artery"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "patent right internal carotid artery stent but with apparent slow flow. signal irregularity and apparent diminutive flow through the stent could be secondary to magnetic susceptibility from the stent, intimal hyperplasia, or a small amount of thrombus.",
+        "units": [
+          {
+            "u_id": "u_77156",
+            "u_unit": {
+              "d_diagnosis": "transthoracic echocardiogram - due to suboptimal technical quality, a focal wall motion abnormality cannot be fully excluded. overall left ventricular systolic function is normal (lvef>55%).",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "transthoracic echocardiogram - due to suboptimal technical quality, a focal wall motion abnormality cannot be fully excluded. overall left ventricular systolic function is normal (lvef>55%)."
+              }
+            }
+          },
+          {
+            "u_id": "u_77157",
+            "u_unit": {
+              "d_diagnosis": "Mitral valve disorders",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Mitral valve disorders"
+              }
+            }
+          },
+          {
+            "u_id": "u_77158",
+            "u_unit": {
+              "d_diagnosis": "Aortocoronary bypass status",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Aortocoronary bypass status"
+              }
+            }
+          },
+          {
+            "u_id": "u_77159",
+            "u_unit": {
+              "d_diagnosis": "Old myocardial infarction",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Old myocardial infarction"
+              }
+            }
+          },
+          {
+            "u_id": "u_77160",
+            "u_unit": {
+              "d_diagnosis": "Diagnostic ultrasound of heart",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Diagnostic ultrasound of heart"
+              }
+            }
+          },
+          {
+            "u_id": "u_77161",
+            "u_unit": {
+              "d_diagnosis": "plan for coumadin for 3 months, re-image stent, if patent, discontinue coumadin. exam remains most notable for dysarthria, l hemiplegia and l extinction to double simultaneous stimulation. cv - ruled out for mi upon admission. blood pressure was initially allowed to autoregulate. htn now controlled on metoprolol. no events on telemetry. tee performed on prelim read: simple atheroma in descending aorta, moderately thick aortic valve, no asd or pfo (final report pending). should follow up with his outpatient cardiologist, dr. , after discharge from rehab. should continue plavix for at least 6 months after stent placement; duration of therapy to be guided directly by pt's cardiologist. fen/gi - pt failed initial swallow evaluations, requiring tube feeds through . cleared by video swallow evaluation for soft solids and thin liquids on . heme - should start coumadin 2.5mg qhs on , goal inr ~2 (low therapeutic goal as pt will also be on aspirin and plavix and would be at high risk for bleeding with higher inr). check inr twice weekly. id - being treated with nitrofurantoin for uti, course to be complete on . tox - for significant alcohol history, pt was started on thiamine, folate. discharged to rehab on in stable condition. medications on admission: plavix asa 325 lipitor ntg fluticasone atneolol lisinopril folate elavil pletal folate temazepam discharge",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "plan for coumadin for 3 months, re-image stent, if patent, discontinue coumadin. exam remains most notable for dysarthria, l hemiplegia and l extinction to double simultaneous stimulation. cv - ruled out for mi upon admission. blood pressure was initially allowed to autoregulate. htn now controlled on metoprolol. no events on telemetry. tee performed on prelim read: simple atheroma in descending aorta, moderately thick aortic valve, no asd or pfo (final report pending). should follow up with his outpatient cardiologist, dr. , after discharge from rehab. should continue plavix for at least 6 months after stent placement; duration of therapy to be guided directly by pt's cardiologist. fen/gi - pt failed initial swallow evaluations, requiring tube feeds through . cleared by video swallow evaluation for soft solids and thin liquids on . heme - should start coumadin 2.5mg qhs on , goal inr ~2 (low therapeutic goal as pt will also be on aspirin and plavix and would be at high risk for bleeding with higher inr). check inr twice weekly. id - being treated with nitrofurantoin for uti, course to be complete on . tox - for significant alcohol history, pt was started on thiamine, folate. discharged to rehab on in stable condition. medications on admission: plavix asa 325 lipitor ntg fluticasone atneolol lisinopril folate elavil pletal folate temazepam discharge"
+              }
+            }
+          },
+          {
+            "u_id": "u_77162",
+            "u_unit": {
+              "d_diagnosis": "plan for coumadin for 3 months, re-image stent, if patent, discontinue coumadin. exam remains most notable for dysarthria, l hemiplegia and l extinction to double simultaneous stimulation. cv - ruled out for mi upon admission. blood pressure was initially allowed to autoregulate. htn now controlled on metoprolol. no events on telemetry. tee performed on prelim read: simple atheroma in descending aorta, moderately thick aortic valve, no asd or pfo (final report pending). should follow up with his outpatient cardiologist, dr. , after discharge from rehab. should continue plavix for at least 6 months after stent placement; duration of therapy to be guided directly by pt's cardiologist. fen/gi - pt failed initial swallow evaluations, requiring tube feeds through . cleared by video swallow evaluation for soft solids and thin liquids on . heme - should start coumadin 2.5mg qhs on , goal inr ~2 (low therapeutic goal as pt will also be on aspirin and plavix and would be at high risk for bleeding with higher inr). check inr twice weekly. id - being treated with nitrofurantoin for uti, course to be complete on . tox - for significant alcohol history, pt was started on thiamine, folate. discharged to rehab on in stable condition. medications on admission: plavix asa 325 lipitor ntg fluticasone atneolol lisinopril folate elavil pletal folate temazepam discharge",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "plan for coumadin for 3 months, re-image stent, if patent, discontinue coumadin. exam remains most notable for dysarthria, l hemiplegia and l extinction to double simultaneous stimulation. cv - ruled out for mi upon admission. blood pressure was initially allowed to autoregulate. htn now controlled on metoprolol. no events on telemetry. tee performed on prelim read: simple atheroma in descending aorta, moderately thick aortic valve, no asd or pfo (final report pending). should follow up with his outpatient cardiologist, dr. , after discharge from rehab. should continue plavix for at least 6 months after stent placement; duration of therapy to be guided directly by pt's cardiologist. fen/gi - pt failed initial swallow evaluations, requiring tube feeds through . cleared by video swallow evaluation for soft solids and thin liquids on . heme - should start coumadin 2.5mg qhs on , goal inr ~2 (low therapeutic goal as pt will also be on aspirin and plavix and would be at high risk for bleeding with higher inr). check inr twice weekly. id - being treated with nitrofurantoin for uti, course to be complete on . tox - for significant alcohol history, pt was started on thiamine, folate. discharged to rehab on in stable condition. medications on admission: plavix asa 325 lipitor ntg fluticasone atneolol lisinopril folate elavil pletal folate temazepam discharge"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "interior apical ischemia",
+    "expected_organs": [
+      "Heart (Cor)"
+    ],
+    "expected_a_locations": [
+      "Interventricular Septum (IVS)",
+      "Left Ventricle (LV)"
+    ],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "anterior septal and apical ischemia",
+        "units": [
+          {
+            "u_id": "u_57699",
+            "u_unit": {
+              "d_diagnosis": "electrocardiogram showed depression inferior in v4-6",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Interventricular Septum (IVS)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "electrocardiogram showed depression inferior in v4-6"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "apical infarction, inferolateral wall ischemia",
+        "units": [
+          {
+            "u_id": "u_30429",
+            "u_unit": {
+              "d_diagnosis": "cardiac catheterization results",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Left Anterior Descending Artery (LAD)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "cardiac catheterization results"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "mild apical and apical septal ischemia",
+        "units": [
+          {
+            "u_id": "u_20923",
+            "u_unit": {
+              "d_diagnosis": "significant three vessel coronary artery disease status post coronary artery bypass graft times three using a left radial artery conduit.",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "significant three vessel coronary artery disease status post coronary artery bypass graft times three using a left radial artery conduit."
+              }
+            }
+          },
+          {
+            "u_id": "u_20924",
+            "u_unit": {
+              "d_diagnosis": "mitral valve prolapse with severe mitral regurgitation status post mitral valve repair, anuloplasty ring using #30 and ultimately a quadrangular resection was also carried out.",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "mitral valve prolapse with severe mitral regurgitation status post mitral valve repair, anuloplasty ring using #30 and ultimately a quadrangular resection was also carried out."
+              }
+            }
+          },
+          {
+            "u_id": "u_20925",
+            "u_unit": {
+              "d_diagnosis": "Mitral valve disorders",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Mitral valve disorders"
+              }
+            }
+          },
+          {
+            "u_id": "u_20926",
+            "u_unit": {
+              "d_diagnosis": "Atrial fibrillation",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Atrial fibrillation"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "40% proximal right coronary artery and 40% mid left anterior descending lesions",
+    "expected_organs": [
+      "Artery (Arteria)"
+    ],
+    "expected_a_locations": [
+      "Left Anterior Descending Artery (LAD)",
+      "Right Coronary Artery"
+    ],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "left main coronary artery revealed a 40%, left anterior descending artery with minor irregularities, left circumflex was diminutive",
+        "units": [
+          {
+            "u_id": "u_52972",
+            "u_unit": {
+              "d_diagnosis": "left main coronary artery revealed a 40%, left anterior descending artery with minor irregularities, left circumflex was diminutive.",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Main Coronary Artery",
+                  "Left Anterior Descending Artery (LAD)",
+                  "Circumflex Artery"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "left main coronary artery revealed a 40%, left anterior descending artery with minor irregularities, left circumflex was diminutive."
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "right coronary artery 40% proximal",
+        "units": [
+          {
+            "u_id": "u_15153",
+            "u_unit": {
+              "d_diagnosis": "right coronary artery 40% proximal",
+              "o_organ": {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Right Coronary Artery",
+                  "Coronary Artery"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "right coronary artery 40% proximal"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "lmca: nl lad: 40% fter d1",
+        "units": [
+          {
+            "u_id": "u_16350",
+            "u_unit": {
+              "d_diagnosis": "Acidosis Coronary atherosclerosis of native coronary artery Mitral valve disorders Congestive heart failure, unspecified Acute kidney failure, unspecified Atrial fibrillation Acute respiratory failure Cardiogenic shock Acute myocardial infarction of other inferior wall, initial episode of care",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Acidosis Coronary atherosclerosis of native coronary artery Mitral valve disorders Congestive heart failure, unspecified Acute kidney failure, unspecified Atrial fibrillation Acute respiratory failure Cardiogenic shock Acute myocardial infarction of other inferior wall, initial episode of care"
+              }
+            }
+          },
+          {
+            "u_id": "u_16351",
+            "u_unit": {
+              "d_diagnosis": "Acidosis Coronary atherosclerosis of native coronary artery Mitral valve disorders Congestive heart failure, unspecified Acute kidney failure, unspecified Atrial fibrillation Acute respiratory failure Cardiogenic shock Acute myocardial infarction of other inferior wall, initial episode of care",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Acidosis Coronary atherosclerosis of native coronary artery Mitral valve disorders Congestive heart failure, unspecified Acute kidney failure, unspecified Atrial fibrillation Acute respiratory failure Cardiogenic shock Acute myocardial infarction of other inferior wall, initial episode of care"
+              }
+            }
+          },
+          {
+            "u_id": "u_16352",
+            "u_unit": {
+              "d_diagnosis": "Acidosis Coronary atherosclerosis of native coronary artery Mitral valve disorders Congestive heart failure, unspecified Acute kidney failure, unspecified Atrial fibrillation Acute respiratory failure Cardiogenic shock Acute myocardial infarction of other inferior wall, initial episode of care",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Acidosis Coronary atherosclerosis of native coronary artery Mitral valve disorders Congestive heart failure, unspecified Acute kidney failure, unspecified Atrial fibrillation Acute respiratory failure Cardiogenic shock Acute myocardial infarction of other inferior wall, initial episode of care"
+              }
+            }
+          },
+          {
+            "u_id": "u_16353",
+            "u_unit": {
+              "d_diagnosis": "Acidosis Coronary atherosclerosis of native coronary artery Mitral valve disorders Congestive heart failure, unspecified Acute kidney failure, unspecified Atrial fibrillation Acute respiratory failure Cardiogenic shock Acute myocardial infarction of other inferior wall, initial episode of care",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Acidosis Coronary atherosclerosis of native coronary artery Mitral valve disorders Congestive heart failure, unspecified Acute kidney failure, unspecified Atrial fibrillation Acute respiratory failure Cardiogenic shock Acute myocardial infarction of other inferior wall, initial episode of care"
+              }
+            }
+          },
+          {
+            "u_id": "u_16354",
+            "u_unit": {
+              "d_diagnosis": "Acidosis Coronary atherosclerosis of native coronary artery Mitral valve disorders Congestive heart failure, unspecified Acute kidney failure, unspecified Atrial fibrillation Acute respiratory failure Cardiogenic shock Acute myocardial infarction of other inferior wall, initial episode of care",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Acidosis Coronary atherosclerosis of native coronary artery Mitral valve disorders Congestive heart failure, unspecified Acute kidney failure, unspecified Atrial fibrillation Acute respiratory failure Cardiogenic shock Acute myocardial infarction of other inferior wall, initial episode of care"
+              }
+            }
+          },
+          {
+            "u_id": "u_16355",
+            "u_unit": {
+              "d_diagnosis": "Acidosis Coronary atherosclerosis of native coronary artery Mitral valve disorders Congestive heart failure, unspecified Acute kidney failure, unspecified Atrial fibrillation Acute respiratory failure Cardiogenic shock Acute myocardial infarction of other inferior wall, initial episode of care",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Acidosis Coronary atherosclerosis of native coronary artery Mitral valve disorders Congestive heart failure, unspecified Acute kidney failure, unspecified Atrial fibrillation Acute respiratory failure Cardiogenic shock Acute myocardial infarction of other inferior wall, initial episode of care"
+              }
+            }
+          },
+          {
+            "u_id": "u_16356",
+            "u_unit": {
+              "d_diagnosis": "left heart catheterization : selective coronary angiography of this right dominant system was difficult due to right brachial access with severe subcalvian artery tortuosity. despite attempts with multiple catheters, we were not able to engage the lmca. sub-optimal images of the rca demonstrated a probably 60% distal stenosis. 2. left ventriculography was deferred. 3. limited resting hemodynamics demonstrated markely elevated systemic systolic pressure. left heart catheterization : right dominant system. lmca: nl lad: 40% fter d1. lcx: mid vessel 50% stenosis at the origin of the om1. the om1 had a tubular ostial/proximal stenosis of 70%. rca: 70% ostial stenosis, a 50% mid segment stenosis and a 90% distal segment stenosis before the pda/pl bifurcation. 2. resting hemodynamics reveal mild systemic arterial hypertension. 3. no left ventriculogram performed to reduce contrast load. 4. despite prolonged attempts it was not possible to recannulate the rca ostium and the procedure was terminated due to prolonged fluroscopy time. 1. two vessel coronary artery disease. 2. mild systemic arterial hypertension.",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "left heart catheterization : selective coronary angiography of this right dominant system was difficult due to right brachial access with severe subcalvian artery tortuosity. despite attempts with multiple catheters, we were not able to engage the lmca. sub-optimal images of the rca demonstrated a probably 60% distal stenosis. 2. left ventriculography was deferred. 3. limited resting hemodynamics demonstrated markely elevated systemic systolic pressure. left heart catheterization : right dominant system. lmca: nl lad: 40% fter d1. lcx: mid vessel 50% stenosis at the origin of the om1. the om1 had a tubular ostial/proximal stenosis of 70%. rca: 70% ostial stenosis, a 50% mid segment stenosis and a 90% distal segment stenosis before the pda/pl bifurcation. 2. resting hemodynamics reveal mild systemic arterial hypertension. 3. no left ventriculogram performed to reduce contrast load. 4. despite prolonged attempts it was not possible to recannulate the rca ostium and the procedure was terminated due to prolonged fluroscopy time. 1. two vessel coronary artery disease. 2. mild systemic arterial hypertension."
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "left arm and shoulder pain",
+    "expected_organs": [
+      "Heart (Cor)"
+    ],
+    "expected_a_locations": [
+      "Left Ventricle (LV)",
+      "Right Coronary Artery"
+    ],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "left back/shoulder pain",
+        "units": [
+          {
+            "u_id": "u_62944",
+            "u_unit": {
+              "d_diagnosis": "cad, aortic valve insufficiency",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Aortic Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "cad, aortic valve insufficiency"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "symptoms of sob and l shoulder pain",
+        "units": [
+          {
+            "u_id": "u_12396",
+            "u_unit": {
+              "d_diagnosis": "found to be in chf and afib, developed a lbbb",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Right Ventricle (RV)",
+                  "Interventricular Septum (IVS)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "found to be in chf and afib, developed a lbbb"
+              }
+            }
+          },
+          {
+            "u_id": "u_12397",
+            "u_unit": {
+              "d_diagnosis": "cardiac cath, which showed 3-vessel cad",
+              "o_organ": {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Right Coronary Artery",
+                  "Left Anterior Descending Artery (LAD)",
+                  "Circumflex Artery"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "cardiac cath, which showed 3-vessel cad"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "left shoulder pain and left arm and hand numbness",
+        "units": [
+          {
+            "u_id": "u_3513",
+            "u_unit": {
+              "d_diagnosis": "ct chest showed 5.1 cm ascending aorta",
+              "o_organ": {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Ascending Aorta",
+                  "Aortic Arch"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "ct chest showed 5.1 cm ascending aorta"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "hypoxia/cough",
+    "expected_organs": [
+      "Lung (Pulmo)"
+    ],
+    "expected_a_locations": [
+      "Alveoli",
+      "Bronchioles"
+    ],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "hypoxia/wheezing",
+        "units": [
+          {
+            "u_id": "u_49688",
+            "u_unit": {
+              "d_diagnosis": "hypoxia/wheezing: 91% on ra with decreased breath sounds at bases and now audible expiratory wheezes",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "hypoxia/wheezing: 91% on ra with decreased breath sounds at bases and now audible expiratory wheezes"
+              }
+            }
+          },
+          {
+            "u_id": "u_49689",
+            "u_unit": {
+              "d_diagnosis": "a tracheostomy was placed on",
+              "o_organ": {
+                "organName": "Trachea",
+                "anatomicalLocations": [
+                  "Tracheal Rings",
+                  "Tracheal Mucosa"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "a tracheostomy was placed on"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "respiratory distress and hypoxia",
+        "units": [
+          {
+            "u_id": "u_5762",
+            "u_unit": {
+              "d_diagnosis": "pseudomonal pneumonia",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "pseudomonal pneumonia"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "hypoxic resp distress",
+        "units": [
+          {
+            "u_id": "u_30654",
+            "u_unit": {
+              "d_diagnosis": "aspiration pneumonia",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "aspiration pneumonia"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+]

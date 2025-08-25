@@ -23,7 +23,6 @@ from data_loader import DataLoader
 from api_manager import APIManager
 from evaluator import Evaluator
 from utils.logger import ReportLogger
-from enhanced_search_engine import EnhancedMedicalSearchEngine
 
 
 class MainWorkflow:
@@ -52,10 +51,11 @@ class MainWorkflow:
             self.search_engine = None
             print(f"✅ 已加载RAG缓存: {rag_cache_path} (共 {len(self.rag_cache)} 条)")
         else:
-            # 初始化RAG搜索引擎（仅在没有缓存时）
+            # 初始化RAG搜索引擎（仅在没有缓存时），延迟导入以避免不必要依赖
             default_index_dir = "/home/duojiechen/Projects/Rag_system/Rag_Build/enhanced_faiss_indexes"
             self.rag_index_dir = os.getenv("RAG_INDEX_DIR", default_index_dir)
             try:
+                from enhanced_search_engine import EnhancedMedicalSearchEngine  # 延迟导入
                 self.search_engine = EnhancedMedicalSearchEngine(self.rag_index_dir)
                 print(f"✅ RAG 搜索引擎已初始化: {self.rag_index_dir}")
             except Exception as e:
@@ -204,9 +204,8 @@ class MainWorkflow:
                     'symptom_id': symptom_id,
                     'diagnosis': symptom_text,
                     'expected_organs': expected_organs,
-                    'api_responses': {},
-                    'api_responses_baseline': {},
                     'api_responses_with_rag': {},
+                    'api_responses_baseline': {},
                     'comparison': {},
                     'rag_retrieval': {
                         'primary_refs': rag_primary_refs,
@@ -243,15 +242,18 @@ class MainWorkflow:
                     rag_api_responses[api_name] = api_response_data
                 
                 # 保存两套结果，并将 api_responses 指向 with_rag 以兼容原有下游
-                symptom_data['api_responses_with_rag'] = rag_api_responses
-                symptom_data['api_responses_baseline'] = baseline_api_responses
-                symptom_data['api_responses'] = rag_api_responses
+                rag_responses_final = rag_api_responses if isinstance(rag_api_responses, dict) else {}
+                baseline_responses_final = baseline_api_responses if isinstance(baseline_api_responses, dict) else {}
+
+                symptom_data['api_responses_with_rag'] = rag_responses_final
+                symptom_data['api_responses_baseline'] = baseline_responses_final
+                symptom_data['api_responses'] = rag_responses_final
                 
                 # 生成对比摘要（with_rag - baseline）
-                all_api_names = set(list(baseline_api_responses.keys()) + list(rag_api_responses.keys()))
+                all_api_names = set(list(baseline_responses_final.keys()) + list(rag_responses_final.keys()))
                 for name in all_api_names:
-                    base_eval = baseline_api_responses.get(name, {}).get('evaluation')
-                    rag_eval = rag_api_responses.get(name, {}).get('evaluation')
+                    base_eval = baseline_responses_final.get(name, {}).get('evaluation')
+                    rag_eval = rag_responses_final.get(name, {}).get('evaluation')
                     if base_eval and rag_eval:
                         comp = {
                             'overall_delta': round(rag_eval.get('overall_score', 0) - base_eval.get('overall_score', 0), 1),
@@ -259,12 +261,12 @@ class MainWorkflow:
                             'recall_delta': round(rag_eval.get('recall', 0) - base_eval.get('recall', 0), 1),
                             'overgeneration_penalty_delta': round(rag_eval.get('overgeneration_penalty', 0) - base_eval.get('overgeneration_penalty', 0), 1),
                             'baseline_prediction': {
-                                'organ_name': baseline_api_responses.get(name, {}).get('organ_name', ''),
-                                'anatomical_locations': baseline_api_responses.get(name, {}).get('anatomical_locations', [])
+                                'organ_name': baseline_responses_final.get(name, {}).get('organ_name', ''),
+                                'anatomical_locations': baseline_responses_final.get(name, {}).get('anatomical_locations', [])
                             },
                             'with_rag_prediction': {
-                                'organ_name': rag_api_responses.get(name, {}).get('organ_name', ''),
-                                'anatomical_locations': rag_api_responses.get(name, {}).get('anatomical_locations', [])
+                                'organ_name': rag_responses_final.get(name, {}).get('organ_name', ''),
+                                'anatomical_locations': rag_responses_final.get(name, {}).get('anatomical_locations', [])
                             }
                         }
                     else:
@@ -274,12 +276,12 @@ class MainWorkflow:
                             'recall_delta': 0.0,
                             'overgeneration_penalty_delta': 0.0,
                             'baseline_prediction': {
-                                'organ_name': baseline_api_responses.get(name, {}).get('organ_name', ''),
-                                'anatomical_locations': baseline_api_responses.get(name, {}).get('anatomical_locations', [])
+                                'organ_name': baseline_responses_final.get(name, {}).get('organ_name', ''),
+                                'anatomical_locations': baseline_responses_final.get(name, {}).get('anatomical_locations', [])
                             },
                             'with_rag_prediction': {
-                                'organ_name': rag_api_responses.get(name, {}).get('organ_name', ''),
-                                'anatomical_locations': rag_api_responses.get(name, {}).get('anatomical_locations', [])
+                                'organ_name': rag_responses_final.get(name, {}).get('organ_name', ''),
+                                'anatomical_locations': rag_responses_final.get(name, {}).get('anatomical_locations', [])
                             }
                         }
                     symptom_data['comparison'][name] = comp
@@ -296,7 +298,9 @@ class MainWorkflow:
                     'diagnosis': symptom_text,
                     'expected_organs': expected_organs,
                     'error': str(e),
-                    'api_responses': {}
+                    'api_responses': {},
+                    'api_responses_baseline': {},
+                    'api_responses_with_rag': {}
                 }
                 report_results['symptoms'].append(symptom_data)
         

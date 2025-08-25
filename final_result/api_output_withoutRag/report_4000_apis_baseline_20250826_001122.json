@@ -1,0 +1,593 @@
+{
+  "80 millimeter aortic valve gradient": {
+    "openai": {
+      "organ": "",
+      "a_position": [],
+      "evaluation": {
+        "overall_score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 0.0,
+        "detailed_analysis": "API调用失败或无有效数据"
+      }
+    },
+    "anthropic": {
+      "organ": "Heart (Cor)",
+      "a_position": [
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Aortic Root & Ascending Aorta"
+      ],
+      "evaluation": {
+        "overall_score": 48.3,
+        "precision": 33.3,
+        "recall": 50.0,
+        "overgeneration_penalty": 75.0,
+        "detailed_analysis": "Precision(精确率): 1/3 (33.3%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 75.0%"
+      }
+    },
+    "gemini": {
+      "organ": "Heart (Cor)",
+      "a_position": [
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Aortic Root & Ascending Aorta"
+      ],
+      "evaluation": {
+        "overall_score": 48.3,
+        "precision": 33.3,
+        "recall": 50.0,
+        "overgeneration_penalty": 75.0,
+        "detailed_analysis": "Precision(精确率): 1/3 (33.3%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 75.0%"
+      }
+    },
+    "moonshot": {
+      "organ": "Heart (Cor)",
+      "a_position": [
+        "Aortic Valve",
+        "Left Ventricle (LV)"
+      ],
+      "evaluation": {
+        "overall_score": 60.0,
+        "precision": 50.0,
+        "recall": 50.0,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 1/2 (50.0%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 100.0%"
+      }
+    },
+    "deepseek": {
+      "organ": "Heart (Cor)",
+      "a_position": [
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Aortic Root & Ascending Aorta"
+      ],
+      "evaluation": {
+        "overall_score": 48.3,
+        "precision": 33.3,
+        "recall": 50.0,
+        "overgeneration_penalty": 75.0,
+        "detailed_analysis": "Precision(精确率): 1/3 (33.3%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 75.0%"
+      }
+    }
+  },
+  "the heart has a systolic ejection murmur": {
+    "openai": {
+      "organ": "",
+      "a_position": [],
+      "evaluation": {
+        "overall_score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 0.0,
+        "detailed_analysis": "API调用失败或无有效数据"
+      }
+    },
+    "anthropic": {
+      "organ": "Heart (Cor)",
+      "a_position": [
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Aortic Root & Ascending Aorta"
+      ],
+      "evaluation": {
+        "overall_score": 48.3,
+        "precision": 33.3,
+        "recall": 50.0,
+        "overgeneration_penalty": 75.0,
+        "detailed_analysis": "Precision(精确率): 1/3 (33.3%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 75.0%"
+      }
+    },
+    "gemini": {
+      "organ": "Heart (Cor)",
+      "a_position": [
+        "Aortic Valve",
+        "Pulmonary Valve",
+        "Left Ventricle (LV)",
+        "Right Ventricle (RV)"
+      ],
+      "evaluation": {
+        "overall_score": 40.0,
+        "precision": 25.0,
+        "recall": 50.0,
+        "overgeneration_penalty": 50.0,
+        "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 50.0%"
+      }
+    },
+    "moonshot": {
+      "organ": "Heart (Cor)",
+      "a_position": [
+        "Aortic Valve",
+        "Pulmonary Valve",
+        "Left Ventricle (LV)"
+      ],
+      "evaluation": {
+        "overall_score": 48.3,
+        "precision": 33.3,
+        "recall": 50.0,
+        "overgeneration_penalty": 75.0,
+        "detailed_analysis": "Precision(精确率): 1/3 (33.3%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 75.0%"
+      }
+    },
+    "deepseek": {
+      "organ": "Heart (Cor)",
+      "a_position": [
+        "Aortic Valve",
+        "Pulmonary Valve",
+        "Left Ventricle (LV)",
+        "Right Ventricle (RV)"
+      ],
+      "evaluation": {
+        "overall_score": 40.0,
+        "precision": 25.0,
+        "recall": 50.0,
+        "overgeneration_penalty": 50.0,
+        "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 50.0%"
+      }
+    }
+  },
+  "moderate to severe mitral regurgitation": {
+    "openai": {
+      "organ": "",
+      "a_position": [],
+      "evaluation": {
+        "overall_score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 0.0,
+        "detailed_analysis": "API调用失败或无有效数据"
+      }
+    },
+    "anthropic": {
+      "organ": "Heart (Cor)",
+      "a_position": [
+        "Mitral Valve",
+        "Left Atrium (LA)",
+        "Left Ventricle (LV)",
+        "Chordae Tendineae"
+      ],
+      "evaluation": {
+        "overall_score": 40.0,
+        "precision": 25.0,
+        "recall": 50.0,
+        "overgeneration_penalty": 50.0,
+        "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 50.0%"
+      }
+    },
+    "gemini": {
+      "organ": "Heart (Cor)",
+      "a_position": [
+        "Mitral Valve",
+        "Left Atrium (LA)",
+        "Left Ventricle (LV)",
+        "Chordae Tendineae"
+      ],
+      "evaluation": {
+        "overall_score": 40.0,
+        "precision": 25.0,
+        "recall": 50.0,
+        "overgeneration_penalty": 50.0,
+        "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 50.0%"
+      }
+    },
+    "moonshot": {
+      "organ": "Heart (Cor)",
+      "a_position": [
+        "Mitral Valve",
+        "Left Ventricle (LV)",
+        "Left Atrium (LA)"
+      ],
+      "evaluation": {
+        "overall_score": 48.3,
+        "precision": 33.3,
+        "recall": 50.0,
+        "overgeneration_penalty": 75.0,
+        "detailed_analysis": "Precision(精确率): 1/3 (33.3%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 75.0%"
+      }
+    },
+    "deepseek": {
+      "organ": "Heart (Cor)",
+      "a_position": [
+        "Mitral Valve",
+        "Left Ventricle (LV)",
+        "Left Atrium (LA)",
+        "Chordae Tendineae"
+      ],
+      "evaluation": {
+        "overall_score": 40.0,
+        "precision": 25.0,
+        "recall": 50.0,
+        "overgeneration_penalty": 50.0,
+        "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 50.0%"
+      }
+    }
+  },
+  "four episodes of loss of consciousness over the past six months": {
+    "openai": {
+      "organ": "",
+      "a_position": [],
+      "evaluation": {
+        "overall_score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 0.0,
+        "detailed_analysis": "API调用失败或无有效数据"
+      }
+    },
+    "anthropic": {
+      "organ": "Brain",
+      "a_position": [
+        "Cerebral Cortex",
+        "Brainstem",
+        "Cerebrospinal Fluid (CSF)"
+      ],
+      "evaluation": {
+        "overall_score": 20.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/3 (0.0%); 过度生成惩罚: 100.0%"
+      }
+    },
+    "gemini": {
+      "organ": "Brain",
+      "a_position": [
+        "Cerebral Cortex",
+        "Brainstem",
+        "Cerebrospinal Fluid (CSF)"
+      ],
+      "evaluation": {
+        "overall_score": 20.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/3 (0.0%); 过度生成惩罚: 100.0%"
+      }
+    },
+    "moonshot": {
+      "organ": "Brain",
+      "a_position": [
+        "Cerebral Cortex",
+        "Brainstem",
+        "Corpus Callosum"
+      ],
+      "evaluation": {
+        "overall_score": 20.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/3 (0.0%); 过度生成惩罚: 100.0%"
+      }
+    },
+    "deepseek": {
+      "organ": "Brain",
+      "a_position": [
+        "Cerebral Cortex",
+        "Brainstem",
+        "Cerebrospinal Fluid (CSF)"
+      ],
+      "evaluation": {
+        "overall_score": 20.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/3 (0.0%); 过度生成惩罚: 100.0%"
+      }
+    }
+  },
+  "no jugular venous distention, no carotid bruits": {
+    "openai": {
+      "organ": "",
+      "a_position": [],
+      "evaluation": {
+        "overall_score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 0.0,
+        "detailed_analysis": "API调用失败或无有效数据"
+      }
+    },
+    "anthropic": {
+      "organ": "Vein (Vena)",
+      "a_position": [
+        "Internal Jugular Vein",
+        "External Jugular Vein"
+      ],
+      "evaluation": {
+        "overall_score": 20.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 0/2 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 100.0%"
+      }
+    },
+    "gemini": {
+      "organ": "Vein (Vena)",
+      "a_position": [
+        "Jugular Vein",
+        "Internal Jugular Vein",
+        "External Jugular Vein",
+        "Superior Vena Cava"
+      ],
+      "evaluation": {
+        "overall_score": 10.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 50.0,
+        "detailed_analysis": "Precision(精确率): 0/4 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 50.0%"
+      }
+    },
+    "moonshot": {
+      "organ": "Vein (Vena)",
+      "a_position": [
+        "Jugular Vein",
+        "Internal Jugular Vein",
+        "External Jugular Vein"
+      ],
+      "evaluation": {
+        "overall_score": 15.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 75.0,
+        "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 75.0%"
+      }
+    },
+    "deepseek": {
+      "organ": "Vein (Vena)",
+      "a_position": [
+        "Jugular Vein",
+        "Internal Jugular Vein",
+        "External Jugular Vein"
+      ],
+      "evaluation": {
+        "overall_score": 15.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 75.0,
+        "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 75.0%"
+      }
+    }
+  },
+  "shortness of breath": {
+    "openai": {
+      "organ": "",
+      "a_position": [],
+      "evaluation": {
+        "overall_score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 0.0,
+        "detailed_analysis": "API调用失败或无有效数据"
+      }
+    },
+    "anthropic": {
+      "organ": "Lung (Pulmo)",
+      "a_position": [
+        "Alveoli",
+        "Bronchioles",
+        "Pulmonary Capillaries",
+        "Pleural Cavity"
+      ],
+      "evaluation": {
+        "overall_score": 36.7,
+        "precision": 25.0,
+        "recall": 16.7,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/6 (16.7%); 过度生成惩罚: 100.0%"
+      }
+    },
+    "gemini": {
+      "organ": "Lung (Pulmo)",
+      "a_position": [
+        "Alveoli",
+        "Bronchioles",
+        "Pulmonary Capillaries"
+      ],
+      "evaluation": {
+        "overall_score": 20.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/6 (0.0%); 过度生成惩罚: 100.0%"
+      }
+    },
+    "moonshot": {
+      "organ": "Lung (Pulmo)",
+      "a_position": [
+        "Alveoli",
+        "Bronchioles",
+        "Pleural Cavity"
+      ],
+      "evaluation": {
+        "overall_score": 40.0,
+        "precision": 33.3,
+        "recall": 16.7,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 1/3 (33.3%); Recall(召回率): 1/6 (16.7%); 过度生成惩罚: 100.0%"
+      }
+    },
+    "deepseek": {
+      "organ": "Lung (Pulmo)",
+      "a_position": [
+        "Alveoli",
+        "Bronchioles",
+        "Pulmonary Capillaries",
+        "Pleural Cavity"
+      ],
+      "evaluation": {
+        "overall_score": 36.7,
+        "precision": 25.0,
+        "recall": 16.7,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/6 (16.7%); 过度生成惩罚: 100.0%"
+      }
+    }
+  },
+  "dyspnea on exertion": {
+    "openai": {
+      "organ": "",
+      "a_position": [],
+      "evaluation": {
+        "overall_score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 0.0,
+        "detailed_analysis": "API调用失败或无有效数据"
+      }
+    },
+    "anthropic": {
+      "organ": "Lung (Pulmo)",
+      "a_position": [
+        "Alveoli",
+        "Pulmonary Capillaries",
+        "Bronchioles"
+      ],
+      "evaluation": {
+        "overall_score": 20.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/6 (0.0%); 过度生成惩罚: 100.0%"
+      }
+    },
+    "gemini": {
+      "organ": "Lung (Pulmo)",
+      "a_position": [
+        "Alveoli",
+        "Pulmonary Capillaries",
+        "Bronchioles"
+      ],
+      "evaluation": {
+        "overall_score": 20.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/6 (0.0%); 过度生成惩罚: 100.0%"
+      }
+    },
+    "moonshot": {
+      "organ": "Heart (Cor)",
+      "a_position": [
+        "Left Ventricle (LV)",
+        "Aortic Valve",
+        "Pulmonary Valve"
+      ],
+      "evaluation": {
+        "overall_score": 60.0,
+        "precision": 66.7,
+        "recall": 33.3,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/6 (33.3%); 过度生成惩罚: 100.0%"
+      }
+    },
+    "deepseek": {
+      "organ": "Lung (Pulmo)",
+      "a_position": [
+        "Alveoli",
+        "Bronchioles",
+        "Pulmonary Capillaries",
+        "Pleural Cavity"
+      ],
+      "evaluation": {
+        "overall_score": 36.7,
+        "precision": 25.0,
+        "recall": 16.7,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/6 (16.7%); 过度生成惩罚: 100.0%"
+      }
+    }
+  },
+  "legally blind for three years": {
+    "openai": {
+      "organ": "",
+      "a_position": [],
+      "evaluation": {
+        "overall_score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 0.0,
+        "detailed_analysis": "API调用失败或无有效数据"
+      }
+    },
+    "anthropic": {
+      "organ": "Eye (Oculus)",
+      "a_position": [
+        "Retina",
+        "Optic Nerve",
+        "Cornea"
+      ],
+      "evaluation": {
+        "overall_score": 73.3,
+        "precision": 66.7,
+        "recall": 66.7,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/3 (66.7%); 过度生成惩罚: 100.0%"
+      }
+    },
+    "gemini": {
+      "organ": "Brain",
+      "a_position": [
+        "Occipital Lobe",
+        "Cerebral Cortex"
+      ],
+      "evaluation": {
+        "overall_score": 20.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 0/2 (0.0%); Recall(召回率): 0/3 (0.0%); 过度生成惩罚: 100.0%"
+      }
+    },
+    "moonshot": {
+      "organ": "Eye (Oculus)",
+      "a_position": [
+        "Retina",
+        "Optic Nerve",
+        "Cornea"
+      ],
+      "evaluation": {
+        "overall_score": 73.3,
+        "precision": 66.7,
+        "recall": 66.7,
+        "overgeneration_penalty": 100.0,
+        "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/3 (66.7%); 过度生成惩罚: 100.0%"
+      }
+    },
+    "deepseek": {
+      "organ": "Eye (Oculus)",
+      "a_position": [
+        "Retina",
+        "Optic Nerve",
+        "Lens",
+        "Cornea"
+      ],
+      "evaluation": {
+        "overall_score": 63.3,
+        "precision": 50.0,
+        "recall": 66.7,
+        "overgeneration_penalty": 83.3,
+        "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/3 (66.7%); 过度生成惩罚: 83.3%"
+      }
+    }
+  }
+}

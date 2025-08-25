@@ -174,10 +174,10 @@ class APIManager:
         return success_count > 0
     
     def process_symptom(self, symptom_data: Dict[str, Any], system_prompt: str) -> Dict[str, Any]:
-        """使用所有API客户端处理单个症状"""
-        api_responses = {}
-        symptom_text = symptom_data['symptom_text']
-        
+        """使用所有启用的API客户端处理单个症状，并返回一个字典"""
+        api_responses: Dict[str, Any] = {}
+        symptom_text = symptom_data.get('symptom_text', '')
+
         for name, client in self.clients.items():
             try:
                 response = client.generate_response(
@@ -195,16 +195,16 @@ class APIManager:
                         response['anatomical_locations'] = parsed_data.get('anatomical_locations', [])
                 
                 # 将期望结果附加到每个响应中，以便后续评估
-                response['expected_results'] = symptom_data['expected_results']
+                response['expected_results'] = symptom_data.get('expected_results', [])
                 api_responses[name] = response
             except Exception as e:
                 api_responses[name] = {
                     'success': False,
                     'error': str(e),
-                    'expected_results': symptom_data['expected_results']
+                    'expected_results': symptom_data.get('expected_results', [])
                 }
                 
-        return api_responses
+        return api_responses if isinstance(api_responses, dict) else {}
     
     def process_report_symptoms(self, report_data: Dict[str, Any], system_prompt: str) -> Dict[str, Any]:
         """处理整个Report的所有症状"""

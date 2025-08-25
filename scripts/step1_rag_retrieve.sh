@@ -13,7 +13,7 @@ TOP_K=${3:-3}
 
 TEST_DIR="/home/duojiechen/Projects/Central_Data/RAG_System/test_set"
 INDEX_DIR="/home/duojiechen/Projects/Rag_system/Rag_Build/enhanced_faiss_indexes"
-OUT_DIR="/home/duojiechen/Projects/Rag_system/Rag_Evaluate/rag_search_output"
+OUT_DIR="/home/duojiechen/Projects/Rag_system/Rag_Evaluate/final_result/rag_search_output"
 mkdir -p "${OUT_DIR}"
 
 # 激活 RAG_Build 环境

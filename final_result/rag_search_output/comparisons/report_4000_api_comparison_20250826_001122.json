@@ -1,0 +1,846 @@
+{
+  "80 millimeter aortic valve gradient": {
+    "gemini": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Left Ventricle (LV)",
+          "Aortic Root & Ascending Aorta"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Left Ventricle (LV)",
+          "Aortic Root & Ascending Aorta"
+        ]
+      }
+    },
+    "deepseek": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Left Ventricle (LV)",
+          "Aortic Root & Ascending Aorta"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Left Ventricle (LV)",
+          "Aortic Root & Ascending Aorta"
+        ]
+      }
+    },
+    "anthropic": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Left Ventricle (LV)",
+          "Aortic Root & Ascending Aorta"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Left Ventricle (LV)",
+          "Aortic Root & Ascending Aorta"
+        ]
+      }
+    },
+    "moonshot": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Left Ventricle (LV)"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Left Ventricle (LV)"
+        ]
+      }
+    },
+    "openai": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      },
+      "with_rag_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      }
+    }
+  },
+  "the heart has a systolic ejection murmur": {
+    "gemini": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Pulmonary Valve",
+          "Left Ventricle (LV)",
+          "Right Ventricle (RV)"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Pulmonary Valve",
+          "Left Ventricle (LV)",
+          "Right Ventricle (RV)"
+        ]
+      }
+    },
+    "deepseek": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Pulmonary Valve",
+          "Left Ventricle (LV)",
+          "Right Ventricle (RV)"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Pulmonary Valve",
+          "Left Ventricle (LV)",
+          "Right Ventricle (RV)"
+        ]
+      }
+    },
+    "anthropic": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Left Ventricle (LV)",
+          "Aortic Root & Ascending Aorta"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Left Ventricle (LV)",
+          "Aortic Root & Ascending Aorta"
+        ]
+      }
+    },
+    "moonshot": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Pulmonary Valve",
+          "Left Ventricle (LV)"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Pulmonary Valve",
+          "Left Ventricle (LV)"
+        ]
+      }
+    },
+    "openai": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      },
+      "with_rag_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      }
+    }
+  },
+  "moderate to severe mitral regurgitation": {
+    "gemini": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Mitral Valve",
+          "Left Atrium (LA)",
+          "Left Ventricle (LV)",
+          "Chordae Tendineae"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Mitral Valve",
+          "Left Atrium (LA)",
+          "Left Ventricle (LV)",
+          "Chordae Tendineae"
+        ]
+      }
+    },
+    "deepseek": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Mitral Valve",
+          "Left Ventricle (LV)",
+          "Left Atrium (LA)",
+          "Chordae Tendineae"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Mitral Valve",
+          "Left Ventricle (LV)",
+          "Left Atrium (LA)",
+          "Chordae Tendineae"
+        ]
+      }
+    },
+    "anthropic": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Mitral Valve",
+          "Left Atrium (LA)",
+          "Left Ventricle (LV)",
+          "Chordae Tendineae"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Mitral Valve",
+          "Left Atrium (LA)",
+          "Left Ventricle (LV)",
+          "Chordae Tendineae"
+        ]
+      }
+    },
+    "moonshot": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Mitral Valve",
+          "Left Ventricle (LV)",
+          "Left Atrium (LA)"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Mitral Valve",
+          "Left Ventricle (LV)",
+          "Left Atrium (LA)"
+        ]
+      }
+    },
+    "openai": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      },
+      "with_rag_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      }
+    }
+  },
+  "four episodes of loss of consciousness over the past six months": {
+    "gemini": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Brainstem",
+          "Cerebrospinal Fluid (CSF)"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Brainstem",
+          "Cerebrospinal Fluid (CSF)"
+        ]
+      }
+    },
+    "deepseek": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Brainstem",
+          "Cerebrospinal Fluid (CSF)"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Brainstem",
+          "Cerebrospinal Fluid (CSF)"
+        ]
+      }
+    },
+    "anthropic": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Brainstem",
+          "Cerebrospinal Fluid (CSF)"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Brainstem",
+          "Cerebrospinal Fluid (CSF)"
+        ]
+      }
+    },
+    "moonshot": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Brainstem",
+          "Corpus Callosum"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Temporal Lobe",
+          "Hypothalamus"
+        ]
+      }
+    },
+    "openai": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      },
+      "with_rag_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      }
+    }
+  },
+  "no jugular venous distention, no carotid bruits": {
+    "gemini": {
+      "overall_delta": 5.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 25.0,
+      "baseline_prediction": {
+        "organ_name": "Vein (Vena)",
+        "anatomical_locations": [
+          "Jugular Vein",
+          "Internal Jugular Vein",
+          "External Jugular Vein",
+          "Superior Vena Cava"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Vein (Vena)",
+        "anatomical_locations": [
+          "Jugular Vein",
+          "Internal Jugular Vein",
+          "External Jugular Vein"
+        ]
+      }
+    },
+    "deepseek": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Vein (Vena)",
+        "anatomical_locations": [
+          "Jugular Vein",
+          "Internal Jugular Vein",
+          "External Jugular Vein"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Vein (Vena)",
+        "anatomical_locations": [
+          "Jugular Vein",
+          "Internal Jugular Vein",
+          "External Jugular Vein"
+        ]
+      }
+    },
+    "anthropic": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Vein (Vena)",
+        "anatomical_locations": [
+          "Internal Jugular Vein",
+          "External Jugular Vein"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Vein (Vena)",
+        "anatomical_locations": [
+          "Internal Jugular Vein",
+          "External Jugular Vein"
+        ]
+      }
+    },
+    "moonshot": {
+      "overall_delta": 5.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 25.0,
+      "baseline_prediction": {
+        "organ_name": "Vein (Vena)",
+        "anatomical_locations": [
+          "Jugular Vein",
+          "Internal Jugular Vein",
+          "External Jugular Vein"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Vein (Vena)",
+        "anatomical_locations": [
+          "Jugular Vein"
+        ]
+      }
+    },
+    "openai": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      },
+      "with_rag_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      }
+    }
+  },
+  "shortness of breath": {
+    "gemini": {
+      "overall_delta": 16.7,
+      "precision_delta": 25.0,
+      "recall_delta": 16.7,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Bronchioles",
+          "Pulmonary Capillaries"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Bronchioles",
+          "Pulmonary Capillaries",
+          "Pleural Cavity"
+        ]
+      }
+    },
+    "deepseek": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Bronchioles",
+          "Pulmonary Capillaries",
+          "Pleural Cavity"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Bronchioles",
+          "Pulmonary Capillaries",
+          "Pleural Cavity"
+        ]
+      }
+    },
+    "anthropic": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Bronchioles",
+          "Pulmonary Capillaries",
+          "Pleural Cavity"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Bronchioles",
+          "Pulmonary Capillaries",
+          "Pleural Cavity"
+        ]
+      }
+    },
+    "moonshot": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Bronchioles",
+          "Pleural Cavity"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Bronchioles",
+          "Pleural Cavity"
+        ]
+      }
+    },
+    "openai": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      },
+      "with_rag_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      }
+    }
+  },
+  "dyspnea on exertion": {
+    "gemini": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Pulmonary Capillaries",
+          "Bronchioles"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Pulmonary Capillaries",
+          "Bronchioles"
+        ]
+      }
+    },
+    "deepseek": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Bronchioles",
+          "Pulmonary Capillaries",
+          "Pleural Cavity"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Bronchioles",
+          "Pulmonary Capillaries",
+          "Pleural Cavity"
+        ]
+      }
+    },
+    "anthropic": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Pulmonary Capillaries",
+          "Bronchioles"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Pulmonary Capillaries",
+          "Bronchioles"
+        ]
+      }
+    },
+    "moonshot": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Aortic Valve",
+          "Pulmonary Valve"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Aortic Valve",
+          "Pulmonary Valve"
+        ]
+      }
+    },
+    "openai": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      },
+      "with_rag_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      }
+    }
+  },
+  "legally blind for three years": {
+    "gemini": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Occipital Lobe",
+          "Cerebral Cortex"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Occipital Lobe",
+          "Thalamus"
+        ]
+      }
+    },
+    "deepseek": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Eye (Oculus)",
+        "anatomical_locations": [
+          "Retina",
+          "Optic Nerve",
+          "Lens",
+          "Cornea"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Eye (Oculus)",
+        "anatomical_locations": [
+          "Retina",
+          "Optic Nerve",
+          "Lens",
+          "Cornea"
+        ]
+      }
+    },
+    "anthropic": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Eye (Oculus)",
+        "anatomical_locations": [
+          "Retina",
+          "Optic Nerve",
+          "Cornea"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Eye (Oculus)",
+        "anatomical_locations": [
+          "Retina",
+          "Optic Nerve",
+          "Cornea"
+        ]
+      }
+    },
+    "moonshot": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "Eye (Oculus)",
+        "anatomical_locations": [
+          "Retina",
+          "Optic Nerve",
+          "Cornea"
+        ]
+      },
+      "with_rag_prediction": {
+        "organ_name": "Eye (Oculus)",
+        "anatomical_locations": [
+          "Retina",
+          "Optic Nerve",
+          "Cornea"
+        ]
+      }
+    },
+    "openai": {
+      "overall_delta": 0.0,
+      "precision_delta": 0.0,
+      "recall_delta": 0.0,
+      "overgeneration_penalty_delta": 0.0,
+      "baseline_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      },
+      "with_rag_prediction": {
+        "organ_name": "",
+        "anatomical_locations": []
+      }
+    }
+  }
+}
