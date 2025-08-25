@@ -25,7 +25,7 @@ sys.path.append(str(project_root))
 
 from api_clients.openai_client import OpenAIClient
 from api_clients.anthropic_client import AnthropicClient
-from api_clients.google_client import GeminiClient
+from api_clients.gemini_client import GeminiClient
 from api_clients.moonshot_client import MoonshotClient
 from api_clients.deepseek_client import DeepseekClient
 
