@@ -16,18 +16,20 @@ from pathlib import Path
 
 # 添加src目录到Python路径
 sys.path.append(str(Path(__file__).parent / "src"))
+sys.path.append(str(Path(__file__).parent.parent / "Rag_Build" / "src"))
 
 from config_loader import ConfigLoader
 from data_loader import DataLoader
 from api_manager import APIManager
 from evaluator import Evaluator
 from utils.logger import ReportLogger
+from enhanced_search_engine import EnhancedMedicalSearchEngine
 
 
 class MainWorkflow:
     """主工作流程类"""
     
-    def __init__(self, config_path: str = "config/config.yaml"):
+    def __init__(self, config_path: str = "config/config.yaml", rag_cache_path: Optional[str] = None):
         """初始化主工作流程"""
         self.config = ConfigLoader(config_path)
         self.data_loader = DataLoader()
@@ -42,6 +44,53 @@ class MainWorkflow:
         # 创建日志目录
         self.logs_dir = Path("logs")
         self.logs_dir.mkdir(exist_ok=True)
+        
+        # RAG 缓存（优先）或在线检索引擎
+        self.rag_cache: Dict[str, List[Dict[str, Any]]] = {}
+        if rag_cache_path and Path(rag_cache_path).exists():
+            self._load_rag_cache(rag_cache_path)
+            self.search_engine = None
+            print(f"✅ 已加载RAG缓存: {rag_cache_path} (共 {len(self.rag_cache)} 条)")
+        else:
+            # 初始化RAG搜索引擎（仅在没有缓存时）
+            default_index_dir = "/home/duojiechen/Projects/Rag_system/Rag_Build/enhanced_faiss_indexes"
+            self.rag_index_dir = os.getenv("RAG_INDEX_DIR", default_index_dir)
+            try:
+                self.search_engine = EnhancedMedicalSearchEngine(self.rag_index_dir)
+                print(f"✅ RAG 搜索引擎已初始化: {self.rag_index_dir}")
+            except Exception as e:
+                print(f"❌ RAG 搜索引擎初始化失败: {e}")
+                self.search_engine = None
+
+    def _load_rag_cache(self, cache_path: str) -> None:
+        """加载由 Rag_Build 生成的 JSONL 缓存，按 query 建立映射"""
+        cache_file = Path(cache_path)
+        mapping: Dict[str, List[Dict[str, Any]]] = {}
+        try:
+            with open(cache_file, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        obj = json.loads(line)
+                    except Exception:
+                        continue
+                    query = (obj.get('query') or '').strip()
+                    results = obj.get('results') or []
+                    if query:
+                        mapping[query] = results
+        except Exception as e:
+            print(f"⚠️ 加载RAG缓存失败: {e}")
+        self.rag_cache = mapping
+
+    def _lookup_rag_cache(self, symptom_text: str, top_k: int = 3) -> List[Dict[str, Any]]:
+        """在缓存中查找对应症状的检索结果（精确匹配，找不到则返回空）"""
+        key = (symptom_text or '').strip()
+        if not key:
+            return []
+        items = self.rag_cache.get(key) or []
+        return items[:top_k]
     
     def process_report(self, report_data: Dict[str, Any]) -> Dict[str, Any]:
         """处理单个报告"""
@@ -76,17 +125,97 @@ class MainWorkflow:
                 else:
                     system_prompt = "你是一个医学专家，请根据症状识别相关的器官和解剖位置。"
                 
-                api_result = self.api_manager.process_symptom(symptom_item, system_prompt)
+                # 先运行基线：不带RAG增强的原始提示
+                baseline_api_result = self.api_manager.process_symptom(symptom_item, system_prompt)
+                # 组装并评估基线结果
+                baseline_api_responses: Dict[str, Any] = {}
+                for api_name, response in baseline_api_result.items():
+                    api_response_data = {
+                        'response': response.get('response', ''),
+                        'parsed_data': response.get('parsed_data', {}),
+                        'organ_name': response.get('organ_name', ''),
+                        'anatomical_locations': response.get('anatomical_locations', [])
+                    }
+                    if response.get('success') and response.get('parsed_data'):
+                        evaluation = self.evaluator.evaluate_single_response(
+                            api_response=response,
+                            expected_results=expected_organs
+                        )
+                        api_response_data['evaluation'] = evaluation
+                    else:
+                        api_response_data['evaluation'] = {
+                            'overall_score': 0.0,
+                            'precision': 0.0,
+                            'recall': 0.0,
+                            'overgeneration_penalty': 0.0,
+                            'detailed_analysis': 'API调用失败或无有效数据'
+                        }
+                    baseline_api_responses[api_name] = api_response_data
+
+                # 第一步：使用RAG进行检索（优先缓存，其次在线），获得参考证据
+                rag_results = None
+                rag_primary_refs: List[Dict[str, Any]] = []
+                rag_context_refs: List[Dict[str, Any]] = []
+                if self.rag_cache:
+                    try:
+                        cached = self._lookup_rag_cache(symptom_text, top_k=3)
+                        for item in cached:
+                            text = item.get('text') or item.get('d_diagnosis') or ''
+                            organ = item.get('o_organ')  # dict: {organName, anatomicalLocations}
+                            rag_primary_refs.append({'text': text, 'organ': organ})
+                    except Exception as re:
+                        print(f"    读取RAG缓存失败，继续使用原始症状: {re}")
+                elif self.search_engine is not None and symptom_text:
+                    try:
+                        rag_results = self.search_engine.comprehensive_search(
+                            query=symptom_text,
+                            top_k=3,
+                            rerank=False,
+                            force_query_type='symptom'
+                        )
+                        # 组装主检索结果（text + organ，如可用）
+                        for item in rag_results.get('primary_results', [])[:3]:
+                            data = item.get('data', {})
+                            text = item.get('symptom_text') or data.get('text') or ''
+                            organ = data.get('organ')
+                            rag_primary_refs.append({
+                                'text': text,
+                                'organ': organ
+                            })
+                        # 组装上下文中的相关诊断（通常包含 organ）
+                        for diag in rag_results.get('context_results', {}).get('related_diagnoses', [])[:5]:
+                            rag_context_refs.append({
+                                'text': diag.get('diagnosis_text', ''),
+                                'organ': diag.get('organ')
+                            })
+                    except Exception as re:
+                        print(f"    RAG检索失败，继续使用原始症状: {re}")
+                
+                # 第二步：将RAG证据注入用户提示，作为参考
+                augmented_symptom_text = self._build_augmented_prompt(symptom_text, rag_primary_refs, rag_context_refs)
+                augmented_item = dict(symptom_item)
+                augmented_item['symptom_text'] = augmented_symptom_text
+                
+                # 调用API（RAG增强）
+                api_result = self.api_manager.process_symptom(augmented_item, system_prompt)
                 
                 # 为每个症状构建完整的数据结构
                 symptom_data = {
                     'symptom_id': symptom_id,
                     'diagnosis': symptom_text,
                     'expected_organs': expected_organs,
-                    'api_responses': {}
+                    'api_responses': {},
+                    'api_responses_baseline': {},
+                    'api_responses_with_rag': {},
+                    'comparison': {},
+                    'rag_retrieval': {
+                        'primary_refs': rag_primary_refs,
+                        'context_refs': rag_context_refs
+                    }
                 }
                 
-                # 处理每个API的响应和评估
+                # 处理RAG增强后的API响应和评估
+                rag_api_responses: Dict[str, Any] = {}
                 for api_name, response in api_result.items():
                     api_response_data = {
                         'response': response.get('response', ''),
@@ -111,7 +240,49 @@ class MainWorkflow:
                             'detailed_analysis': 'API调用失败或无有效数据'
                         }
                     
-                    symptom_data['api_responses'][api_name] = api_response_data
+                    rag_api_responses[api_name] = api_response_data
+                
+                # 保存两套结果，并将 api_responses 指向 with_rag 以兼容原有下游
+                symptom_data['api_responses_with_rag'] = rag_api_responses
+                symptom_data['api_responses_baseline'] = baseline_api_responses
+                symptom_data['api_responses'] = rag_api_responses
+                
+                # 生成对比摘要（with_rag - baseline）
+                all_api_names = set(list(baseline_api_responses.keys()) + list(rag_api_responses.keys()))
+                for name in all_api_names:
+                    base_eval = baseline_api_responses.get(name, {}).get('evaluation')
+                    rag_eval = rag_api_responses.get(name, {}).get('evaluation')
+                    if base_eval and rag_eval:
+                        comp = {
+                            'overall_delta': round(rag_eval.get('overall_score', 0) - base_eval.get('overall_score', 0), 1),
+                            'precision_delta': round(rag_eval.get('precision', 0) - base_eval.get('precision', 0), 1),
+                            'recall_delta': round(rag_eval.get('recall', 0) - base_eval.get('recall', 0), 1),
+                            'overgeneration_penalty_delta': round(rag_eval.get('overgeneration_penalty', 0) - base_eval.get('overgeneration_penalty', 0), 1),
+                            'baseline_prediction': {
+                                'organ_name': baseline_api_responses.get(name, {}).get('organ_name', ''),
+                                'anatomical_locations': baseline_api_responses.get(name, {}).get('anatomical_locations', [])
+                            },
+                            'with_rag_prediction': {
+                                'organ_name': rag_api_responses.get(name, {}).get('organ_name', ''),
+                                'anatomical_locations': rag_api_responses.get(name, {}).get('anatomical_locations', [])
+                            }
+                        }
+                    else:
+                        comp = {
+                            'overall_delta': 0.0,
+                            'precision_delta': 0.0,
+                            'recall_delta': 0.0,
+                            'overgeneration_penalty_delta': 0.0,
+                            'baseline_prediction': {
+                                'organ_name': baseline_api_responses.get(name, {}).get('organ_name', ''),
+                                'anatomical_locations': baseline_api_responses.get(name, {}).get('anatomical_locations', [])
+                            },
+                            'with_rag_prediction': {
+                                'organ_name': rag_api_responses.get(name, {}).get('organ_name', ''),
+                                'anatomical_locations': rag_api_responses.get(name, {}).get('anatomical_locations', [])
+                            }
+                        }
+                    symptom_data['comparison'][name] = comp
                 
                 report_results['symptoms'].append(symptom_data)
                 
@@ -130,6 +301,46 @@ class MainWorkflow:
                 report_results['symptoms'].append(symptom_data)
         
         return report_results
+
+    def _build_augmented_prompt(self, symptom_text: str, primary_refs: List[Dict[str, Any]], context_refs: List[Dict[str, Any]]) -> str:
+        """将RAG检索到的证据拼接到用户提示中，提供文本与对应器官参考"""
+        if not primary_refs and not context_refs:
+            return symptom_text
+        
+        def fmt_ref(ref: Dict[str, Any]) -> str:
+            organ_part = ""
+            organ = ref.get('organ')
+            if organ:
+                # organ 可能是字符串或字典
+                if isinstance(organ, str):
+                    organ_part = f" | organ: {organ}"
+                elif isinstance(organ, dict):
+                    # 常见结构: {'organName': 'xxx', 'anatomicalLocations': [...]}
+                    name = organ.get('organName') or organ.get('name') or ''
+                    locs = organ.get('anatomicalLocations') or organ.get('locations') or []
+                    if isinstance(locs, list):
+                        loc_str = ", ".join(locs)
+                    else:
+                        loc_str = str(locs)
+                    organ_part = f" | organ: {name} | locations: {loc_str}" if name or loc_str else ""
+            text = ref.get('text') or ''
+            return f"- {text}{organ_part}".strip()
+        
+        primary_block = "\n".join([fmt_ref(r) for r in primary_refs]) if primary_refs else ""
+        context_block = "\n".join([fmt_ref(r) for r in context_refs]) if context_refs else ""
+        
+        aug_parts = [
+            "以下是我的症状描述：",
+            symptom_text.strip(),
+            "",
+            "下面给你一些来自检索系统（RAG）的相关参考，请在回答时以这些参考为主要依据进行推理与归纳，同时严格输出JSON结构：",
+            "参考-主检索：",
+            primary_block if primary_block else "(无)",
+            "",
+            "参考-相关诊断：",
+            context_block if context_block else "(无)"
+        ]
+        return "\n".join([p for p in aug_parts if p is not None])
     
     def save_results(self, report_results: Dict[str, Any]) -> str:
         """保存单个报告的结果"""
@@ -484,11 +695,12 @@ def main():
     parser.add_argument("--max_files", type=int, help="最大处理文件数量")
     parser.add_argument("--mock_mode", action="store_true", help="启用模拟模式")
     parser.add_argument("--config", default="config/config.yaml", help="配置文件路径")
+    parser.add_argument("--rag_cache", type=str, help="RAG检索结果缓存(JSONL)路径，若提供则优先使用缓存")
     
     args = parser.parse_args()
     
     # 创建并运行工作流程
-    workflow = MainWorkflow(args.config)
+    workflow = MainWorkflow(args.config, rag_cache_path=args.rag_cache)
     workflow.run_workflow(
         start_id=args.start_id,
         end_id=args.end_id,
@@ -499,3 +711,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+

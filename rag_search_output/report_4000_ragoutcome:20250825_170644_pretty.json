@@ -1,0 +1,570 @@
+[
+  {
+    "query": "80 millimeter aortic valve gradient",
+    "expected_organs": [
+      "Heart (Cor)"
+    ],
+    "expected_a_locations": [
+      "Aortic Valve",
+      "Mitral Valve"
+    ],
+    "s": {
+      "rag_s_1_id": {
+        "units": [
+          {
+            "u_id": "u_43404",
+            "u_unit": {
+              "d_diagnosis": "severe calcific aortic stenosis .6 cm2 with mild aortic regurgitation",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "severe calcific aortic stenosis .6 cm2 with mild aortic regurgitation"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "units": [
+          {
+            "u_id": "u_85008",
+            "u_unit": {
+              "d_diagnosis": "three vessel coronary artery disease",
+              "o_organ": {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "three vessel coronary artery disease"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "units": [
+          {
+            "u_id": "u_50937",
+            "u_unit": {
+              "d_diagnosis": "hypoxemic respiratory failure: patient with an elevated a-a gradient, respiratory distress, and fever, raising concern for pneumonia",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "hypoxemic respiratory failure: patient with an elevated a-a gradient, respiratory distress, and fever, raising concern for pneumonia"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "the heart has a systolic ejection murmur",
+    "expected_organs": [
+      "Heart (Cor)"
+    ],
+    "expected_a_locations": [
+      "Aortic Valve",
+      "Mitral Valve"
+    ],
+    "s": {
+      "rag_s_1_id": {
+        "units": [
+          {
+            "u_id": "u_13589",
+            "u_unit": {
+              "d_diagnosis": "the patient is a 73-year-old gentleman who was found to have critical aortic stenosis as well as coronary artery disease.",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "the patient is a 73-year-old gentleman who was found to have critical aortic stenosis as well as coronary artery disease."
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "units": [
+          {
+            "u_id": "u_6690",
+            "u_unit": {
+              "d_diagnosis": "systolic ejection murmur",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "systolic ejection murmur"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "units": [
+          {
+            "u_id": "u_79454",
+            "u_unit": {
+              "d_diagnosis": "Aortic valve disorders",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "Aortic valve disorders"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "moderate to severe mitral regurgitation",
+    "expected_organs": [
+      "Heart (Cor)"
+    ],
+    "expected_a_locations": [
+      "Aortic Valve",
+      "Mitral Valve"
+    ],
+    "s": {
+      "rag_s_1_id": {
+        "units": [
+          {
+            "u_id": "u_24333",
+            "u_unit": {
+              "d_diagnosis": "an echocardiogram was notable for moderate mitral regurgitation",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "an echocardiogram was notable for moderate mitral regurgitation"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "units": [
+          {
+            "u_id": "u_51346",
+            "u_unit": {
+              "d_diagnosis": "moderate mitral regurgitation",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "moderate mitral regurgitation"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "units": [
+          {
+            "u_id": "u_40684",
+            "u_unit": {
+              "d_diagnosis": "the mitral valve leaflets are mildly thickened",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "the mitral valve leaflets are mildly thickened"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "four episodes of loss of consciousness over the past six months",
+    "expected_organs": [
+      "Heart (Cor)"
+    ],
+    "expected_a_locations": [
+      "Aortic Root & Ascending Aorta",
+      "Aortic Valve",
+      "Left Ventricle (LV)"
+    ],
+    "s": {
+      "rag_s_1_id": {
+        "units": [
+          {
+            "u_id": "u_79029",
+            "u_unit": {
+              "d_diagnosis": "past medical history of transient ischemic attacks",
+              "o_organ": {
+                "organName": "Brain",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "past medical history of transient ischemic attacks"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "units": [
+          {
+            "u_id": "u_57133",
+            "u_unit": {
+              "d_diagnosis": "small intracranial hemorrhage",
+              "o_organ": {
+                "organName": "Brain",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "small intracranial hemorrhage"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "units": [
+          {
+            "u_id": "u_10158",
+            "u_unit": {
+              "d_diagnosis": "colonic thickening",
+              "o_organ": {
+                "organName": "Large intestine (Intestinum crassum)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "colonic thickening"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "no jugular venous distention, no carotid bruits",
+    "expected_organs": [
+      "Heart (Cor)"
+    ],
+    "expected_a_locations": [
+      "Aortic Valve",
+      "Mitral Valve"
+    ],
+    "s": {
+      "rag_s_1_id": {
+        "units": [
+          {
+            "u_id": "u_56758",
+            "u_unit": {
+              "d_diagnosis": "acute myocardial infarction",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "acute myocardial infarction"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "units": [
+          {
+            "u_id": "u_25729",
+            "u_unit": {
+              "d_diagnosis": "discharge diagnoses: 1. diabetes mellitus. 2. coronary artery disease. 3. angina. 4. hypercholesterolemia. 5. hypertension. 6. elevated psa. 7. venous varicosities. 8. slightly reduced left ventricular function.",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "discharge diagnoses: 1. diabetes mellitus. 2. coronary artery disease. 3. angina. 4. hypercholesterolemia. 5. hypertension. 6. elevated psa. 7. venous varicosities. 8. slightly reduced left ventricular function."
+              }
+            }
+          },
+          {
+            "u_id": "u_25730",
+            "u_unit": {
+              "d_diagnosis": "discharge diagnoses: 1. diabetes mellitus. 2. coronary artery disease. 3. angina. 4. hypercholesterolemia. 5. hypertension. 6. elevated psa. 7. venous varicosities. 8. slightly reduced left ventricular function.",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "discharge diagnoses: 1. diabetes mellitus. 2. coronary artery disease. 3. angina. 4. hypercholesterolemia. 5. hypertension. 6. elevated psa. 7. venous varicosities. 8. slightly reduced left ventricular function."
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "units": [
+          {
+            "u_id": "u_81770",
+            "u_unit": {
+              "d_diagnosis": "aortic valve replacement as well as resection of the ascending aortic aneurysm and the non-coronary sinuses",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "aortic valve replacement as well as resection of the ascending aortic aneurysm and the non-coronary sinuses"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "shortness of breath",
+    "expected_organs": [
+      "Heart (Cor)",
+      "Lung (Pulmo)"
+    ],
+    "expected_a_locations": [
+      "Left Atrium (LA)",
+      "Left Lung",
+      "Left Ventricle (LV)",
+      "Mitral Valve",
+      "Pleural Cavity",
+      "Visceral Pleura"
+    ],
+    "s": {
+      "rag_s_1_id": {
+        "units": [
+          {
+            "u_id": "u_4022",
+            "u_unit": {
+              "d_diagnosis": "large pericardial effusion without markers for tamponade",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "large pericardial effusion without markers for tamponade"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "units": [
+          {
+            "u_id": "u_6717",
+            "u_unit": {
+              "d_diagnosis": "lung cancer",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "lung cancer"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "units": [
+          {
+            "u_id": "u_3329",
+            "u_unit": {
+              "d_diagnosis": "hemothorax",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "hemothorax"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "dyspnea on exertion",
+    "expected_organs": [
+      "Heart (Cor)",
+      "Lung (Pulmo)"
+    ],
+    "expected_a_locations": [
+      "Aortic Valve",
+      "Left Lung",
+      "Left Ventricle (LV)",
+      "Mitral Valve",
+      "Pleural Cavity",
+      "Visceral Pleura"
+    ],
+    "s": {
+      "rag_s_1_id": {
+        "units": [
+          {
+            "u_id": "u_5835",
+            "u_unit": {
+              "d_diagnosis": "chf (preserved ef)",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "chf (preserved ef)"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "units": [
+          {
+            "u_id": "u_8620",
+            "u_unit": {
+              "d_diagnosis": "Pneumonia, organism unspecified",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "Pneumonia, organism unspecified"
+              }
+            }
+          },
+          {
+            "u_id": "u_8621",
+            "u_unit": {
+              "d_diagnosis": "coronary artery bypass graft x 3 (lima to lad, svg to diag, svg to om)",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "coronary artery bypass graft x 3 (lima to lad, svg to diag, svg to om)"
+              }
+            }
+          },
+          {
+            "u_id": "u_8622",
+            "u_unit": {
+              "d_diagnosis": "Moyamoya disease",
+              "o_organ": {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "Moyamoya disease"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "units": [
+          {
+            "u_id": "u_6681",
+            "u_unit": {
+              "d_diagnosis": "Coronary atherosclerosis of native coronary artery",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "Coronary atherosclerosis of native coronary artery"
+              }
+            }
+          },
+          {
+            "u_id": "u_6682",
+            "u_unit": {
+              "d_diagnosis": "Asthma, unspecified type, unspecified",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "Asthma, unspecified type, unspecified"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "legally blind for three years",
+    "expected_organs": [
+      "Eye (Oculus)"
+    ],
+    "expected_a_locations": [
+      "Macula",
+      "Optic Nerve",
+      "Retina"
+    ],
+    "s": {
+      "rag_s_1_id": {
+        "units": [
+          {
+            "u_id": "u_65410",
+            "u_unit": {
+              "d_diagnosis": "Legal blindness, as defined in U.S.A.",
+              "o_organ": {
+                "organName": "Eye (Oculus)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "Legal blindness, as defined in U.S.A."
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "units": [
+          {
+            "u_id": "u_56797",
+            "u_unit": {
+              "d_diagnosis": "Background diabetic retinopathy",
+              "o_organ": {
+                "organName": "Eye (Oculus)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "Background diabetic retinopathy"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "units": [
+          {
+            "u_id": "u_15201",
+            "u_unit": {
+              "d_diagnosis": "Legal blindness, as defined in U.S.A.",
+              "o_organ": {
+                "organName": "Eye (Oculus)",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "Legal blindness, as defined in U.S.A."
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+]

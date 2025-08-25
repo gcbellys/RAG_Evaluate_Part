@@ -1,0 +1,225 @@
+[
+  {
+    "report_number": "diagnostic_4000",
+    "symptom_number": 1,
+    "symptom_name": "80 millimeter aortic valve gradient",
+    "expected_result": {
+      "diag": "Diagnoses: Pure hypercholesterolemia Unspecified pleural effusion Congestive heart failure, unspecified; Procedure: Extracorporeal circulation auxiliary to open heart surgery Combined right and left heart cardiac catheterization; hospital course: the patient was taken by the plastic surgery service and went to the operating room",
+      "organ": "Heart (Cor)",
+      "a_position": "Aortic Valve, Mitral Valve",
+      "organ_distribution": {
+        "Heart (Cor)": ["Aortic Valve", "Mitral Valve"]
+      }
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "openai",
+        "api_response": {
+          "organ": "",
+          "a_position": ""
+        },
+        "api_eva": {
+          "overall_score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "overgeneration_penalty": 0.0,
+          "detailed_analysis": "API调用失败或无有效数据"
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "anthropic",
+        "api_response": {
+          "organ": "Heart (Cor)",
+          "a_position": "Aortic Valve, Left Ventricle (LV), Aortic Root & Ascending Aorta"
+        },
+        "api_eva": {
+          "overall_score": 48.3,
+          "precision": 33.3,
+          "recall": 50.0,
+          "overgeneration_penalty": 75.0
+        }
+      }
+    ]
+  },
+  {
+    "report_number": "diagnostic_4000",
+    "symptom_number": 6,
+    "symptom_name": "shortness of breath",
+    "expected_result": {
+      "diag": "chest x-ray showed a large pleural effusion for which she was given lasix and diuresed out.; moderate to severe mitral regurgitation",
+      "organ": "Heart (Cor), Lung (Pulmo)",
+      "a_position": "Left Atrium (LA), Left Lung, Left Ventricle (LV), Mitral Valve, Pleural Cavity, Visceral Pleura",
+      "organ_distribution": {
+        "Heart (Cor)": ["Left Atrium (LA)", "Left Ventricle (LV)", "Mitral Valve"],
+        "Lung (Pulmo)": ["Left Lung", "Pleural Cavity", "Visceral Pleura"]
+      }
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "openai",
+        "api_response": {
+          "organ": "",
+          "a_position": ""
+        },
+        "api_eva": {
+          "overall_score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "overgeneration_penalty": 0.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "anthropic",
+        "api_response": {
+          "organ": "Heart (Cor)",
+          "a_position": "Left Ventricle (LV), Left Atrium (LA), Mitral Valve"
+        },
+        "api_eva": {
+          "overall_score": 60.0,
+          "precision": 100.0,
+          "recall": 50.0,
+          "overgeneration_penalty": 0.0,
+          "detailed_analysis": "正确识别心脏相关部分，但遗漏肺部成分"
+        }
+      },
+      {
+        "api_number": 3,
+        "api_name": "gemini",
+        "api_response": {
+          "organ": "Lung (Pulmo)",
+          "a_position": "Pleural Cavity, Left Lung"
+        },
+        "api_eva": {
+          "overall_score": 50.0,
+          "precision": 100.0,
+          "recall": 33.3,
+          "overgeneration_penalty": 0.0,
+          "detailed_analysis": "正确识别肺部成分，但遗漏心脏部分"
+        }
+      }
+    ]
+  },
+  {
+    "report_number": "diagnostic_4000", 
+    "symptom_number": 7,
+    "symptom_name": "dyspnea on exertion",
+    "expected_result": {
+      "diag": "cardiac catheterization found an 80 millimeter aortic valve gradient, moderate to severe mitral regurgitation.; chest x-ray showed a large pleural effusion for which she was given lasix and diuresed out.",
+      "organ": "Heart (Cor), Lung (Pulmo)",
+      "a_position": "Aortic Valve, Left Lung, Left Ventricle (LV), Mitral Valve, Pleural Cavity, Visceral Pleura",
+      "organ_distribution": {
+        "Heart (Cor)": ["Aortic Valve", "Left Ventricle (LV)", "Mitral Valve"],
+        "Lung (Pulmo)": ["Left Lung", "Pleural Cavity", "Visceral Pleura"]
+      }
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "openai",
+        "api_response": {
+          "organ": "",
+          "a_position": ""
+        },
+        "api_eva": {
+          "overall_score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "overgeneration_penalty": 0.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "anthropic",
+        "api_response": {
+          "organ": "Heart (Cor)",
+          "a_position": "Left Ventricle (LV), Aortic Valve, Mitral Valve"
+        },
+        "api_eva": {
+          "overall_score": 75.0,
+          "precision": 100.0,
+          "recall": 50.0,
+          "overgeneration_penalty": 0.0,
+          "detailed_analysis": "完美识别心脏成分，但未识别肺部成分"
+        }
+      },
+      {
+        "api_number": 3,
+        "api_name": "gemini",
+        "api_response": {
+          "organ": "Heart (Cor)",
+          "a_position": "Left Ventricle (LV), Right Ventricle (RV), Pulmonary Artery"
+        },
+        "api_eva": {
+          "overall_score": 45.0,
+          "precision": 33.3,
+          "recall": 16.7,
+          "overgeneration_penalty": 50.0,
+          "detailed_analysis": "部分正确但有过度生成"
+        }
+      }
+    ]
+  },
+  {
+    "report_number": "diagnostic_4000",
+    "symptom_number": 8,
+    "symptom_name": "legally blind for three years",
+    "expected_result": {
+      "diag": "Macular degeneration (senile), unspecified",
+      "organ": "Eye (Oculus)",
+      "a_position": "Macula, Optic Nerve, Retina",
+      "organ_distribution": {
+        "Eye (Oculus)": ["Macula", "Optic Nerve", "Retina"]
+      }
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "openai",
+        "api_response": {
+          "organ": "",
+          "a_position": ""
+        },
+        "api_eva": {
+          "overall_score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "overgeneration_penalty": 0.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "anthropic",
+        "api_response": {
+          "organ": "Eye (Oculus)",
+          "a_position": "Retina, Macula"
+        },
+        "api_eva": {
+          "overall_score": 83.3,
+          "precision": 100.0,
+          "recall": 66.7,
+          "overgeneration_penalty": 0.0,
+          "detailed_analysis": "正确识别眼部器官，遗漏视神经"
+        }
+      },
+      {
+        "api_number": 4,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Eye (Oculus)",
+          "a_position": "Retina, Optic Nerve, Cornea"
+        },
+        "api_eva": {
+          "overall_score": 73.3,
+          "precision": 66.7,
+          "recall": 66.7,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "识别准确但包含无关结构(角膜)"
+        }
+      }
+    ]
+  }
+]
