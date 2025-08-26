@@ -1,0 +1,3530 @@
+{
+  "report_id": "diagnostic_4001",
+  "timestamp": "2025-08-26T08:22:58.151464",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4001_symptom_0",
+      "diagnosis": "no minimal pericardial effusion, no evidence of tamponade",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "",
+          "parsed_data": {},
+          "organ_name": "",
+          "anatomical_locations": [],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": "API调用失败或无有效数据"
+          }
+        },
+        "anthropic": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Pericardium\",\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Pericardium",
+              "Left Ventricle (LV)",
+              "Right Ventricle (RV)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Pericardium",
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Pericardium",
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ],
+          "evaluation": {
+            "overall_score": 15.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Pericardium\",\n        \"Right Atrium (RA)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Pericardium",
+              "Right Atrium (RA)",
+              "Right Ventricle (RV)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Pericardium",
+                    "Right Atrium (RA)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Pericardium",
+            "Right Atrium (RA)",
+            "Right Ventricle (RV)"
+          ],
+          "evaluation": {
+            "overall_score": 15.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 20.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 100.0,
+            "detailed_analysis": "Precision(精确率): 0/1 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 100.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Pericardium\",\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Pericardium",
+              "Left Ventricle (LV)",
+              "Right Ventricle (RV)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Pericardium",
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Pericardium",
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ],
+          "evaluation": {
+            "overall_score": 15.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 75.0%"
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4001_symptom_1",
+      "diagnosis": "left ventriculography revealed an ejection fraction of 46% with mild global hypokinesis. there was no mitral regurgitation",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "",
+          "parsed_data": {},
+          "organ_name": "",
+          "anatomical_locations": [],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": "API调用失败或无有效数据"
+          }
+        },
+        "anthropic": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Mitral Valve\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Papillary Muscles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Anterior Descending Artery (LAD)\",\n        \"Circumflex Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Mitral Valve",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Papillary Muscles"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Mitral Valve",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Papillary Muscles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Anterior Descending Artery (LAD)",
+                    "Circumflex Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Papillary Muscles"
+          ],
+          "evaluation": {
+            "overall_score": 40.0,
+            "precision": 25.0,
+            "recall": 50.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Mitral Valve\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Papillary Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Mitral Valve",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Papillary Muscles"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Mitral Valve",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Papillary Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Papillary Muscles"
+          ],
+          "evaluation": {
+            "overall_score": 40.0,
+            "precision": 25.0,
+            "recall": 50.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Interventricular Septum (IVS)\",\n        \"Mitral Valve\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Interventricular Septum (IVS)",
+              "Mitral Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Interventricular Septum (IVS)",
+                    "Mitral Valve"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)",
+            "Mitral Valve"
+          ],
+          "evaluation": {
+            "overall_score": 48.3,
+            "precision": 33.3,
+            "recall": 50.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 1/3 (33.3%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Papillary Muscles\",\n        \"Chordae Tendineae\",\n        \"Mitral Valve\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Papillary Muscles",
+              "Chordae Tendineae",
+              "Mitral Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Papillary Muscles",
+                    "Chordae Tendineae",
+                    "Mitral Valve"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Papillary Muscles",
+            "Chordae Tendineae",
+            "Mitral Valve"
+          ],
+          "evaluation": {
+            "overall_score": 40.0,
+            "precision": 25.0,
+            "recall": 50.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 50.0%"
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4001_symptom_2",
+      "diagnosis": "the right-sided filling pressures were normal. the preliminary capillary wedge pressure was 12 mm of mercury. the left ventricular end diastolic pressure was elevated about 30 mm of mercury. cardiac index depressed at 2.2 liters/min meter squared",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "",
+          "parsed_data": {},
+          "organ_name": "",
+          "anatomical_locations": [],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": "API调用失败或无有效数据"
+          }
+        },
+        "anthropic": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Pulmonary Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Pulmonary Artery\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Capillary (Vas capillare)\",\n      \"anatomicalLocations\": [\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Right Ventricle (RV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Pulmonary Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Pulmonary Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Pulmonary Artery",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Capillary (Vas capillare)",
+                  "anatomicalLocations": [
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Pulmonary Valve"
+          ],
+          "evaluation": {
+            "overall_score": 10.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 0/4 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Mitral Valve\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pulmonary Capillaries\",\n        \"Pulmonary Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Mitral Valve",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Mitral Valve",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pulmonary Capillaries",
+                    "Pulmonary Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 81.7,
+            "precision": 66.7,
+            "recall": 100.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Mitral Valve\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Mitral Valve",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Mitral Valve",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 81.7,
+            "precision": 66.7,
+            "recall": 100.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Mitral Valve\",\n        \"Aortic Valve\",\n        \"Left Atrium (LA)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Mitral Valve",
+              "Aortic Valve",
+              "Left Atrium (LA)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Mitral Valve",
+                    "Aortic Valve",
+                    "Left Atrium (LA)"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve",
+            "Aortic Valve",
+            "Left Atrium (LA)"
+          ],
+          "evaluation": {
+            "overall_score": 70.0,
+            "precision": 50.0,
+            "recall": 100.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 50.0%"
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4001_symptom_3",
+      "diagnosis": "left ventricular systolic function is moderately depressed",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "",
+          "parsed_data": {},
+          "organ_name": "",
+          "anatomical_locations": [],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": "API调用失败或无有效数据"
+          }
+        },
+        "anthropic": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Papillary Muscles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Coronary Artery\",\n        \"Left Anterior Descending Artery (LAD)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Papillary Muscles"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Papillary Muscles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Coronary Artery",
+                    "Left Anterior Descending Artery (LAD)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Papillary Muscles"
+          ],
+          "evaluation": {
+            "overall_score": 81.7,
+            "precision": 66.7,
+            "recall": 100.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Aortic Valve\",\n        \"Mitral Valve\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Aortic Valve",
+              "Mitral Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Aortic Valve",
+                    "Mitral Valve"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Aortic Valve",
+            "Mitral Valve"
+          ],
+          "evaluation": {
+            "overall_score": 70.0,
+            "precision": 50.0,
+            "recall": 100.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Interventricular Septum (IVS)\",\n        \"Papillary Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Interventricular Septum (IVS)",
+              "Papillary Muscles"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Interventricular Septum (IVS)",
+                    "Papillary Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)",
+            "Papillary Muscles"
+          ],
+          "evaluation": {
+            "overall_score": 48.3,
+            "precision": 33.3,
+            "recall": 50.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 1/3 (33.3%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Mitral Valve\",\n        \"Aortic Valve\",\n        \"Chordae Tendineae\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Mitral Valve",
+              "Aortic Valve",
+              "Chordae Tendineae"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Mitral Valve",
+                    "Aortic Valve",
+                    "Chordae Tendineae"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve",
+            "Aortic Valve",
+            "Chordae Tendineae"
+          ],
+          "evaluation": {
+            "overall_score": 40.0,
+            "precision": 25.0,
+            "recall": 50.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 50.0%"
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4001_symptom_4",
+      "diagnosis": "small pericardial effusion",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Pericardium",
+            "Left Ventricle (LV)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "",
+          "parsed_data": {},
+          "organ_name": "",
+          "anatomical_locations": [],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": "API调用失败或无有效数据"
+          }
+        },
+        "anthropic": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Pericardium\",\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Visceral Pleura\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Pericardium",
+              "Left Ventricle (LV)",
+              "Right Ventricle (RV)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Pericardium",
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Visceral Pleura"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Pericardium",
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ],
+          "evaluation": {
+            "overall_score": 81.7,
+            "precision": 66.7,
+            "recall": 100.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Pericardium\",\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Pericardium",
+              "Left Ventricle (LV)",
+              "Right Ventricle (RV)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Pericardium",
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Pericardium",
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ],
+          "evaluation": {
+            "overall_score": 81.7,
+            "precision": 66.7,
+            "recall": 100.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 80.0,
+            "precision": 100.0,
+            "recall": 50.0,
+            "overgeneration_penalty": 100.0,
+            "detailed_analysis": "Precision(精确率): 1/1 (100.0%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 100.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Pericardium\",\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Pericardium",
+              "Left Ventricle (LV)",
+              "Right Ventricle (RV)",
+              "Aortic Root & Ascending Aorta"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Pericardium",
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Root & Ascending Aorta"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Pericardium",
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)",
+            "Aortic Root & Ascending Aorta"
+          ],
+          "evaluation": {
+            "overall_score": 70.0,
+            "precision": 50.0,
+            "recall": 100.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 50.0%"
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4001_symptom_5",
+      "diagnosis": "temperature 97.7, heart rate 98, respirations 13, 94% on room air saturations, blood pressure 141/71",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "",
+          "parsed_data": {},
+          "organ_name": "",
+          "anatomical_locations": [],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": "API调用失败或无有效数据"
+          }
+        },
+        "anthropic": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Ascending Aorta\",\n        \"Thoracic Aorta\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Right Ventricle (RV)",
+              "Aortic Root & Ascending Aorta"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Root & Ascending Aorta"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Ascending Aorta",
+                    "Thoracic Aorta"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)",
+            "Aortic Root & Ascending Aorta"
+          ],
+          "evaluation": {
+            "overall_score": 15.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Pulmonary Capillaries"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Pulmonary Capillaries"
+          ],
+          "evaluation": {
+            "overall_score": 20.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 100.0,
+            "detailed_analysis": "Precision(精确率): 0/2 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 100.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Right Ventricle (RV)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ],
+          "evaluation": {
+            "overall_score": 20.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 100.0,
+            "detailed_analysis": "Precision(精确率): 0/2 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 100.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Carotid Artery\",\n        \"Radial Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Brainstem\",\n        \"Hypothalamus\",\n        \"Cerebral Cortex\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Carotid Artery",
+                    "Radial Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Bronchioles"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Brainstem",
+                    "Hypothalamus",
+                    "Cerebral Cortex"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 48.3,
+            "precision": 33.3,
+            "recall": 50.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 1/3 (33.3%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 75.0%"
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4001_symptom_6",
+      "diagnosis": "regular rate and rhythm, no murmurs, rubs or gallops appreciated",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "",
+          "parsed_data": {},
+          "organ_name": "",
+          "anatomical_locations": [],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": "API调用失败或无有效数据"
+          }
+        },
+        "anthropic": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Aortic Valve\",\n        \"Mitral Valve\",\n        \"Left Ventricle (LV)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Aortic Valve",
+              "Mitral Valve",
+              "Left Ventricle (LV)",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Aortic Valve",
+                    "Mitral Valve",
+                    "Left Ventricle (LV)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Aortic Valve",
+            "Mitral Valve",
+            "Left Ventricle (LV)",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 70.0,
+            "precision": 50.0,
+            "recall": 100.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Mitral Valve\",\n        \"Tricuspid Valve\",\n        \"Aortic Valve\",\n        \"Pulmonary Valve\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Mitral Valve",
+              "Tricuspid Valve",
+              "Aortic Valve",
+              "Pulmonary Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Mitral Valve",
+                    "Tricuspid Valve",
+                    "Aortic Valve",
+                    "Pulmonary Valve"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Mitral Valve",
+            "Tricuspid Valve",
+            "Aortic Valve",
+            "Pulmonary Valve"
+          ],
+          "evaluation": {
+            "overall_score": 70.0,
+            "precision": 50.0,
+            "recall": 100.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Left Atrium (LA)\",\n        \"Right Atrium (RA)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Right Ventricle (RV)",
+              "Left Atrium (LA)",
+              "Right Atrium (RA)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Left Atrium (LA)",
+                    "Right Atrium (RA)"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)",
+            "Left Atrium (LA)",
+            "Right Atrium (RA)"
+          ],
+          "evaluation": {
+            "overall_score": 10.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 0/4 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Left Atrium (LA)\",\n        \"Right Atrium (RA)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Right Ventricle (RV)",
+              "Left Atrium (LA)",
+              "Right Atrium (RA)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Left Atrium (LA)",
+                    "Right Atrium (RA)"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)",
+            "Left Atrium (LA)",
+            "Right Atrium (RA)"
+          ],
+          "evaluation": {
+            "overall_score": 10.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 0/4 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 50.0%"
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4001_symptom_7",
+      "diagnosis": "right coronary artery had a 70% stenosis",
+      "expected_organs": [
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Right Coronary Artery",
+            "Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "",
+          "parsed_data": {},
+          "organ_name": "",
+          "anatomical_locations": [],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": "API调用失败或无有效数据"
+          }
+        },
+        "anthropic": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Coronary Artery\",\n        \"Right Ventricle (RV)\",\n        \"Right Atrium (RA)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Right Coronary Artery\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Right Coronary Artery",
+              "Right Ventricle (RV)",
+              "Right Atrium (RA)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Coronary Artery",
+                    "Right Ventricle (RV)",
+                    "Right Atrium (RA)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Right Coronary Artery",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Right Coronary Artery",
+            "Right Ventricle (RV)",
+            "Right Atrium (RA)"
+          ],
+          "evaluation": {
+            "overall_score": 48.3,
+            "precision": 33.3,
+            "recall": 50.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 1/3 (33.3%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Ventricle (RV)\",\n        \"Right Atrium (RA)\",\n        \"Right Coronary Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Right Coronary Artery\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Right Ventricle (RV)",
+              "Right Atrium (RA)",
+              "Right Coronary Artery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Ventricle (RV)",
+                    "Right Atrium (RA)",
+                    "Right Coronary Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Right Coronary Artery"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Right Ventricle (RV)",
+            "Right Atrium (RA)",
+            "Right Coronary Artery"
+          ],
+          "evaluation": {
+            "overall_score": 48.3,
+            "precision": 33.3,
+            "recall": 50.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 1/3 (33.3%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Coronary Artery\",\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Right Coronary Artery\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Right Coronary Artery",
+              "Left Ventricle (LV)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Coronary Artery",
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Right Coronary Artery"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Right Coronary Artery",
+            "Left Ventricle (LV)"
+          ],
+          "evaluation": {
+            "overall_score": 60.0,
+            "precision": 50.0,
+            "recall": 50.0,
+            "overgeneration_penalty": 100.0,
+            "detailed_analysis": "Precision(精确率): 1/2 (50.0%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 100.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Coronary Artery\",\n        \"Right Ventricle (RV)\",\n        \"Left Ventricle (LV)\",\n        \"Interventricular Septum (IVS)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Right Coronary Artery\",\n        \"Coronary Artery\",\n        \"Aorta\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Right Coronary Artery",
+              "Right Ventricle (RV)",
+              "Left Ventricle (LV)",
+              "Interventricular Septum (IVS)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Coronary Artery",
+                    "Right Ventricle (RV)",
+                    "Left Ventricle (LV)",
+                    "Interventricular Septum (IVS)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Right Coronary Artery",
+                    "Coronary Artery",
+                    "Aorta"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Right Coronary Artery",
+            "Right Ventricle (RV)",
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ],
+          "evaluation": {
+            "overall_score": 40.0,
+            "precision": 25.0,
+            "recall": 50.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/2 (50.0%); 过度生成惩罚: 50.0%"
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4001_symptom_8",
+      "diagnosis": "large right inguinal hematoma",
+      "expected_organs": [
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Dermis",
+            "Subcutaneous Tissue"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "",
+          "parsed_data": {},
+          "organ_name": "",
+          "anatomical_locations": [],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": "API调用失败或无有效数据"
+          }
+        },
+        "anthropic": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Femoral Vein\",\n        \"Great Saphenous Vein\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Femoral Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Femoral Vein\",\n        \"Femoral Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Vein (Vena)",
+            "anatomical_locations": [
+              "Femoral Vein",
+              "Great Saphenous Vein"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Femoral Vein",
+                    "Great Saphenous Vein"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Femoral Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Skin (Cutis)",
+                  "anatomicalLocations": [
+                    "Femoral Vein",
+                    "Femoral Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Vein (Vena)",
+          "anatomical_locations": [
+            "Femoral Vein",
+            "Great Saphenous Vein"
+          ],
+          "evaluation": {
+            "overall_score": 20.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 100.0,
+            "detailed_analysis": "Precision(精确率): 0/2 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 100.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Femoral Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Femoral Vein\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lymph node\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Artery (Arteria)",
+            "anatomical_locations": [
+              "Femoral Artery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Femoral Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Femoral Vein"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lymph node",
+                  "anatomicalLocations": [],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Artery (Arteria)",
+          "anatomical_locations": [
+            "Femoral Artery"
+          ],
+          "evaluation": {
+            "overall_score": 20.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 100.0,
+            "detailed_analysis": "Precision(精确率): 0/1 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 100.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Femoral Vein\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Femoral Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Inguinal Region\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Vein (Vena)",
+            "anatomical_locations": [
+              "Femoral Vein"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Femoral Vein"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Femoral Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Skin (Cutis)",
+                  "anatomicalLocations": [
+                    "Inguinal Region"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Vein (Vena)",
+          "anatomical_locations": [
+            "Femoral Vein"
+          ],
+          "evaluation": {
+            "overall_score": 20.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 100.0,
+            "detailed_analysis": "Precision(精确率): 0/1 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 100.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Femoral Artery\",\n        \"External Iliac Artery\",\n        \"Deep Circumflex Iliac Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Femoral Vein\",\n        \"Great Saphenous Vein\",\n        \"External Iliac Vein\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Subcutaneous Tissue\",\n        \"Dermis\",\n        \"Superficial Fascia\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Artery (Arteria)",
+            "anatomical_locations": [
+              "Femoral Artery",
+              "External Iliac Artery",
+              "Deep Circumflex Iliac Artery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Femoral Artery",
+                    "External Iliac Artery",
+                    "Deep Circumflex Iliac Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Femoral Vein",
+                    "Great Saphenous Vein",
+                    "External Iliac Vein"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Skin (Cutis)",
+                  "anatomicalLocations": [
+                    "Subcutaneous Tissue",
+                    "Dermis",
+                    "Superficial Fascia"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Artery (Arteria)",
+          "anatomical_locations": [
+            "Femoral Artery",
+            "External Iliac Artery",
+            "Deep Circumflex Iliac Artery"
+          ],
+          "evaluation": {
+            "overall_score": 15.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 75.0%"
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4001_symptom_9",
+      "diagnosis": "the left atrium is normal in size. left ventricular wall thickness was normal. left ventricular size cavity size is normal. overall left ventricular systolic function is moderately depressed. resting regional wall motion abnormalities include septal, anterior akinesis. though, the views are limited, it appeared that the inferior wall was akinetic. there was a small pericardial effusion. the effusion appears circumferential. there are no echocardiographic signs or tamponade. compared to the previous report of , effusion has not changed. the ejection fraction appears worse than previously reported. previous study is not available for review. ejection fraction of 35% to 40%",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "",
+          "parsed_data": {},
+          "organ_name": "",
+          "anatomical_locations": [],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": "API调用失败或无有效数据"
+          }
+        },
+        "anthropic": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Left Atrium (LA)\",\n        \"Interventricular Septum (IVS)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Left Atrium (LA)",
+              "Interventricular Septum (IVS)",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Left Atrium (LA)",
+                    "Interventricular Septum (IVS)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Left Atrium (LA)",
+            "Interventricular Septum (IVS)",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 10.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 0/4 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Interventricular Septum (IVS)\",\n        \"Left Atrium (LA)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Interventricular Septum (IVS)",
+              "Left Atrium (LA)",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Interventricular Septum (IVS)",
+                    "Left Atrium (LA)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)",
+            "Left Atrium (LA)",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 10.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 0/4 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Interventricular Septum (IVS)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Interventricular Septum (IVS)",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Interventricular Septum (IVS)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 15.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Interventricular Septum (IVS)\",\n        \"Pericardium\",\n        \"Papillary Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Interventricular Septum (IVS)",
+              "Pericardium",
+              "Papillary Muscles"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Interventricular Septum (IVS)",
+                    "Pericardium",
+                    "Papillary Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)",
+            "Pericardium",
+            "Papillary Muscles"
+          ],
+          "evaluation": {
+            "overall_score": 10.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 0/4 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 50.0%"
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4001_symptom_10",
+      "diagnosis": "selective coronary angiography revealed a right dominant system. the left main coronary artery, left anterior descending and left circumflex were angiographically normal. the right coronary artery had a 70% stenosis. the neostented gap was seen on the previously placed proximal image stents. there was 90% restenosis placed on the initially placed mid . there was a 60% restenosis on the distal cypher . there was minimal disease of the posterior descending artery, percutaneous transluminal coronary angioplasty site",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "",
+          "parsed_data": {},
+          "organ_name": "",
+          "anatomical_locations": [],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": "API调用失败或无有效数据"
+          }
+        },
+        "anthropic": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Coronary Artery\",\n        \"Left Anterior Descending Artery (LAD)\",\n        \"Circumflex Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Anterior Descending Artery (LAD)\",\n        \"Right Coronary Artery\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Right Coronary Artery",
+              "Left Anterior Descending Artery (LAD)",
+              "Circumflex Artery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Coronary Artery",
+                    "Left Anterior Descending Artery (LAD)",
+                    "Circumflex Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Anterior Descending Artery (LAD)",
+                    "Right Coronary Artery"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Right Coronary Artery",
+            "Left Anterior Descending Artery (LAD)",
+            "Circumflex Artery"
+          ],
+          "evaluation": {
+            "overall_score": 15.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Coronary Artery\",\n        \"Left Anterior Descending Artery (LAD)\",\n        \"Circumflex Artery\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Right Coronary Artery\",\n        \"Left Anterior Descending Artery (LAD)\",\n        \"Circumflex Artery\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Right Coronary Artery",
+              "Left Anterior Descending Artery (LAD)",
+              "Circumflex Artery",
+              "Coronary Artery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Coronary Artery",
+                    "Left Anterior Descending Artery (LAD)",
+                    "Circumflex Artery",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Right Coronary Artery",
+                    "Left Anterior Descending Artery (LAD)",
+                    "Circumflex Artery"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Right Coronary Artery",
+            "Left Anterior Descending Artery (LAD)",
+            "Circumflex Artery",
+            "Coronary Artery"
+          ],
+          "evaluation": {
+            "overall_score": 10.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 0/4 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Coronary Artery\",\n        \"Left Main Coronary Artery\",\n        \"Left Anterior Descending Artery\",\n        \"Left Circumflex Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Posterior Descending Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Right Coronary Artery",
+              "Left Main Coronary Artery",
+              "Left Anterior Descending Artery",
+              "Left Circumflex Artery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Coronary Artery",
+                    "Left Main Coronary Artery",
+                    "Left Anterior Descending Artery",
+                    "Left Circumflex Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Posterior Descending Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Right Coronary Artery",
+            "Left Main Coronary Artery",
+            "Left Anterior Descending Artery",
+            "Left Circumflex Artery"
+          ],
+          "evaluation": {
+            "overall_score": 10.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 0/4 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Coronary Artery\",\n        \"Left Anterior Descending Artery (LAD)\",\n        \"Circumflex Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Right Coronary Artery\",\n        \"Left Anterior Descending Artery (LAD)\",\n        \"Circumflex Artery\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Right Coronary Artery",
+              "Left Anterior Descending Artery (LAD)",
+              "Circumflex Artery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Coronary Artery",
+                    "Left Anterior Descending Artery (LAD)",
+                    "Circumflex Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Right Coronary Artery",
+                    "Left Anterior Descending Artery (LAD)",
+                    "Circumflex Artery",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Right Coronary Artery",
+            "Left Anterior Descending Artery (LAD)",
+            "Circumflex Artery"
+          ],
+          "evaluation": {
+            "overall_score": 15.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 75.0%"
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4001_symptom_11",
+      "diagnosis": "resting regional wall motion abnormalities include septal, anterior akinesis",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Interventricular Septum (IVS)",
+            "Left Ventricle (LV)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "",
+          "parsed_data": {},
+          "organ_name": "",
+          "anatomical_locations": [],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": "API调用失败或无有效数据"
+          }
+        },
+        "anthropic": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Interventricular Septum (IVS)\",\n        \"Left Ventricular Posterior Wall (LVPW)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Left Anterior Descending Artery (LAD)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Interventricular Septum (IVS)",
+              "Left Ventricular Posterior Wall (LVPW)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Interventricular Septum (IVS)",
+                    "Left Ventricular Posterior Wall (LVPW)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Left Anterior Descending Artery (LAD)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)",
+            "Left Ventricular Posterior Wall (LVPW)"
+          ],
+          "evaluation": {
+            "overall_score": 81.7,
+            "precision": 66.7,
+            "recall": 100.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Interventricular Septum (IVS)\",\n        \"Left Ventricle (LV)\",\n        \"Left Anterior Descending Artery (LAD)\",\n        \"Left Ventricular Posterior Wall (LVPW)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Interventricular Septum (IVS)",
+              "Left Ventricle (LV)",
+              "Left Anterior Descending Artery (LAD)",
+              "Left Ventricular Posterior Wall (LVPW)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Interventricular Septum (IVS)",
+                    "Left Ventricle (LV)",
+                    "Left Anterior Descending Artery (LAD)",
+                    "Left Ventricular Posterior Wall (LVPW)"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Interventricular Septum (IVS)",
+            "Left Ventricle (LV)",
+            "Left Anterior Descending Artery (LAD)",
+            "Left Ventricular Posterior Wall (LVPW)"
+          ],
+          "evaluation": {
+            "overall_score": 70.0,
+            "precision": 50.0,
+            "recall": 100.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Interventricular Septum (IVS)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Interventricular Septum (IVS)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Left Ventricle (LV)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Interventricular Septum (IVS)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Interventricular Septum (IVS)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Left Ventricle (LV)"
+          ],
+          "evaluation": {
+            "overall_score": 81.7,
+            "precision": 66.7,
+            "recall": 100.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Interventricular Septum (IVS)\",\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Papillary Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Interventricular Septum (IVS)",
+              "Left Ventricle (LV)",
+              "Right Ventricle (RV)",
+              "Papillary Muscles"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Interventricular Septum (IVS)",
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Papillary Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Interventricular Septum (IVS)",
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)",
+            "Papillary Muscles"
+          ],
+          "evaluation": {
+            "overall_score": 70.0,
+            "precision": 50.0,
+            "recall": 100.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 50.0%"
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4001_symptom_12",
+      "diagnosis": "no jugulovenous distension appreciated",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "",
+          "parsed_data": {},
+          "organ_name": "",
+          "anatomical_locations": [],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": "API调用失败或无有效数据"
+          }
+        },
+        "anthropic": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Internal Jugular Vein\",\n        \"External Jugular Vein\",\n        \"Superior Vena Cava\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Atrium (RA)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Vein (Vena)",
+            "anatomical_locations": [
+              "Internal Jugular Vein",
+              "External Jugular Vein",
+              "Superior Vena Cava"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Internal Jugular Vein",
+                    "External Jugular Vein",
+                    "Superior Vena Cava"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Atrium (RA)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Vein (Vena)",
+          "anatomical_locations": [
+            "Internal Jugular Vein",
+            "External Jugular Vein",
+            "Superior Vena Cava"
+          ],
+          "evaluation": {
+            "overall_score": 15.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Jugular Vein\",\n        \"Internal Jugular Vein\",\n        \"External Jugular Vein\",\n        \"Superior Vena Cava\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Atrium (RA)\",\n        \"Superior Vena Cava\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Vein (Vena)",
+            "anatomical_locations": [
+              "Jugular Vein",
+              "Internal Jugular Vein",
+              "External Jugular Vein",
+              "Superior Vena Cava"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Jugular Vein",
+                    "Internal Jugular Vein",
+                    "External Jugular Vein",
+                    "Superior Vena Cava"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Atrium (RA)",
+                    "Superior Vena Cava",
+                    "Pericardium"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Vein (Vena)",
+          "anatomical_locations": [
+            "Jugular Vein",
+            "Internal Jugular Vein",
+            "External Jugular Vein",
+            "Superior Vena Cava"
+          ],
+          "evaluation": {
+            "overall_score": 10.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 0/4 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Jugular Vein\",\n        \"Internal Jugular Vein\",\n        \"External Jugular Vein\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Vein (Vena)",
+            "anatomical_locations": [
+              "Jugular Vein",
+              "Internal Jugular Vein",
+              "External Jugular Vein"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Jugular Vein",
+                    "Internal Jugular Vein",
+                    "External Jugular Vein"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Vein (Vena)",
+          "anatomical_locations": [
+            "Jugular Vein",
+            "Internal Jugular Vein",
+            "External Jugular Vein"
+          ],
+          "evaluation": {
+            "overall_score": 15.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Internal Jugular Vein\",\n        \"External Jugular Vein\",\n        \"Superior Vena Cava\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Atrium (RA)\",\n        \"Right Ventricle (RV)\",\n        \"Tricuspid Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Vein (Vena)",
+            "anatomical_locations": [
+              "Internal Jugular Vein",
+              "External Jugular Vein",
+              "Superior Vena Cava"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Internal Jugular Vein",
+                    "External Jugular Vein",
+                    "Superior Vena Cava"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Atrium (RA)",
+                    "Right Ventricle (RV)",
+                    "Tricuspid Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Vein (Vena)",
+          "anatomical_locations": [
+            "Internal Jugular Vein",
+            "External Jugular Vein",
+            "Superior Vena Cava"
+          ],
+          "evaluation": {
+            "overall_score": 15.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 0/3 (0.0%); Recall(召回率): 0/2 (0.0%); 过度生成惩罚: 75.0%"
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4001_symptom_13",
+      "diagnosis": "left ventricular end diastolic pressure was elevated about 30 mm of mercury",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "",
+          "parsed_data": {},
+          "organ_name": "",
+          "anatomical_locations": [],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": "API调用失败或无有效数据"
+          }
+        },
+        "anthropic": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Mitral Valve\",\n        \"Left Atrium (LA)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pulmonary Capillaries\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Mitral Valve",
+              "Left Atrium (LA)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Mitral Valve",
+                    "Left Atrium (LA)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pulmonary Capillaries",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve",
+            "Left Atrium (LA)"
+          ],
+          "evaluation": {
+            "overall_score": 81.7,
+            "precision": 66.7,
+            "recall": 100.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Mitral Valve\",\n        \"Left Atrium (LA)\",\n        \"Left Ventricular Posterior Wall (LVPW)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Mitral Valve",
+              "Left Atrium (LA)",
+              "Left Ventricular Posterior Wall (LVPW)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Mitral Valve",
+                    "Left Atrium (LA)",
+                    "Left Ventricular Posterior Wall (LVPW)"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve",
+            "Left Atrium (LA)",
+            "Left Ventricular Posterior Wall (LVPW)"
+          ],
+          "evaluation": {
+            "overall_score": 70.0,
+            "precision": 50.0,
+            "recall": 100.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Mitral Valve\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Mitral Valve",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Mitral Valve",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 81.7,
+            "precision": 66.7,
+            "recall": 100.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Mitral Valve\",\n        \"Aortic Valve\",\n        \"Left Atrium (LA)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Mitral Valve",
+              "Aortic Valve",
+              "Left Atrium (LA)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Mitral Valve",
+                    "Aortic Valve",
+                    "Left Atrium (LA)"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve",
+            "Aortic Valve",
+            "Left Atrium (LA)"
+          ],
+          "evaluation": {
+            "overall_score": 70.0,
+            "precision": 50.0,
+            "recall": 100.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 50.0%"
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4001_symptom_14",
+      "diagnosis": "sinus rhythm with left bundle branch block",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "",
+          "parsed_data": {},
+          "organ_name": "",
+          "anatomical_locations": [],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": "API调用失败或无有效数据"
+          }
+        },
+        "anthropic": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Interventricular Septum (IVS)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Anterior Descending Artery (LAD)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Right Ventricle (RV)",
+              "Interventricular Septum (IVS)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Interventricular Septum (IVS)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Anterior Descending Artery (LAD)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)",
+            "Interventricular Septum (IVS)"
+          ],
+          "evaluation": {
+            "overall_score": 81.7,
+            "precision": 66.7,
+            "recall": 100.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Interventricular Septum (IVS)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Papillary Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Interventricular Septum (IVS)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Papillary Muscles"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Interventricular Septum (IVS)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Papillary Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Papillary Muscles"
+          ],
+          "evaluation": {
+            "overall_score": 70.0,
+            "precision": 50.0,
+            "recall": 100.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Interventricular Septum (IVS)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Interventricular Septum (IVS)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Interventricular Septum (IVS)"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ],
+          "evaluation": {
+            "overall_score": 100.0,
+            "precision": 100.0,
+            "recall": 100.0,
+            "overgeneration_penalty": 100.0,
+            "detailed_analysis": "Precision(精确率): 2/2 (100.0%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 100.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Interventricular Septum (IVS)\",\n        \"Left Bundle Branch\",\n        \"Right Bundle Branch\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Interventricular Septum (IVS)",
+              "Left Bundle Branch",
+              "Right Bundle Branch"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Interventricular Septum (IVS)",
+                    "Left Bundle Branch",
+                    "Right Bundle Branch"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)",
+            "Left Bundle Branch",
+            "Right Bundle Branch"
+          ],
+          "evaluation": {
+            "overall_score": 70.0,
+            "precision": 50.0,
+            "recall": 100.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 50.0%"
+          }
+        }
+      }
+    }
+  ]
+}

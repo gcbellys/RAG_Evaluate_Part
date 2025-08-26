@@ -1,0 +1,595 @@
+{
+  "80 millimeter aortic valve gradient": {
+    "gemini": {
+      "baseline_organ": "Heart (Cor)",
+      "rag_organ": "Heart (Cor)",
+      "baseline_locations": [
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Aortic Root & Ascending Aorta"
+      ],
+      "rag_locations": [
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Aortic Root & Ascending Aorta"
+      ],
+      "organ_changed": false,
+      "locations_changed": false
+    },
+    "moonshot": {
+      "baseline_organ": "Heart (Cor)",
+      "rag_organ": "Heart (Cor)",
+      "baseline_locations": [
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Aortic Root & Ascending Aorta"
+      ],
+      "rag_locations": [
+        "Aortic Valve",
+        "Left Ventricle (LV)"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "anthropic": {
+      "baseline_organ": "Heart (Cor)",
+      "rag_organ": "Heart (Cor)",
+      "baseline_locations": [
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Aortic Root & Ascending Aorta"
+      ],
+      "rag_locations": [
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Left Atrium (LA)"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "openai": {
+      "baseline_organ": "",
+      "rag_organ": "",
+      "baseline_locations": [],
+      "rag_locations": [],
+      "organ_changed": false,
+      "locations_changed": false
+    },
+    "deepseek": {
+      "baseline_organ": "Heart (Cor)",
+      "rag_organ": "Heart (Cor)",
+      "baseline_locations": [
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Aortic Root & Ascending Aorta"
+      ],
+      "rag_locations": [
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Aortic Root & Ascending Aorta"
+      ],
+      "organ_changed": false,
+      "locations_changed": false
+    }
+  },
+  "the heart has a systolic ejection murmur": {
+    "gemini": {
+      "baseline_organ": "Heart (Cor)",
+      "rag_organ": "Heart (Cor)",
+      "baseline_locations": [
+        "Aortic Valve",
+        "Pulmonary Valve",
+        "Left Ventricle (LV)",
+        "Right Ventricle (RV)"
+      ],
+      "rag_locations": [
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Left Ventricular Posterior Wall (LVPW)"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "moonshot": {
+      "baseline_organ": "Heart (Cor)",
+      "rag_organ": "Heart (Cor)",
+      "baseline_locations": [
+        "Aortic Valve",
+        "Pulmonary Valve",
+        "Left Ventricle (LV)"
+      ],
+      "rag_locations": [
+        "Aortic Valve",
+        "Left Ventricle (LV)"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "anthropic": {
+      "baseline_organ": "Heart (Cor)",
+      "rag_organ": "Heart (Cor)",
+      "baseline_locations": [
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Aortic Root & Ascending Aorta"
+      ],
+      "rag_locations": [
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Left Ventricular Posterior Wall (LVPW)"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "openai": {
+      "baseline_organ": "",
+      "rag_organ": "",
+      "baseline_locations": [],
+      "rag_locations": [],
+      "organ_changed": false,
+      "locations_changed": false
+    },
+    "deepseek": {
+      "baseline_organ": "Heart (Cor)",
+      "rag_organ": "Heart (Cor)",
+      "baseline_locations": [
+        "Aortic Valve",
+        "Pulmonary Valve",
+        "Left Ventricle (LV)",
+        "Right Ventricle (RV)"
+      ],
+      "rag_locations": [
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Left Ventricular Posterior Wall (LVPW)"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    }
+  },
+  "moderate to severe mitral regurgitation": {
+    "gemini": {
+      "baseline_organ": "Heart (Cor)",
+      "rag_organ": "Heart (Cor)",
+      "baseline_locations": [
+        "Mitral Valve",
+        "Left Atrium (LA)",
+        "Left Ventricle (LV)",
+        "Chordae Tendineae"
+      ],
+      "rag_locations": [
+        "Mitral Valve",
+        "Left Atrium (LA)",
+        "Left Ventricle (LV)"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "moonshot": {
+      "baseline_organ": "Heart (Cor)",
+      "rag_organ": "Heart (Cor)",
+      "baseline_locations": [
+        "Mitral Valve",
+        "Left Ventricle (LV)",
+        "Left Atrium (LA)"
+      ],
+      "rag_locations": [
+        "Mitral Valve",
+        "Left Atrium (LA)",
+        "Left Ventricle (LV)"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "anthropic": {
+      "baseline_organ": "Heart (Cor)",
+      "rag_organ": "Heart (Cor)",
+      "baseline_locations": [
+        "Mitral Valve",
+        "Left Atrium (LA)",
+        "Left Ventricle (LV)",
+        "Chordae Tendineae"
+      ],
+      "rag_locations": [
+        "Mitral Valve",
+        "Left Atrium (LA)",
+        "Left Ventricle (LV)"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "openai": {
+      "baseline_organ": "",
+      "rag_organ": "",
+      "baseline_locations": [],
+      "rag_locations": [],
+      "organ_changed": false,
+      "locations_changed": false
+    },
+    "deepseek": {
+      "baseline_organ": "Heart (Cor)",
+      "rag_organ": "Heart (Cor)",
+      "baseline_locations": [
+        "Mitral Valve",
+        "Left Ventricle (LV)",
+        "Left Atrium (LA)",
+        "Chordae Tendineae"
+      ],
+      "rag_locations": [
+        "Mitral Valve",
+        "Left Atrium (LA)",
+        "Left Ventricle (LV)"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    }
+  },
+  "four episodes of loss of consciousness over the past six months": {
+    "gemini": {
+      "baseline_organ": "Brain",
+      "rag_organ": "Brain",
+      "baseline_locations": [
+        "Cerebral Cortex",
+        "Brainstem",
+        "Cerebrospinal Fluid (CSF)"
+      ],
+      "rag_locations": [
+        "Cerebral Cortex",
+        "Frontal Lobe",
+        "Brainstem"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "moonshot": {
+      "baseline_organ": "Brain",
+      "rag_organ": "Brain",
+      "baseline_locations": [
+        "Cerebral Cortex",
+        "Brainstem",
+        "Hypothalamus"
+      ],
+      "rag_locations": [
+        "Cerebral Cortex",
+        "Frontal Lobe",
+        "Brainstem"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "anthropic": {
+      "baseline_organ": "Brain",
+      "rag_organ": "Brain",
+      "baseline_locations": [
+        "Cerebral Cortex",
+        "Brainstem",
+        "Cerebrospinal Fluid (CSF)"
+      ],
+      "rag_locations": [
+        "Cerebral Cortex",
+        "Frontal Lobe",
+        "Brainstem"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "openai": {
+      "baseline_organ": "",
+      "rag_organ": "",
+      "baseline_locations": [],
+      "rag_locations": [],
+      "organ_changed": false,
+      "locations_changed": false
+    },
+    "deepseek": {
+      "baseline_organ": "Brain",
+      "rag_organ": "Brain",
+      "baseline_locations": [
+        "Cerebral Cortex",
+        "Brainstem",
+        "Cerebrospinal Fluid (CSF)"
+      ],
+      "rag_locations": [
+        "Cerebral Cortex",
+        "Frontal Lobe",
+        "Brainstem",
+        "Cerebrospinal Fluid (CSF)"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    }
+  },
+  "no jugular venous distention, no carotid bruits": {
+    "gemini": {
+      "baseline_organ": "Vein (Vena)",
+      "rag_organ": "Heart (Cor)",
+      "baseline_locations": [
+        "Jugular Vein",
+        "Internal Jugular Vein",
+        "External Jugular Vein",
+        "Superior Vena Cava"
+      ],
+      "rag_locations": [
+        "Aortic Valve",
+        "Mitral Valve",
+        "Superior Vena Cava",
+        "Right Atrium (RA)"
+      ],
+      "organ_changed": true,
+      "locations_changed": true
+    },
+    "moonshot": {
+      "baseline_organ": "Vein (Vena)",
+      "rag_organ": "Heart (Cor)",
+      "baseline_locations": [
+        "Jugular Vein"
+      ],
+      "rag_locations": [
+        "Aortic Valve",
+        "Mitral Valve"
+      ],
+      "organ_changed": true,
+      "locations_changed": true
+    },
+    "anthropic": {
+      "baseline_organ": "Vein (Vena)",
+      "rag_organ": "Vein (Vena)",
+      "baseline_locations": [
+        "Internal Jugular Vein",
+        "External Jugular Vein"
+      ],
+      "rag_locations": [
+        "Internal Jugular Vein",
+        "External Jugular Vein"
+      ],
+      "organ_changed": false,
+      "locations_changed": false
+    },
+    "openai": {
+      "baseline_organ": "",
+      "rag_organ": "",
+      "baseline_locations": [],
+      "rag_locations": [],
+      "organ_changed": false,
+      "locations_changed": false
+    },
+    "deepseek": {
+      "baseline_organ": "Vein (Vena)",
+      "rag_organ": "Vein (Vena)",
+      "baseline_locations": [
+        "Jugular Vein",
+        "Internal Jugular Vein",
+        "External Jugular Vein"
+      ],
+      "rag_locations": [
+        "Jugular Vein",
+        "Internal Jugular Vein",
+        "External Jugular Vein"
+      ],
+      "organ_changed": false,
+      "locations_changed": false
+    }
+  },
+  "shortness of breath": {
+    "gemini": {
+      "baseline_organ": "Lung (Pulmo)",
+      "rag_organ": "Lung (Pulmo)",
+      "baseline_locations": [
+        "Alveoli",
+        "Bronchioles",
+        "Pulmonary Capillaries",
+        "Pleural Cavity"
+      ],
+      "rag_locations": [
+        "Alveoli",
+        "Bronchioles",
+        "Pleural Cavity"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "moonshot": {
+      "baseline_organ": "Lung (Pulmo)",
+      "rag_organ": "Lung (Pulmo)",
+      "baseline_locations": [
+        "Alveoli",
+        "Bronchioles",
+        "Pleural Cavity"
+      ],
+      "rag_locations": [
+        "Alveoli",
+        "Bronchioles",
+        "Pleural Cavity"
+      ],
+      "organ_changed": false,
+      "locations_changed": false
+    },
+    "anthropic": {
+      "baseline_organ": "Lung (Pulmo)",
+      "rag_organ": "Lung (Pulmo)",
+      "baseline_locations": [
+        "Alveoli",
+        "Bronchioles",
+        "Pulmonary Capillaries",
+        "Pleural Cavity"
+      ],
+      "rag_locations": [
+        "Alveoli",
+        "Bronchioles",
+        "Pleural Cavity",
+        "Left Lung"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "openai": {
+      "baseline_organ": "",
+      "rag_organ": "",
+      "baseline_locations": [],
+      "rag_locations": [],
+      "organ_changed": false,
+      "locations_changed": false
+    },
+    "deepseek": {
+      "baseline_organ": "Lung (Pulmo)",
+      "rag_organ": "Lung (Pulmo)",
+      "baseline_locations": [
+        "Alveoli",
+        "Bronchioles",
+        "Pulmonary Capillaries",
+        "Pleural Cavity"
+      ],
+      "rag_locations": [
+        "Alveoli",
+        "Bronchioles",
+        "Pleural Cavity"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    }
+  },
+  "dyspnea on exertion": {
+    "gemini": {
+      "baseline_organ": "Lung (Pulmo)",
+      "rag_organ": "Lung (Pulmo)",
+      "baseline_locations": [
+        "Alveoli",
+        "Bronchioles",
+        "Pulmonary Capillaries"
+      ],
+      "rag_locations": [
+        "Alveoli",
+        "Bronchioles",
+        "Pulmonary Capillaries"
+      ],
+      "organ_changed": false,
+      "locations_changed": false
+    },
+    "moonshot": {
+      "baseline_organ": "Heart (Cor)",
+      "rag_organ": "Heart (Cor)",
+      "baseline_locations": [
+        "Left Ventricle (LV)",
+        "Aortic Valve",
+        "Pulmonary Valve"
+      ],
+      "rag_locations": [
+        "Left Ventricle (LV)",
+        "Coronary Artery"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "anthropic": {
+      "baseline_organ": "Lung (Pulmo)",
+      "rag_organ": "Lung (Pulmo)",
+      "baseline_locations": [
+        "Alveoli",
+        "Pulmonary Capillaries",
+        "Bronchioles"
+      ],
+      "rag_locations": [
+        "Alveoli",
+        "Bronchioles",
+        "Pulmonary Capillaries"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "openai": {
+      "baseline_organ": "",
+      "rag_organ": "",
+      "baseline_locations": [],
+      "rag_locations": [],
+      "organ_changed": false,
+      "locations_changed": false
+    },
+    "deepseek": {
+      "baseline_organ": "Lung (Pulmo)",
+      "rag_organ": "Lung (Pulmo)",
+      "baseline_locations": [
+        "Alveoli",
+        "Bronchioles",
+        "Pulmonary Capillaries",
+        "Pleural Cavity"
+      ],
+      "rag_locations": [
+        "Alveoli",
+        "Bronchioles",
+        "Pulmonary Capillaries"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    }
+  },
+  "legally blind for three years": {
+    "gemini": {
+      "baseline_organ": "Brain",
+      "rag_organ": "Eye (Oculus)",
+      "baseline_locations": [
+        "Occipital Lobe",
+        "Cerebral Cortex"
+      ],
+      "rag_locations": [
+        "Retina",
+        "Optic Nerve"
+      ],
+      "organ_changed": true,
+      "locations_changed": true
+    },
+    "moonshot": {
+      "baseline_organ": "Eye (Oculus)",
+      "rag_organ": "Eye (Oculus)",
+      "baseline_locations": [
+        "Retina",
+        "Optic Nerve",
+        "Cornea"
+      ],
+      "rag_locations": [
+        "Retina",
+        "Optic Nerve"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "anthropic": {
+      "baseline_organ": "Eye (Oculus)",
+      "rag_organ": "Eye (Oculus)",
+      "baseline_locations": [
+        "Retina",
+        "Optic Nerve",
+        "Cornea"
+      ],
+      "rag_locations": [
+        "Retina",
+        "Optic Nerve"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    },
+    "openai": {
+      "baseline_organ": "",
+      "rag_organ": "",
+      "baseline_locations": [],
+      "rag_locations": [],
+      "organ_changed": false,
+      "locations_changed": false
+    },
+    "deepseek": {
+      "baseline_organ": "Eye (Oculus)",
+      "rag_organ": "Eye (Oculus)",
+      "baseline_locations": [
+        "Retina",
+        "Optic Nerve",
+        "Lens",
+        "Cornea"
+      ],
+      "rag_locations": [
+        "Retina",
+        "Optic Nerve"
+      ],
+      "organ_changed": false,
+      "locations_changed": true
+    }
+  }
+}

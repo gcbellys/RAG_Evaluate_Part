@@ -1,0 +1,1384 @@
+{
+  "80 millimeter aortic valve gradient": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Aortic Valve\",\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Aortic Valve",
+            "Left Ventricle (LV)"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Left Ventricle (LV)"
+                ],
+                "relevance": "High"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Left Ventricle (LV)"
+        ],
+        "usage": {
+          "completion_tokens": 67,
+          "prompt_tokens": 2326,
+          "total_tokens": 2393,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "expected_results": []
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Aortic Valve\",\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Ascending Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Aortic Valve",
+            "Left Ventricle (LV)",
+            "Aortic Root & Ascending Aorta"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Left Ventricle (LV)",
+                  "Aortic Root & Ascending Aorta"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Aorta",
+                  "Ascending Aorta",
+                  "Coronary Artery"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Left Ventricle (LV)",
+          "Aortic Root & Ascending Aorta"
+        ],
+        "usage": {
+          "completion_tokens": 127,
+          "prompt_tokens": 2189,
+          "total_tokens": 2316,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2176
+          },
+          "prompt_cache_hit_tokens": 2176,
+          "prompt_cache_miss_tokens": 13
+        },
+        "model": "deepseek-chat",
+        "expected_results": []
+      }
+    },
+    "rag_context": {
+      "rag_s_1_id": {
+        "s_text": "valve area of 0.8 cm 2 with a gradient of 76 mm hg",
+        "units": [
+          {
+            "u_id": "u_43404",
+            "u_unit": {
+              "d_diagnosis": "severe calcific aortic stenosis .6 cm2 with mild aortic regurgitation",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Left Ventricle (LV)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "severe calcific aortic stenosis .6 cm2 with mild aortic regurgitation"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "80% mid vessel lesion at the origin of a large acute marginal branch",
+        "units": [
+          {
+            "u_id": "u_85008",
+            "u_unit": {
+              "d_diagnosis": "three vessel coronary artery disease",
+              "o_organ": {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Right Coronary Artery",
+                  "Acute Marginal Branch"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "three vessel coronary artery disease"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "elevated a-a gradient",
+        "units": [
+          {
+            "u_id": "u_50937",
+            "u_unit": {
+              "d_diagnosis": "hypoxemic respiratory failure: patient with an elevated a-a gradient, respiratory distress, and fever, raising concern for pneumonia",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Pleural Cavity"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "hypoxemic respiratory failure: patient with an elevated a-a gradient, respiratory distress, and fever, raising concern for pneumonia"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "augmented_prompt": "以下是我的症状描述：\n80 millimeter aortic valve gradient\n\n下面给你一些来自检索系统（RAG）的相关参考，请在回答时以这些参考为主要依据进行推理与归纳，同时严格输出JSON结构：\n--- 参考资料 ---\n- severe calcific aortic stenosis .6 cm2 with mild aortic regurgitation | organ: Heart (Cor) | locations: Aortic Valve, Left Ventricle (LV)\n- three vessel coronary artery disease | organ: Artery (Arteria) | locations: Right Coronary Artery, Acute Marginal Branch\n- hypoxemic respiratory failure: patient with an elevated a-a gradient, respiratory distress, and fever, raising concern for pneumonia | organ: Lung (Pulmo) | locations: Alveoli, Pleural Cavity\n--- 请根据以上信息回答 ---"
+  },
+  "the heart has a systolic ejection murmur": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Aortic Valve\",\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Aortic Valve",
+            "Left Ventricle (LV)"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Left Ventricle (LV)"
+                ],
+                "relevance": "High"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Left Ventricle (LV)"
+        ],
+        "usage": {
+          "completion_tokens": 67,
+          "prompt_tokens": 2329,
+          "total_tokens": 2396,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "expected_results": []
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Aortic Valve\",\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Aortic Valve",
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Left Ventricle (LV)",
+                  "Left Ventricular Posterior Wall (LVPW)"
+                ],
+                "relevance": "High"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Left Ventricle (LV)",
+          "Left Ventricular Posterior Wall (LVPW)"
+        ],
+        "usage": {
+          "completion_tokens": 73,
+          "prompt_tokens": 2187,
+          "total_tokens": 2260,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2176
+          },
+          "prompt_cache_hit_tokens": 2176,
+          "prompt_cache_miss_tokens": 11
+        },
+        "model": "deepseek-chat",
+        "expected_results": []
+      }
+    },
+    "rag_context": {
+      "rag_s_1_id": {
+        "s_text": "systolic ejection murmur",
+        "units": [
+          {
+            "u_id": "u_13589",
+            "u_unit": {
+              "d_diagnosis": "the patient is a 73-year-old gentleman who was found to have critical aortic stenosis as well as coronary artery disease.",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Left Ventricle (LV)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "the patient is a 73-year-old gentleman who was found to have critical aortic stenosis as well as coronary artery disease."
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "systolic ejection murmur",
+        "units": [
+          {
+            "u_id": "u_6690",
+            "u_unit": {
+              "d_diagnosis": "systolic ejection murmur",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Left Ventricle (LV)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "systolic ejection murmur"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "systolic ejection murmur",
+        "units": [
+          {
+            "u_id": "u_79454",
+            "u_unit": {
+              "d_diagnosis": "Aortic valve disorders",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Left Ventricle (LV)",
+                  "Left Ventricular Posterior Wall (LVPW)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Aortic valve disorders"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "augmented_prompt": "以下是我的症状描述：\nthe heart has a systolic ejection murmur\n\n下面给你一些来自检索系统（RAG）的相关参考，请在回答时以这些参考为主要依据进行推理与归纳，同时严格输出JSON结构：\n--- 参考资料 ---\n- the patient is a 73-year-old gentleman who was found to have critical aortic stenosis as well as coronary artery disease. | organ: Heart (Cor) | locations: Aortic Valve, Left Ventricle (LV)\n- systolic ejection murmur | organ: Heart (Cor) | locations: Aortic Valve, Left Ventricle (LV)\n- Aortic valve disorders | organ: Heart (Cor) | locations: Aortic Valve, Left Ventricle (LV), Left Ventricular Posterior Wall (LVPW)\n--- 请根据以上信息回答 ---"
+  },
+  "moderate to severe mitral regurgitation": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Mitral Valve\",\n        \"Left Atrium (LA)\",\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Mitral Valve",
+            "Left Atrium (LA)",
+            "Left Ventricle (LV)"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Mitral Valve",
+                  "Left Atrium (LA)",
+                  "Left Ventricle (LV)"
+                ],
+                "relevance": "High"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Mitral Valve",
+          "Left Atrium (LA)",
+          "Left Ventricle (LV)"
+        ],
+        "usage": {
+          "completion_tokens": 77,
+          "prompt_tokens": 2315,
+          "total_tokens": 2392,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "expected_results": []
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Mitral Valve\",\n        \"Left Atrium (LA)\",\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Mitral Valve",
+            "Left Atrium (LA)",
+            "Left Ventricle (LV)"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Mitral Valve",
+                  "Left Atrium (LA)",
+                  "Left Ventricle (LV)"
+                ],
+                "relevance": "High"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Mitral Valve",
+          "Left Atrium (LA)",
+          "Left Ventricle (LV)"
+        ],
+        "usage": {
+          "completion_tokens": 69,
+          "prompt_tokens": 2172,
+          "total_tokens": 2241,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2112
+          },
+          "prompt_cache_hit_tokens": 2112,
+          "prompt_cache_miss_tokens": 60
+        },
+        "model": "deepseek-chat",
+        "expected_results": []
+      }
+    },
+    "rag_context": {
+      "rag_s_1_id": {
+        "s_text": "moderate mitral regurgitation",
+        "units": [
+          {
+            "u_id": "u_24333",
+            "u_unit": {
+              "d_diagnosis": "an echocardiogram was notable for moderate mitral regurgitation",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Mitral Valve",
+                  "Left Atrium (LA)",
+                  "Left Ventricle (LV)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "an echocardiogram was notable for moderate mitral regurgitation"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "moderate mitral regurgitation",
+        "units": [
+          {
+            "u_id": "u_51346",
+            "u_unit": {
+              "d_diagnosis": "moderate mitral regurgitation",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Mitral Valve",
+                  "Left Atrium (LA)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "moderate mitral regurgitation"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "moderate (2+) mitral regurgitation",
+        "units": [
+          {
+            "u_id": "u_40684",
+            "u_unit": {
+              "d_diagnosis": "the mitral valve leaflets are mildly thickened",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Mitral Valve",
+                  "Left Atrium (LA)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "the mitral valve leaflets are mildly thickened"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "augmented_prompt": "以下是我的症状描述：\nmoderate to severe mitral regurgitation\n\n下面给你一些来自检索系统（RAG）的相关参考，请在回答时以这些参考为主要依据进行推理与归纳，同时严格输出JSON结构：\n--- 参考资料 ---\n- an echocardiogram was notable for moderate mitral regurgitation | organ: Heart (Cor) | locations: Mitral Valve, Left Atrium (LA), Left Ventricle (LV)\n- moderate mitral regurgitation | organ: Heart (Cor) | locations: Mitral Valve, Left Atrium (LA)\n- the mitral valve leaflets are mildly thickened | organ: Heart (Cor) | locations: Mitral Valve, Left Atrium (LA)\n--- 请根据以上信息回答 ---"
+  },
+  "four episodes of loss of consciousness over the past six months": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Frontal Lobe\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Frontal Lobe",
+            "Brainstem"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Cerebral Cortex",
+                  "Frontal Lobe",
+                  "Brainstem"
+                ],
+                "relevance": "High"
+              }
+            ]
+          }
+        },
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Frontal Lobe",
+          "Brainstem"
+        ],
+        "usage": {
+          "completion_tokens": 68,
+          "prompt_tokens": 2287,
+          "total_tokens": 2355,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "expected_results": []
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Frontal Lobe\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Frontal Lobe",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Cerebral Cortex",
+                  "Frontal Lobe",
+                  "Brainstem",
+                  "Cerebrospinal Fluid (CSF)"
+                ],
+                "relevance": "High"
+              }
+            ]
+          }
+        },
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Frontal Lobe",
+          "Brainstem",
+          "Cerebrospinal Fluid (CSF)"
+        ],
+        "usage": {
+          "completion_tokens": 74,
+          "prompt_tokens": 2151,
+          "total_tokens": 2225,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2112
+          },
+          "prompt_cache_hit_tokens": 2112,
+          "prompt_cache_miss_tokens": 39
+        },
+        "model": "deepseek-chat",
+        "expected_results": []
+      }
+    },
+    "rag_context": {
+      "rag_s_1_id": {
+        "s_text": "feeling lethargic more than usual for four days",
+        "units": [
+          {
+            "u_id": "u_79029",
+            "u_unit": {
+              "d_diagnosis": "past medical history of transient ischemic attacks",
+              "o_organ": {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Cerebral Cortex",
+                  "Frontal Lobe"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "past medical history of transient ischemic attacks"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "one to two minutes of loss of consciousness",
+        "units": [
+          {
+            "u_id": "u_57133",
+            "u_unit": {
+              "d_diagnosis": "small intracranial hemorrhage",
+              "o_organ": {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Frontal Lobe",
+                  "Brainstem"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "small intracranial hemorrhage"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "not had a bm in 4 days",
+        "units": [
+          {
+            "u_id": "u_10158",
+            "u_unit": {
+              "d_diagnosis": "colonic thickening",
+              "o_organ": {
+                "organName": "Large intestine (Intestinum crassum)",
+                "anatomicalLocations": [
+                  "Colon",
+                  "Rectum"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "colonic thickening"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "augmented_prompt": "以下是我的症状描述：\nfour episodes of loss of consciousness over the past six months\n\n下面给你一些来自检索系统（RAG）的相关参考，请在回答时以这些参考为主要依据进行推理与归纳，同时严格输出JSON结构：\n--- 参考资料 ---\n- past medical history of transient ischemic attacks | organ: Brain | locations: Cerebral Cortex, Frontal Lobe\n- small intracranial hemorrhage | organ: Brain | locations: Frontal Lobe, Brainstem\n- colonic thickening | organ: Large intestine (Intestinum crassum) | locations: Colon, Rectum\n--- 请根据以上信息回答 ---"
+  },
+  "no jugular venous distention, no carotid bruits": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Aortic Valve\",\n        \"Mitral Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Jugular Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Vein (Vena)",
+                "anatomicalLocations": [
+                  "Superior Vena Cava",
+                  "Jugular Vein"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Carotid Artery"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Mitral Valve"
+        ],
+        "usage": {
+          "completion_tokens": 164,
+          "prompt_tokens": 2450,
+          "total_tokens": 2614,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "expected_results": []
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Aortic Valve\",\n        \"Mitral Valve\",\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Jugular Vein\",\n        \"Superior Vena Cava\",\n        \"Internal Jugular Vein\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Common Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Aortic Valve",
+            "Mitral Valve",
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve",
+                  "Left Ventricle (LV)",
+                  "Coronary Artery"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Vein (Vena)",
+                "anatomicalLocations": [
+                  "Jugular Vein",
+                  "Superior Vena Cava",
+                  "Internal Jugular Vein"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Carotid Artery",
+                  "Internal Carotid Artery",
+                  "Common Carotid Artery"
+                ],
+                "relevance": "High"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Mitral Valve",
+          "Left Ventricle (LV)",
+          "Coronary Artery"
+        ],
+        "usage": {
+          "completion_tokens": 192,
+          "prompt_tokens": 2305,
+          "total_tokens": 2497,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2304
+          },
+          "prompt_cache_hit_tokens": 2304,
+          "prompt_cache_miss_tokens": 1
+        },
+        "model": "deepseek-chat",
+        "expected_results": []
+      }
+    },
+    "rag_context": {
+      "rag_s_1_id": {
+        "s_text": "no jugular venous distention, no carotid bruits",
+        "units": [
+          {
+            "u_id": "u_56758",
+            "u_unit": {
+              "d_diagnosis": "acute myocardial infarction",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "acute myocardial infarction"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "no jugular venous distention or carotid bruits",
+        "units": [
+          {
+            "u_id": "u_25729",
+            "u_unit": {
+              "d_diagnosis": "discharge diagnoses: 1. diabetes mellitus. 2. coronary artery disease. 3. angina. 4. hypercholesterolemia. 5. hypertension. 6. elevated psa. 7. venous varicosities. 8. slightly reduced left ventricular function.",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "discharge diagnoses: 1. diabetes mellitus. 2. coronary artery disease. 3. angina. 4. hypercholesterolemia. 5. hypertension. 6. elevated psa. 7. venous varicosities. 8. slightly reduced left ventricular function."
+              }
+            }
+          },
+          {
+            "u_id": "u_25730",
+            "u_unit": {
+              "d_diagnosis": "discharge diagnoses: 1. diabetes mellitus. 2. coronary artery disease. 3. angina. 4. hypercholesterolemia. 5. hypertension. 6. elevated psa. 7. venous varicosities. 8. slightly reduced left ventricular function.",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "discharge diagnoses: 1. diabetes mellitus. 2. coronary artery disease. 3. angina. 4. hypercholesterolemia. 5. hypertension. 6. elevated psa. 7. venous varicosities. 8. slightly reduced left ventricular function."
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "no jugular venous distention, no bruit",
+        "units": [
+          {
+            "u_id": "u_81770",
+            "u_unit": {
+              "d_diagnosis": "aortic valve replacement as well as resection of the ascending aortic aneurysm and the non-coronary sinuses",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Right Atrium (RA)",
+                  "Superior Vena Cava"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "aortic valve replacement as well as resection of the ascending aortic aneurysm and the non-coronary sinuses"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "augmented_prompt": "以下是我的症状描述：\nno jugular venous distention, no carotid bruits\n\n下面给你一些来自检索系统（RAG）的相关参考，请在回答时以这些参考为主要依据进行推理与归纳，同时严格输出JSON结构：\n--- 参考资料 ---\n- acute myocardial infarction | organ: Heart (Cor) | locations: Aortic Valve, Mitral Valve\n- discharge diagnoses: 1. diabetes mellitus. 2. coronary artery disease. 3. angina. 4. hypercholesterolemia. 5. hypertension. 6. elevated psa. 7. venous varicosities. 8. slightly reduced left ventricular function. | organ: Heart (Cor) | locations: Aortic Valve, Mitral Valve\n- discharge diagnoses: 1. diabetes mellitus. 2. coronary artery disease. 3. angina. 4. hypercholesterolemia. 5. hypertension. 6. elevated psa. 7. venous varicosities. 8. slightly reduced left ventricular function. | organ: Heart (Cor) | locations: Aortic Valve, Mitral Valve\n- aortic valve replacement as well as resection of the ascending aortic aneurysm and the non-coronary sinuses | organ: Heart (Cor) | locations: Right Atrium (RA), Superior Vena Cava\n--- 请根据以上信息回答 ---"
+  },
+  "shortness of breath": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Pericardium\",\n        \"Right Atrium (RA)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles",
+                  "Pleural Cavity"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Pericardium",
+                  "Right Atrium (RA)",
+                  "Right Ventricle (RV)"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Bronchioles",
+          "Pleural Cavity"
+        ],
+        "usage": {
+          "completion_tokens": 134,
+          "prompt_tokens": 2296,
+          "total_tokens": 2430,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "expected_results": []
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Pericardium\",\n        \"Right Atrium (RA)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles",
+                  "Pleural Cavity"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Pericardium",
+                  "Right Atrium (RA)",
+                  "Right Ventricle (RV)"
+                ],
+                "relevance": "High"
+              }
+            ]
+          }
+        },
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Bronchioles",
+          "Pleural Cavity"
+        ],
+        "usage": {
+          "completion_tokens": 126,
+          "prompt_tokens": 2165,
+          "total_tokens": 2291,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2112
+          },
+          "prompt_cache_hit_tokens": 2112,
+          "prompt_cache_miss_tokens": 53
+        },
+        "model": "deepseek-chat",
+        "expected_results": []
+      }
+    },
+    "rag_context": {
+      "rag_s_1_id": {
+        "s_text": "shortness of breath",
+        "units": [
+          {
+            "u_id": "u_4022",
+            "u_unit": {
+              "d_diagnosis": "large pericardial effusion without markers for tamponade",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Pericardium",
+                  "Right Atrium (RA)",
+                  "Right Ventricle (RV)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "large pericardial effusion without markers for tamponade"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "shortness of breath",
+        "units": [
+          {
+            "u_id": "u_6717",
+            "u_unit": {
+              "d_diagnosis": "lung cancer",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "lung cancer"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "shortness of breath",
+        "units": [
+          {
+            "u_id": "u_3329",
+            "u_unit": {
+              "d_diagnosis": "hemothorax",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Left Lung",
+                  "Pleural Cavity"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "hemothorax"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "augmented_prompt": "以下是我的症状描述：\nshortness of breath\n\n下面给你一些来自检索系统（RAG）的相关参考，请在回答时以这些参考为主要依据进行推理与归纳，同时严格输出JSON结构：\n--- 参考资料 ---\n- large pericardial effusion without markers for tamponade | organ: Heart (Cor) | locations: Pericardium, Right Atrium (RA), Right Ventricle (RV)\n- lung cancer | organ: Lung (Pulmo) | locations: Alveoli, Bronchioles\n- hemothorax | organ: Lung (Pulmo) | locations: Left Lung, Pleural Cavity\n--- 请根据以上信息回答 ---"
+  },
+  "dyspnea on exertion": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Coronary Artery"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles"
+                ],
+                "relevance": "High"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Coronary Artery"
+        ],
+        "usage": {
+          "completion_tokens": 119,
+          "prompt_tokens": 2405,
+          "total_tokens": 2524,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "expected_results": []
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Carotid Artery\",\n        \"Aorta\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pulmonary Capillaries"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles",
+                  "Pulmonary Capillaries"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Coronary Artery",
+                  "Aortic Valve"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Coronary Artery",
+                  "Carotid Artery",
+                  "Aorta"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Bronchioles",
+          "Pulmonary Capillaries"
+        ],
+        "usage": {
+          "completion_tokens": 180,
+          "prompt_tokens": 2272,
+          "total_tokens": 2452,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2240
+          },
+          "prompt_cache_hit_tokens": 2240,
+          "prompt_cache_miss_tokens": 32
+        },
+        "model": "deepseek-chat",
+        "expected_results": []
+      }
+    },
+    "rag_context": {
+      "rag_s_1_id": {
+        "s_text": "dyspnea on exertion",
+        "units": [
+          {
+            "u_id": "u_5835",
+            "u_unit": {
+              "d_diagnosis": "chf (preserved ef)",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Pericardium"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "chf (preserved ef)"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "dyspnea on exertion",
+        "units": [
+          {
+            "u_id": "u_8620",
+            "u_unit": {
+              "d_diagnosis": "Pneumonia, organism unspecified",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Pneumonia, organism unspecified"
+              }
+            }
+          },
+          {
+            "u_id": "u_8621",
+            "u_unit": {
+              "d_diagnosis": "coronary artery bypass graft x 3 (lima to lad, svg to diag, svg to om)",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Aortic Valve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "coronary artery bypass graft x 3 (lima to lad, svg to diag, svg to om)"
+              }
+            }
+          },
+          {
+            "u_id": "u_8622",
+            "u_unit": {
+              "d_diagnosis": "Moyamoya disease",
+              "o_organ": {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Carotid Artery",
+                  "Coronary Artery"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Moyamoya disease"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "dyspnea on exertion",
+        "units": [
+          {
+            "u_id": "u_6681",
+            "u_unit": {
+              "d_diagnosis": "Coronary atherosclerosis of native coronary artery",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Aortic Valve",
+                  "Coronary Artery"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Coronary atherosclerosis of native coronary artery"
+              }
+            }
+          },
+          {
+            "u_id": "u_6682",
+            "u_unit": {
+              "d_diagnosis": "Asthma, unspecified type, unspecified",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Bronchioles",
+                  "Alveoli"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Asthma, unspecified type, unspecified"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "augmented_prompt": "以下是我的症状描述：\ndyspnea on exertion\n\n下面给你一些来自检索系统（RAG）的相关参考，请在回答时以这些参考为主要依据进行推理与归纳，同时严格输出JSON结构：\n--- 参考资料 ---\n- chf (preserved ef) | organ: Heart (Cor) | locations: Left Ventricle (LV), Pericardium\n- Pneumonia, organism unspecified | organ: Lung (Pulmo) | locations: Alveoli, Bronchioles\n- coronary artery bypass graft x 3 (lima to lad, svg to diag, svg to om) | organ: Heart (Cor) | locations: Left Ventricle (LV), Aortic Valve\n- Moyamoya disease | organ: Artery (Arteria) | locations: Carotid Artery, Coronary Artery\n- Coronary atherosclerosis of native coronary artery | organ: Heart (Cor) | locations: Left Ventricle (LV), Aortic Valve, Coronary Artery\n- Asthma, unspecified type, unspecified | organ: Lung (Pulmo) | locations: Bronchioles, Alveoli\n--- 请根据以上信息回答 ---"
+  },
+  "legally blind for three years": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Eye (Oculus)\",\n      \"anatomicalLocations\": [\n        \"Retina\",\n        \"Optic Nerve\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Eye (Oculus)",
+          "anatomical_locations": [
+            "Retina",
+            "Optic Nerve"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Eye (Oculus)",
+                "anatomicalLocations": [
+                  "Retina",
+                  "Optic Nerve"
+                ],
+                "relevance": "High"
+              }
+            ]
+          }
+        },
+        "organ_name": "Eye (Oculus)",
+        "anatomical_locations": [
+          "Retina",
+          "Optic Nerve"
+        ],
+        "usage": {
+          "completion_tokens": 64,
+          "prompt_tokens": 2292,
+          "total_tokens": 2356,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "expected_results": []
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Eye (Oculus)\",\n      \"anatomicalLocations\": [\n        \"Retina\",\n        \"Optic Nerve\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Eye (Oculus)",
+          "anatomical_locations": [
+            "Retina",
+            "Optic Nerve"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Eye (Oculus)",
+                "anatomicalLocations": [
+                  "Retina",
+                  "Optic Nerve"
+                ],
+                "relevance": "High"
+              }
+            ]
+          }
+        },
+        "organ_name": "Eye (Oculus)",
+        "anatomical_locations": [
+          "Retina",
+          "Optic Nerve"
+        ],
+        "usage": {
+          "completion_tokens": 58,
+          "prompt_tokens": 2160,
+          "total_tokens": 2218,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2112
+          },
+          "prompt_cache_hit_tokens": 2112,
+          "prompt_cache_miss_tokens": 48
+        },
+        "model": "deepseek-chat",
+        "expected_results": []
+      }
+    },
+    "rag_context": {
+      "rag_s_1_id": {
+        "s_text": "legally blind",
+        "units": [
+          {
+            "u_id": "u_65410",
+            "u_unit": {
+              "d_diagnosis": "Legal blindness, as defined in U.S.A.",
+              "o_organ": {
+                "organName": "Eye (Oculus)",
+                "anatomicalLocations": [
+                  "Retina",
+                  "Optic Nerve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Legal blindness, as defined in U.S.A."
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "she is legally blind",
+        "units": [
+          {
+            "u_id": "u_56797",
+            "u_unit": {
+              "d_diagnosis": "Background diabetic retinopathy",
+              "o_organ": {
+                "organName": "Eye (Oculus)",
+                "anatomicalLocations": [
+                  "Retina",
+                  "Optic Nerve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Background diabetic retinopathy"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "legal blindness",
+        "units": [
+          {
+            "u_id": "u_15201",
+            "u_unit": {
+              "d_diagnosis": "Legal blindness, as defined in U.S.A.",
+              "o_organ": {
+                "organName": "Eye (Oculus)",
+                "anatomicalLocations": [
+                  "Retina",
+                  "Optic Nerve"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "Legal blindness, as defined in U.S.A."
+              }
+            }
+          }
+        ]
+      }
+    },
+    "augmented_prompt": "以下是我的症状描述：\nlegally blind for three years\n\n下面给你一些来自检索系统（RAG）的相关参考，请在回答时以这些参考为主要依据进行推理与归纳，同时严格输出JSON结构：\n--- 参考资料 ---\n- Legal blindness, as defined in U.S.A. | organ: Eye (Oculus) | locations: Retina, Optic Nerve\n- Background diabetic retinopathy | organ: Eye (Oculus) | locations: Retina, Optic Nerve\n- Legal blindness, as defined in U.S.A. | organ: Eye (Oculus) | locations: Retina, Optic Nerve\n--- 请根据以上信息回答 ---"
+  }
+}
