@@ -43,6 +43,7 @@ def main():
     parser.add_argument("start_id", type=int, help="开始报告ID")
     parser.add_argument("end_id", type=int, nargs='?', help="结束报告ID (可选，默认与start_id相同)")
     parser.add_argument("--top_k", type=int, default=3, help="RAG检索的top_k参数")
+    parser.add_argument("--config", type=str, default="config/config.yaml", help="配置文件路径")
     
     args = parser.parse_args()
     
@@ -56,7 +57,7 @@ def main():
     print(f"📋 报告范围: {start_id} - {end_id}")
     print(f"🔍 检索参数: top_k={top_k}")
     
-    base_dir = Path(__file__).parent
+    base_dir = Path(__file__).parent.parent  # 项目根目录
     success_count = 0
     total_reports = end_id - start_id + 1
     
@@ -72,7 +73,7 @@ def main():
             continue
         
         # Step 2: RAG增强评估
-        step2_cmd = f"python {base_dir}/rerun_with_rag.py {report_id}"
+        step2_cmd = f"python {base_dir}/workflows/rerun_with_rag.py {report_id} --config {args.config}"
         if not run_command(step2_cmd, f"RAG增强评估 (报告 {report_id})"):
             print(f"⚠️  报告 {report_id} 的RAG增强评估失败")
             continue
