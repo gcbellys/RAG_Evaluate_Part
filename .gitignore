@@ -158,13 +158,76 @@ logs/
 .DS_Store
 Thumbs.db
 
-# 配置文件（可选，根据项目需要调整）
-# config/*.yaml
-# config/*.yml
-# config/*.json
+# ============ RAG评估系统特定忽略规则 ============
 
-# 数据文件（可选，根据项目需要调整）
-# *.json
-# *.csv
-# *.xlsx
-# *.xls
+# 评估结果目录 - 包含所有API响应和评估结果
+final_result/baseline_results/
+final_result/rerun_comparisons/
+final_result/rerun_with_rag/
+final_result/results_of_apis/
+final_result/rag_search_output/
+# 保留 final_result/ 下的脚本文件
+
+# RAG检索结果
+rag_search_output/
+rag_output/
+
+# 各种评估结果文件夹
+baseline_results/
+rerun_comparisons/
+rerun_with_rag/
+results_of_apis/
+
+# 数据文件 - 避免上传大量测试数据
+test_set/
+train_set/
+diag_data_*/
+*.jsonl
+report_*.json
+diagnostic_*.json
+
+# 模型和索引文件
+*.index
+*.model
+*.bin
+*.tar.gz
+*.pkl
+*.pickle
+enhanced_faiss_indexes/
+bio_lm_models.tar.gz
+
+# API输出文件
+*_evaluation_*.json
+*_comparison_*.json
+*_summary_*.txt
+*_score_report.txt
+*_ragoutcome*.jsonl
+*_search_results*.jsonl
+
+# 临时评估文件
+*_baseline.json
+*_rag.json
+*_with_rag.json
+*_without_rag.json
+
+# 批量处理输出
+batch_*.json
+batch_*.txt
+
+# 配置文件中的敏感信息（保留结构文件）
+config/.env*
+!config/config*.yaml  # 保留配置模板
+
+# 特定的大数据文件
+*.csv
+*.xlsx
+*.xls
+
+# ============ 项目保留文件说明 ============
+# 保留的重要文件:
+# - 所有Python源代码 (*.py)
+# - 配置文件模板 (config/*.yaml)
+# - 文档文件 (*.md, *.txt 说明文件)
+# - 需求文件 (requirements.txt)
+# - 脚本文件 (*.sh)
+# - 项目结构文件
