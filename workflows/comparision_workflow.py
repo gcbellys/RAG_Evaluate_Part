@@ -15,7 +15,7 @@ from typing import Dict, List, Any, Optional
 from pathlib import Path
 
 # 添加src目录到Python路径
-sys.path.append(str(Path(__file__).parent / "src"))
+sys.path.append(str(Path(__file__).parent.parent / "src"))
 sys.path.append(str(Path(__file__).parent.parent / "Rag_Build" / "src"))
 
 from config_loader import ConfigLoader

@@ -17,13 +17,13 @@ import argparse
 import logging
 import shutil
 from datetime import datetime
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Tuple
 from pathlib import Path
 import glob
 
 # --- 关键：确保脚本能找到src目录下的模块 ---
 # 将项目根目录添加到Python路径中
-sys.path.append(str(Path(__file__).resolve().parent / "src"))
+sys.path.append(str(Path(__file__).resolve().parent.parent / "src"))
 
 try:
     from config_loader import ConfigLoader
@@ -47,11 +47,13 @@ class RerunWorkflow:
         self.logger = ReportLogger()
 
         # --- 路径定义 ---
+        # 获取项目根目录（从workflows/向上一级）
+        self.project_root = Path(__file__).resolve().parent.parent
         # RAG缓存文件的存放位置
-        self.rag_output_dir = Path("/home/duojiechen/Projects/Rag_system/Rag_Evaluate/final_result/rag_search_output")
+        self.rag_output_dir = self.project_root / "final_result" / "rag_search_output"
         
         # 统一在final_result下管理所有结果
-        self.final_result_dir = Path("final_result")
+        self.final_result_dir = self.project_root / "final_result"
         self.baseline_results_dir = self.final_result_dir / "baseline_results"
         self.rerun_results_dir = self.final_result_dir / "rerun_with_rag"
         self.comparison_results_dir = self.final_result_dir / "rerun_comparisons"
@@ -93,7 +95,7 @@ class RerunWorkflow:
             return Path(latest_file)
         
         # 如果没有找到，尝试在旧的results目录查找
-        old_results_dir = Path("results")
+        old_results_dir = self.project_root / "results"
         old_files = glob.glob(str(old_results_dir / search_pattern))
         old_detailed_files = [f for f in old_files if 'standardized' not in f and 'user_format' not in f]
         
@@ -240,26 +242,137 @@ class RerunWorkflow:
         print(f"💾 Baseline结果已保存: {detailed_path}")
         return detailed_path
 
-    def _build_augmented_prompt(self, original_query: str, rag_results: Dict[str, Any]) -> str:
-        """
-        根据RAG结果构建增强型Prompt。
-        此逻辑与comparision_workflow.py保持一致。
-        """
-        primary_refs = []
+    def _evaluate_rag_quality(self, rag_results: Dict[str, Any]) -> Tuple[float, str]:
+        """评估RAG结果的质量和可靠性，加入信息一致性检查"""
         if not rag_results:
-            return original_query
+            return 0.0, "无检索结果"
+        
+        total_refs = 0
+        quality_score = 0.0
+        quality_indicators = []
+        
+        # 收集所有器官信息用于一致性检查
+        all_organs = []
+        all_locations = []
+        
+        for key, value in rag_results.items():
+            if isinstance(value, dict) and 'units' in value:
+                for unit in value.get('units', []):
+                    total_refs += 1
+                    u_unit = unit.get('u_unit', {})
+                    text = u_unit.get('d_diagnosis', '')
+                    organ = u_unit.get('o_organ', {})
+                    
+                    # 收集器官和位置信息
+                    if organ and isinstance(organ, dict):
+                        organ_name = organ.get('organName', '')
+                        locations = organ.get('anatomicalLocations', [])
+                        if organ_name:
+                            all_organs.append(organ_name)
+                        if locations:
+                            all_locations.extend(locations)
+                    
+                    # 基础质量评估因子
+                    if len(text) > 30:  # 详细的诊断文本
+                        quality_score += 0.3
+                    if organ and isinstance(organ, dict):  # 有器官信息
+                        quality_score += 0.2
+                        if organ.get('anatomicalLocations'):  # 有解剖位置
+                            quality_score += 0.2
+                    if any(medical_term in text.lower() for medical_term in 
+                           ['diagnosis', 'condition', 'disease', 'syndrome', 'disorder']):
+                        quality_score += 0.1
+        
+        if total_refs > 0:
+            avg_quality = quality_score / total_refs
+            quality_indicators.append(f"检索到{total_refs}条结果")
+            
+            # 信息一致性检查 - 这是关键改进！
+            consistency_penalty = 0.0
+            unique_organs = set(all_organs)
+            unique_locations = set(all_locations)
+            
+            # 如果器官信息不一致（超过1个不同的器官），大幅降低质量
+            if len(unique_organs) > 1:
+                consistency_penalty += 0.4  # 重大惩罚
+                quality_indicators.append(f"器官信息不一致({len(unique_organs)}种器官)")
+                
+            # 如果解剖位置过于分散，也降低质量
+            if len(unique_locations) > 5:  # 超过5个不同位置认为过于分散
+                consistency_penalty += 0.2
+                quality_indicators.append("解剖位置信息过于分散")
+                
+            # 应用一致性惩罚
+            avg_quality = max(0.0, avg_quality - consistency_penalty)
+            
+            # 重新分类质量等级
+            if avg_quality > 0.6:
+                quality_indicators.append("质量较高")
+            elif avg_quality > 0.3:
+                quality_indicators.append("质量中等")
+            else:
+                quality_indicators.append("质量较低")
+                
+            # 特别标记不一致的情况
+            if consistency_penalty > 0:
+                if consistency_penalty >= 0.4:
+                    quality_indicators.append("信息冲突严重")
+                else:
+                    quality_indicators.append("信息轻微冲突")
+        else:
+            avg_quality = 0.0
+            quality_indicators.append("无有效结果")
+        
+        return min(avg_quality, 1.0), "; ".join(quality_indicators)
 
-        # 遍历rag_s_1_id, rag_s_2_id等
+    def _filter_consistent_rag_info(self, rag_results: Dict[str, Any]) -> List[Dict[str, Any]]:
+        """过滤掉冲突的RAG信息，保留最一致的信息"""
+        if not rag_results:
+            return []
+        
+        # 收集所有信息
+        all_info = []
+        organ_counts = {}
+        
         for key, value in rag_results.items():
             if isinstance(value, dict) and 'units' in value:
                 for unit in value.get('units', []):
                     u_unit = unit.get('u_unit', {})
                     text = u_unit.get('d_diagnosis', '')
                     organ = u_unit.get('o_organ', {})
-                    primary_refs.append({'text': text, 'organ': organ})
+                    
+                    if organ and isinstance(organ, dict):
+                        organ_name = organ.get('organName', '')
+                        if organ_name:
+                            info_item = {'text': text, 'organ': organ}
+                            all_info.append(info_item)
+                            organ_counts[organ_name] = organ_counts.get(organ_name, 0) + 1
+        
+        if not organ_counts:
+            return []
+        
+        # 找到最常见的器官（认为是最可能正确的）
+        most_common_organ = max(organ_counts, key=organ_counts.get)
+        
+        # 如果所有信息都指向同一个器官，返回所有信息
+        if len(organ_counts) == 1:
+            return all_info
+        
+        # 如果有冲突，只保留最常见器官的信息
+        filtered_info = [info for info in all_info 
+                        if info['organ'].get('organName') == most_common_organ]
+        
+        return filtered_info
 
-        if not primary_refs:
-            return original_query
+    def _build_augmented_prompt(self, original_query: str, rag_results: Dict[str, Any]) -> str:
+        """
+        构建智能增强型Prompt，让LLM可以选择性相信RAG
+        """
+        # 评估RAG质量
+        rag_quality, quality_desc = self._evaluate_rag_quality(rag_results)
+        
+        # 过滤掉冲突的信息，保留一致的高质量信息
+        primary_refs = self._filter_consistent_rag_info(rag_results)
 
         def fmt_ref(ref: Dict[str, Any]) -> str:
             organ_part = ""
@@ -272,18 +385,68 @@ class RerunWorkflow:
             text = ref.get('text', '')
             return f"- {text}{organ_part}".strip()
 
-        primary_block = "\n".join([fmt_ref(r) for r in primary_refs])
-        
-        # --- Prompt模板 ---
+        # 构建智能提示词
         aug_parts = [
-            "以下是我的症状描述：",
-            original_query.strip(),
+            "🔍 症状分析任务：",
+            f"症状：{original_query.strip()}",
             "",
-            "下面给你一些来自检索系统（RAG）的相关参考，请在回答时以这些参考为主要依据进行推理与归纳，同时严格输出JSON结构：",
-            "--- 参考资料 ---",
-            primary_block if primary_block else "(无)",
-            "--- 请根据以上信息回答 ---",
         ]
+        
+        # 根据RAG质量调整策略
+        if primary_refs and rag_quality > 0.0:
+            primary_block = "\n".join([fmt_ref(r) for r in primary_refs])
+            
+            # 决策策略基于质量和一致性
+            if "信息冲突严重" in quality_desc:
+                strategy = "⚠️ 决策策略：检索信息存在严重冲突，建议主要依据您的医学知识，谨慎使用检索信息"
+            elif "信息冲突" in quality_desc:
+                strategy = "🛡️ 决策策略：检索信息存在冲突，建议优先使用医学常识，检索信息仅作参考"
+            elif rag_quality > 0.6:
+                strategy = "🎯 决策策略：检索信息质量较高且一致，建议重点参考但需结合医学常识判断"
+            elif rag_quality > 0.3:
+                strategy = "⚖️ 决策策略：检索信息质量中等，建议谨慎参考，优先依据医学专业知识"
+            else:
+                strategy = "🛡️ 决策策略：检索信息质量较低，建议主要依据医学常识，检索信息仅作辅助参考"
+            
+            aug_parts.extend([
+                f"📚 检索系统提供的参考信息：",
+                f"💡 质量评估：{quality_desc} (质量评分: {rag_quality:.2f})",
+                "",
+                "参考内容：",
+                primary_block,
+                "",
+                strategy,
+                "",
+                "请综合以上信息进行分析：",
+                "1. 优先使用您的医学专业知识",
+                "2. 理性评估检索信息的可靠性和相关性", 
+                "3. 当检索信息与医学常识冲突时，请相信您的专业判断",
+                "4. 说明您的决策理由",
+                "",
+                "请严格按照JSON格式输出：",
+                "{",
+                '  "organ": "主要相关器官",',
+                '  "anatomical_locations": ["解剖位置1", "解剖位置2", ...],',
+                f'  "rag_quality_used": {rag_quality:.2f},',
+                '  "decision_rationale": "简述决策理由和参考信息使用情况"',
+                "}"
+            ])
+        else:
+            # 没有RAG信息或质量很差时，回退到基础模式
+            aug_parts.extend([
+                "📚 检索系统未提供有效的参考信息",
+                "",
+                "请基于您的医学专业知识进行分析：",
+                "",
+                "请严格按照JSON格式输出：",
+                "{",
+                '  "organ": "主要相关器官",',
+                '  "anatomical_locations": ["解剖位置1", "解剖位置2", ...],',
+                '  "rag_quality_used": 0.0,',
+                '  "decision_rationale": "基于医学常识的独立判断"',
+                "}"
+            ])
+        
         return "\n".join(aug_parts)
 
     def run(self):

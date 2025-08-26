@@ -250,7 +250,7 @@ class APIManager:
         return list(self.clients.keys())
     
     def _extract_and_parse_json(self, text: str) -> Dict[str, Any]:
-        """提取和解析JSON内容"""
+        """提取和解析JSON内容，支持多种格式"""
         try:
             import json
             import re
@@ -270,7 +270,18 @@ class APIManager:
             # 解析JSON
             data = json.loads(json_str)
             
-            # 提取器官名称和解剖位置
+            # 支持新的智能RAG格式: {"organ": "...", "anatomical_locations": [...], ...}
+            if 'organ' in data and 'anatomical_locations' in data:
+                organ_name = data.get('organ', '')
+                anatomical_locations = data.get('anatomical_locations', [])
+                
+                return {
+                    'organ_name': organ_name,
+                    'anatomical_locations': anatomical_locations,
+                    'full_response': data
+                }
+            
+            # 支持旧的格式: {"organs": [{"organName": "...", "anatomicalLocations": [...]}]}
             organs = data.get('organs', [])
             if organs:
                 # 取第一个器官作为主要器官
