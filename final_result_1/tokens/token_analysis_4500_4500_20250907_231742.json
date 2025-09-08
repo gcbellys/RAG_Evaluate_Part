@@ -1,0 +1,103 @@
+{
+  "timestamp": "2025-09-07T23:17:42.674111",
+  "report_range": "4500-4500",
+  "reports": {
+    "report_4500": {
+      "report_id": 4500,
+      "summary": {
+        "total_symptoms": 2,
+        "total_apis": 4,
+        "baseline_total_tokens": 17672,
+        "rag_total_tokens": 19446,
+        "token_difference": 1774,
+        "percentage_change": 10.038478949751019
+      },
+      "api_comparison": {
+        "deepseek": {
+          "baseline_tokens": 4408,
+          "rag_tokens": 4739,
+          "difference": 331,
+          "baseline_calls": 2,
+          "rag_calls": 2
+        },
+        "gemini": {
+          "baseline_tokens": 4282,
+          "rag_tokens": 4715,
+          "difference": 433,
+          "baseline_calls": 2,
+          "rag_calls": 2
+        },
+        "moonshot": {
+          "baseline_tokens": 4571,
+          "rag_tokens": 5041,
+          "difference": 470,
+          "baseline_calls": 2,
+          "rag_calls": 2
+        },
+        "openai": {
+          "baseline_tokens": 4411,
+          "rag_tokens": 4951,
+          "difference": 540,
+          "baseline_calls": 2,
+          "rag_calls": 2
+        }
+      },
+      "symptom_comparison": {
+        "chest pressure": {
+          "baseline_tokens": 8807,
+          "rag_tokens": 10169,
+          "difference": 1362,
+          "api_breakdown": {
+            "deepseek": {
+              "baseline": 2192,
+              "rag": 2448,
+              "difference": 256
+            },
+            "gemini": {
+              "baseline": 2151,
+              "rag": 2434,
+              "difference": 283
+            },
+            "moonshot": {
+              "baseline": 2288,
+              "rag": 2707,
+              "difference": 419
+            },
+            "openai": {
+              "baseline": 2176,
+              "rag": 2580,
+              "difference": 404
+            }
+          }
+        },
+        "shortness of breath": {
+          "baseline_tokens": 8865,
+          "rag_tokens": 9277,
+          "difference": 412,
+          "api_breakdown": {
+            "deepseek": {
+              "baseline": 2216,
+              "rag": 2291,
+              "difference": 75
+            },
+            "gemini": {
+              "baseline": 2131,
+              "rag": 2281,
+              "difference": 150
+            },
+            "moonshot": {
+              "baseline": 2283,
+              "rag": 2334,
+              "difference": 51
+            },
+            "openai": {
+              "baseline": 2235,
+              "rag": 2371,
+              "difference": 136
+            }
+          }
+        }
+      }
+    }
+  }
+}

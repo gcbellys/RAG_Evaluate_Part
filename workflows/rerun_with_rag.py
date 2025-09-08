@@ -149,7 +149,13 @@ class RerunWorkflow:
         report_results = {
             'report_id': report_id,
             'timestamp': datetime.now().isoformat(),
-            'symptoms': []
+            'symptoms': [],
+            'token_summary': {
+                'total_tokens': 0,
+                'total_prompt_tokens': 0,
+                'total_completion_tokens': 0,
+                'api_breakdown': {}
+            }
         }
         
         # 加载系统提示词
@@ -188,8 +194,39 @@ class RerunWorkflow:
                         'response': response.get('response', ''),
                         'parsed_data': response.get('parsed_data', {}),
                         'organ_name': response.get('organ_name', ''),
-                        'anatomical_locations': response.get('anatomical_locations', [])
+                        'anatomical_locations': response.get('anatomical_locations', []),
+                        'success': response.get('success', False),
+                        'model': response.get('model', ''),
+                        'usage': response.get('usage', {}),  # 关键：保存token使用信息
+                        'error': response.get('error', '')
                     }
+                    
+                    # 统计token使用
+                    if 'usage' in response and response['usage']:
+                        usage = response['usage']
+                        total_tokens = usage.get('total_tokens', 0)
+                        prompt_tokens = usage.get('prompt_tokens', 0)
+                        completion_tokens = usage.get('completion_tokens', 0)
+                        
+                        # 更新总计
+                        report_results['token_summary']['total_tokens'] += total_tokens
+                        report_results['token_summary']['total_prompt_tokens'] += prompt_tokens
+                        report_results['token_summary']['total_completion_tokens'] += completion_tokens
+                        
+                        # 更新API分解
+                        if api_name not in report_results['token_summary']['api_breakdown']:
+                            report_results['token_summary']['api_breakdown'][api_name] = {
+                                'total_tokens': 0,
+                                'prompt_tokens': 0,
+                                'completion_tokens': 0,
+                                'calls': 0
+                            }
+                        
+                        api_breakdown = report_results['token_summary']['api_breakdown'][api_name]
+                        api_breakdown['total_tokens'] += total_tokens
+                        api_breakdown['prompt_tokens'] += prompt_tokens
+                        api_breakdown['completion_tokens'] += completion_tokens
+                        api_breakdown['calls'] += 1
                     
                     # 评估这个API的响应
                     if response.get('success') and response.get('parsed_data'):
@@ -238,6 +275,15 @@ class RerunWorkflow:
         
         with open(detailed_path, 'w', encoding='utf-8') as f:
             json.dump(report_results, f, ensure_ascii=False, indent=2)
+        
+        # 显示token统计摘要
+        token_summary = report_results.get('token_summary', {})
+        total_tokens = token_summary.get('total_tokens', 0)
+        if total_tokens > 0:
+            print(f"📊 Token使用统计: {total_tokens:,} tokens")
+            for api, stats in token_summary.get('api_breakdown', {}).items():
+                if stats['calls'] > 0:
+                    print(f"  {api.upper():12}: {stats['total_tokens']:,} tokens ({stats['calls']}次调用)")
         
         print(f"💾 Baseline结果已保存: {detailed_path}")
         return detailed_path
@@ -479,6 +525,14 @@ class RerunWorkflow:
             all_rag_results = {}
             all_comparisons = {}
             
+            # 初始化token统计
+            rag_token_summary = {
+                'total_tokens': 0,
+                'total_prompt_tokens': 0,
+                'total_completion_tokens': 0,
+                'api_breakdown': {}
+            }
+            
             print(f"\n🚀 开始处理RAG缓存文件...")
             
             # 加载系统提示词
@@ -515,6 +569,33 @@ class RerunWorkflow:
                             if response.get('success') and response.get('parsed_data'):
                                 # 这里可以添加评估逻辑，但目前我们只关注API响应
                                 pass
+                            
+                            # 统计RAG增强的token使用
+                            if 'usage' in response and response['usage']:
+                                usage = response['usage']
+                                total_tokens = usage.get('total_tokens', 0)
+                                prompt_tokens = usage.get('prompt_tokens', 0)
+                                completion_tokens = usage.get('completion_tokens', 0)
+                                
+                                # 更新总计
+                                rag_token_summary['total_tokens'] += total_tokens
+                                rag_token_summary['total_prompt_tokens'] += prompt_tokens
+                                rag_token_summary['total_completion_tokens'] += completion_tokens
+                                
+                                # 更新API分解
+                                if api_name not in rag_token_summary['api_breakdown']:
+                                    rag_token_summary['api_breakdown'][api_name] = {
+                                        'total_tokens': 0,
+                                        'prompt_tokens': 0,
+                                        'completion_tokens': 0,
+                                        'calls': 0
+                                    }
+                                
+                                api_breakdown = rag_token_summary['api_breakdown'][api_name]
+                                api_breakdown['total_tokens'] += total_tokens
+                                api_breakdown['prompt_tokens'] += prompt_tokens
+                                api_breakdown['completion_tokens'] += completion_tokens
+                                api_breakdown['calls'] += 1
                         
                         all_rag_results[original_query] = {
                             'api_responses': api_results,
@@ -541,10 +622,26 @@ class RerunWorkflow:
             if all_rag_results:
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                 
+                # 构建完整的RAG结果（包含token统计）
+                complete_rag_results = {
+                    'report_id': self.report_id,
+                    'timestamp': datetime.now().isoformat(),
+                    'symptoms': all_rag_results,
+                    'token_summary': rag_token_summary
+                }
+                
                 # 保存RAG增强结果
                 rag_output_filename = self.rerun_results_dir / f"report_{self.report_id}_withRAG_{timestamp}.json"
                 with open(rag_output_filename, 'w', encoding='utf-8') as f:
-                    json.dump(all_rag_results, f, ensure_ascii=False, indent=2)
+                    json.dump(complete_rag_results, f, ensure_ascii=False, indent=2)
+                
+                # 显示token统计摘要
+                total_tokens = rag_token_summary.get('total_tokens', 0)
+                if total_tokens > 0:
+                    print(f"\n📊 RAG增强Token使用统计: {total_tokens:,} tokens")
+                    for api, stats in rag_token_summary.get('api_breakdown', {}).items():
+                        if stats['calls'] > 0:
+                            print(f"  {api.upper():12}: {stats['total_tokens']:,} tokens ({stats['calls']}次调用)")
                 
                 print(f"\n✅ RAG增强结果已保存: {rag_output_filename}")
                 

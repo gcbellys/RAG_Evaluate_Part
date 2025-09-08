@@ -1,0 +1,301 @@
+================================================================================
+📊 Token使用统计报告
+📋 报告范围: 4001 - 4003
+⏰ 生成时间: 2025-09-08 18:34:34
+================================================================================
+
+📈 总体统计:
+   处理报告数: 3
+   总症状数: 28
+   Baseline总tokens: 189,712
+   RAG增强总tokens: 368,882
+   估计缓存读取tokens: 0
+   估计节省prompt tokens: 0
+
+📋 报告 4001:
+   症状数量: 15
+   API数量: 4
+
+   🔵 Baseline Token使用:
+     总计: 101,367 tokens
+     GEMINI    : 31,775 tokens (15次调用, 平均2118)
+     MOONSHOT  : 34,094 tokens (15次调用, 平均2273)
+     ANTHROPIC : 3,059 tokens (15次调用, 平均204)
+     DEEPSEEK  : 32,439 tokens (15次调用, 平均2163)
+
+   🟢 RAG增强 Token使用:
+     总计: 238,734 tokens
+     GEMINI    : 70,377 tokens (15次调用, 平均4692), 缓存读取≈0
+     MOONSHOT  : 48,605 tokens (13次调用, 平均3739), 缓存读取≈0
+     ANTHROPIC : 49,844 tokens (15次调用, 平均3323), 缓存读取≈0
+     DEEPSEEK  : 69,908 tokens (15次调用, 平均4661), 缓存读取≈0
+
+   🔍 各症状Token使用:
+     症状: left ventricular systolic function is moderately depressed
+       Baseline: 6,609 tokens
+       RAG增强:  11,527 tokens
+       API分解:
+         GEMINI  : Baseline 2,072, RAG 3,234
+         MOONSHOT: Baseline 2,239, RAG 3,581
+         ANTHROPIC: Baseline 196, RAG 1,549
+         DEEPSEEK: Baseline 2,102, RAG 3,163
+     症状: no minimal pericardial effusion, no evidence of tamponade
+       Baseline: 6,477 tokens
+       RAG增强:  18,238 tokens
+       API分解:
+         GEMINI  : Baseline 2,055, RAG 4,692
+         MOONSHOT: Baseline 2,223, RAG 5,260
+         ANTHROPIC: Baseline 94, RAG 3,552
+         DEEPSEEK: Baseline 2,105, RAG 4,734
+     症状: temperature 97.7, heart rate 98, respirations 13, 94% on room air saturations, blood pressure 141/71
+       Baseline: 7,016 tokens
+       RAG增强:  10,648 tokens
+       API分解:
+         GEMINI  : Baseline 2,150, RAG 3,025
+         MOONSHOT: Baseline 2,306, RAG 3,267
+         ANTHROPIC: Baseline 281, RAG 1,367
+         DEEPSEEK: Baseline 2,279, RAG 2,989
+     症状: right coronary artery had a 70% stenosis
+       Baseline: 6,758 tokens
+       RAG增强:  20,983 tokens
+       API分解:
+         GEMINI  : Baseline 2,141, RAG 5,451
+         MOONSHOT: Baseline 2,285, RAG 5,809
+         ANTHROPIC: Baseline 179, RAG 4,305
+         DEEPSEEK: Baseline 2,153, RAG 5,418
+     症状: resting regional wall motion abnormalities include septal, anterior akinesis
+       Baseline: 6,660 tokens
+       RAG增强:  12,464 tokens
+       API分解:
+         GEMINI  : Baseline 2,094, RAG 3,452
+         MOONSHOT: Baseline 2,248, RAG 3,734
+         ANTHROPIC: Baseline 198, RAG 1,900
+         DEEPSEEK: Baseline 2,120, RAG 3,378
+     症状: no jugulovenous distension appreciated
+       Baseline: 6,709 tokens
+       RAG增强:  10,407 tokens
+       API分解:
+         GEMINI  : Baseline 2,138, RAG 3,000
+         MOONSHOT: Baseline 2,236, RAG 3,207
+         ANTHROPIC: Baseline 176, RAG 1,264
+         DEEPSEEK: Baseline 2,159, RAG 2,936
+     症状: the right-sided filling pressures were normal. the preliminary capillary wedge pressure was 12 mm of mercury. the left ventricular end diastolic pressure was elevated about 30 mm of mercury. cardiac index depressed at 2.2 liters/min meter squared
+       Baseline: 6,977 tokens
+       RAG增强:  46,106 tokens
+       API分解:
+         GEMINI  : Baseline 2,171, RAG 15,340
+         MOONSHOT: Baseline 2,275, RAG 0
+         ANTHROPIC: Baseline 339, RAG 15,848
+         DEEPSEEK: Baseline 2,192, RAG 14,918
+     症状: large right inguinal hematoma
+       Baseline: 6,850 tokens
+       RAG增强:  8,203 tokens
+       API分解:
+         GEMINI  : Baseline 2,114, RAG 2,460
+         MOONSHOT: Baseline 2,307, RAG 2,558
+         ANTHROPIC: Baseline 216, RAG 630
+         DEEPSEEK: Baseline 2,213, RAG 2,555
+     症状: left ventricular end diastolic pressure was elevated about 30 mm of mercury
+       Baseline: 6,668 tokens
+       RAG增强:  18,518 tokens
+       API分解:
+         GEMINI  : Baseline 2,082, RAG 4,967
+         MOONSHOT: Baseline 2,240, RAG 5,211
+         ANTHROPIC: Baseline 180, RAG 3,421
+         DEEPSEEK: Baseline 2,166, RAG 4,919
+     症状: sinus rhythm with left bundle branch block
+       Baseline: 6,586 tokens
+       RAG增强:  10,520 tokens
+       API分解:
+         GEMINI  : Baseline 2,080, RAG 2,946
+         MOONSHOT: Baseline 2,230, RAG 3,279
+         ANTHROPIC: Baseline 169, RAG 1,253
+         DEEPSEEK: Baseline 2,107, RAG 3,042
+     症状: selective coronary angiography revealed a right dominant system. the left main coronary artery, left anterior descending and left circumflex were angiographically normal. the right coronary artery had a 70% stenosis. the neostented gap was seen on the previously placed proximal image stents. there was 90% restenosis placed on the initially placed mid . there was a 60% restenosis on the distal cypher . there was minimal disease of the posterior descending artery, percutaneous transluminal coronary angioplasty site
+       Baseline: 7,243 tokens
+       RAG增强:  15,572 tokens
+       API分解:
+         GEMINI  : Baseline 2,239, RAG 4,100
+         MOONSHOT: Baseline 2,417, RAG 4,505
+         ANTHROPIC: Baseline 308, RAG 2,882
+         DEEPSEEK: Baseline 2,279, RAG 4,085
+     症状: the left atrium is normal in size. left ventricular wall thickness was normal. left ventricular size cavity size is normal. overall left ventricular systolic function is moderately depressed. resting regional wall motion abnormalities include septal, anterior akinesis. though, the views are limited, it appeared that the inferior wall was akinetic. there was a small pericardial effusion. the effusion appears circumferential. there are no echocardiographic signs or tamponade. compared to the previous report of , effusion has not changed. the ejection fraction appears worse than previously reported. previous study is not available for review. ejection fraction of 35% to 40%
+       Baseline: 7,085 tokens
+       RAG增强:  30,659 tokens
+       API分解:
+         GEMINI  : Baseline 2,214, RAG 10,413
+         MOONSHOT: Baseline 2,372, RAG 0
+         ANTHROPIC: Baseline 268, RAG 9,999
+         DEEPSEEK: Baseline 2,231, RAG 10,247
+     症状: left ventriculography revealed an ejection fraction of 46% with mild global hypokinesis. there was no mitral regurgitation
+       Baseline: 6,615 tokens
+       RAG增强:  8,167 tokens
+       API分解:
+         GEMINI  : Baseline 2,099, RAG 2,401
+         MOONSHOT: Baseline 2,248, RAG 2,717
+         ANTHROPIC: Baseline 148, RAG 573
+         DEEPSEEK: Baseline 2,120, RAG 2,476
+     症状: regular rate and rhythm, no murmurs, rubs or gallops appreciated
+       Baseline: 6,573 tokens
+       RAG增强:  8,782 tokens
+       API分解:
+         GEMINI  : Baseline 2,078, RAG 2,554
+         MOONSHOT: Baseline 2,253, RAG 2,870
+         ANTHROPIC: Baseline 126, RAG 787
+         DEEPSEEK: Baseline 2,116, RAG 2,571
+     症状: small pericardial effusion
+       Baseline: 6,541 tokens
+       RAG增强:  7,940 tokens
+       API分解:
+         GEMINI  : Baseline 2,048, RAG 2,342
+         MOONSHOT: Baseline 2,215, RAG 2,607
+         ANTHROPIC: Baseline 181, RAG 514
+         DEEPSEEK: Baseline 2,097, RAG 2,477
+
+📋 报告 4002:
+   症状数量: 5
+   API数量: 4
+
+   🔵 Baseline Token使用:
+     总计: 33,868 tokens
+     GEMINI    : 10,559 tokens (5次调用, 平均2112)
+     MOONSHOT  : 11,382 tokens (5次调用, 平均2276)
+     ANTHROPIC : 1,064 tokens (5次调用, 平均213)
+     DEEPSEEK  : 10,863 tokens (5次调用, 平均2173)
+
+   🟢 RAG增强 Token使用:
+     总计: 47,224 tokens
+     GEMINI    : 13,776 tokens (5次调用, 平均2755), 缓存读取≈0
+     MOONSHOT  : 14,554 tokens (5次调用, 平均2911), 缓存读取≈0
+     ANTHROPIC : 4,996 tokens (5次调用, 平均999), 缓存读取≈0
+     DEEPSEEK  : 13,898 tokens (5次调用, 平均2780), 缓存读取≈0
+
+   🔍 各症状Token使用:
+     症状: left arm and shoulder pain
+       Baseline: 6,900 tokens
+       RAG增强:  8,092 tokens
+       API分解:
+         GEMINI  : Baseline 2,124, RAG 2,475
+         MOONSHOT: Baseline 2,319, RAG 2,563
+         ANTHROPIC: Baseline 246, RAG 605
+         DEEPSEEK: Baseline 2,211, RAG 2,449
+     症状: interior apical ischemia
+       Baseline: 6,595 tokens
+       RAG增强:  8,591 tokens
+       API分解:
+         GEMINI  : Baseline 2,064, RAG 2,568
+         MOONSHOT: Baseline 2,228, RAG 2,753
+         ANTHROPIC: Baseline 197, RAG 762
+         DEEPSEEK: Baseline 2,106, RAG 2,508
+     症状: 40% proximal right coronary artery and 40% mid left anterior descending lesions
+       Baseline: 6,792 tokens
+       RAG增强:  11,068 tokens
+       API分解:
+         GEMINI  : Baseline 2,121, RAG 3,175
+         MOONSHOT: Baseline 2,290, RAG 3,261
+         ANTHROPIC: Baseline 194, RAG 1,496
+         DEEPSEEK: Baseline 2,187, RAG 3,136
+     症状: in-stent restenosis of a mid right coronary artery stent
+       Baseline: 6,714 tokens
+       RAG增强:  11,382 tokens
+       API分解:
+         GEMINI  : Baseline 2,118, RAG 3,188
+         MOONSHOT: Baseline 2,267, RAG 3,439
+         ANTHROPIC: Baseline 173, RAG 1,489
+         DEEPSEEK: Baseline 2,156, RAG 3,266
+     症状: hypoxia/cough
+       Baseline: 6,867 tokens
+       RAG增强:  8,091 tokens
+       API分解:
+         GEMINI  : Baseline 2,132, RAG 2,370
+         MOONSHOT: Baseline 2,278, RAG 2,538
+         ANTHROPIC: Baseline 254, RAG 644
+         DEEPSEEK: Baseline 2,203, RAG 2,539
+
+📋 报告 4003:
+   症状数量: 8
+   API数量: 4
+
+   🔵 Baseline Token使用:
+     总计: 54,477 tokens
+     GEMINI    : 16,884 tokens (8次调用, 平均2110)
+     MOONSHOT  : 18,287 tokens (8次调用, 平均2286)
+     ANTHROPIC : 1,711 tokens (8次调用, 平均214)
+     DEEPSEEK  : 17,595 tokens (8次调用, 平均2199)
+
+   🟢 RAG增强 Token使用:
+     总计: 82,924 tokens
+     GEMINI    : 23,933 tokens (8次调用, 平均2992), 缓存读取≈0
+     MOONSHOT  : 25,361 tokens (8次调用, 平均3170), 缓存读取≈0
+     ANTHROPIC : 9,918 tokens (8次调用, 平均1240), 缓存读取≈0
+     DEEPSEEK  : 23,712 tokens (8次调用, 平均2964), 缓存读取≈0
+
+   🔍 各症状Token使用:
+     症状: abg 7.24/66/62
+       Baseline: 6,832 tokens
+       RAG增强:  9,756 tokens
+       API分解:
+         GEMINI  : Baseline 2,119, RAG 2,893
+         MOONSHOT: Baseline 2,286, RAG 3,066
+         ANTHROPIC: Baseline 233, RAG 1,016
+         DEEPSEEK: Baseline 2,194, RAG 2,781
+     症状: progressive sob x7 months and cough x 2 months
+       Baseline: 6,861 tokens
+       RAG增强:  8,205 tokens
+       API分解:
+         GEMINI  : Baseline 2,140, RAG 2,448
+         MOONSHOT: Baseline 2,294, RAG 2,684
+         ANTHROPIC: Baseline 227, RAG 609
+         DEEPSEEK: Baseline 2,200, RAG 2,464
+     症状: wbc rose to >50k
+       Baseline: 6,783 tokens
+       RAG增强:  10,091 tokens
+       API分解:
+         GEMINI  : Baseline 2,104, RAG 2,947
+         MOONSHOT: Baseline 2,310, RAG 3,081
+         ANTHROPIC: Baseline 197, RAG 1,194
+         DEEPSEEK: Baseline 2,172, RAG 2,869
+     症状: shortness of breath
+       Baseline: 6,926 tokens
+       RAG增强:  7,377 tokens
+       API分解:
+         GEMINI  : Baseline 2,130, RAG 2,232
+         MOONSHOT: Baseline 2,283, RAG 2,334
+         ANTHROPIC: Baseline 247, RAG 462
+         DEEPSEEK: Baseline 2,266, RAG 2,349
+     症状: neutropenic
+       Baseline: 6,708 tokens
+       RAG增强:  8,205 tokens
+       API分解:
+         GEMINI  : Baseline 2,054, RAG 2,504
+         MOONSHOT: Baseline 2,303, RAG 2,622
+         ANTHROPIC: Baseline 221, RAG 640
+         DEEPSEEK: Baseline 2,130, RAG 2,439
+     症状: whe
+       Baseline: 6,711 tokens
+       RAG增强:  24,024 tokens
+       API分解:
+         GEMINI  : Baseline 2,122, RAG 6,198
+         MOONSHOT: Baseline 2,219, RAG 6,631
+         ANTHROPIC: Baseline 191, RAG 5,067
+         DEEPSEEK: Baseline 2,179, RAG 6,128
+     症状: hct >25
+       Baseline: 6,898 tokens
+       RAG增强:  8,184 tokens
+       API分解:
+         GEMINI  : Baseline 2,129, RAG 2,554
+         MOONSHOT: Baseline 2,326, RAG 2,617
+         ANTHROPIC: Baseline 212, RAG 582
+         DEEPSEEK: Baseline 2,231, RAG 2,431
+     症状: low-grade temperature at 100.4
+       Baseline: 6,758 tokens
+       RAG增强:  7,082 tokens
+       API分解:
+         GEMINI  : Baseline 2,086, RAG 2,157
+         MOONSHOT: Baseline 2,266, RAG 2,326
+         ANTHROPIC: Baseline 183, RAG 348
+         DEEPSEEK: Baseline 2,223, RAG 2,251
+
+================================================================================
+🏁 统计完成
+================================================================================

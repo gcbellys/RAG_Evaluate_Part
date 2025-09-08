@@ -1,0 +1,227 @@
+{
+  "timestamp": "2025-09-08T17:44:31.371529",
+  "report_range": "4000-4000",
+  "reports": {
+    "report_4000": {
+      "report_id": 4000,
+      "summary": {
+        "total_symptoms": 8,
+        "total_apis": 4,
+        "baseline_total_tokens": 52495,
+        "rag_total_tokens": 59524,
+        "token_difference": 7029,
+        "percentage_change": 13.3898466520621,
+        "cache_read_tokens_total": 0,
+        "cache_creation_tokens_total": 0
+      },
+      "api_comparison": {
+        "deepseek": {
+          "baseline_tokens": 17374,
+          "rag_tokens": 19372,
+          "difference": 1998,
+          "baseline_calls": 8,
+          "rag_calls": 8
+        },
+        "gemini": {
+          "baseline_tokens": 16928,
+          "rag_tokens": 19209,
+          "difference": 2281,
+          "baseline_calls": 8,
+          "rag_calls": 8
+        },
+        "moonshot": {
+          "baseline_tokens": 18193,
+          "rag_tokens": 20943,
+          "difference": 2750,
+          "baseline_calls": 8,
+          "rag_calls": 8
+        },
+        "anthropic": {
+          "baseline_tokens": 0,
+          "rag_tokens": 0,
+          "difference": 0,
+          "baseline_calls": 8,
+          "rag_calls": 8
+        }
+      },
+      "symptom_comparison": {
+        "legally blind for three years": {
+          "baseline_tokens": 6504,
+          "rag_tokens": 7467,
+          "difference": 963,
+          "api_breakdown": {
+            "deepseek": {
+              "baseline": 2144,
+              "rag": 2413,
+              "difference": 269
+            },
+            "gemini": {
+              "baseline": 2088,
+              "rag": 2482,
+              "difference": 394
+            },
+            "moonshot": {
+              "baseline": 2272,
+              "rag": 2572,
+              "difference": 300
+            }
+          }
+        },
+        "dyspnea on exertion": {
+          "baseline_tokens": 6638,
+          "rag_tokens": 7691,
+          "difference": 1053,
+          "api_breakdown": {
+            "deepseek": {
+              "baseline": 2221,
+              "rag": 2472,
+              "difference": 251
+            },
+            "gemini": {
+              "baseline": 2131,
+              "rag": 2451,
+              "difference": 320
+            },
+            "moonshot": {
+              "baseline": 2286,
+              "rag": 2768,
+              "difference": 482
+            }
+          }
+        },
+        "shortness of breath": {
+          "baseline_tokens": 6629,
+          "rag_tokens": 6858,
+          "difference": 229,
+          "api_breakdown": {
+            "deepseek": {
+              "baseline": 2216,
+              "rag": 2295,
+              "difference": 79
+            },
+            "gemini": {
+              "baseline": 2130,
+              "rag": 2229,
+              "difference": 99
+            },
+            "moonshot": {
+              "baseline": 2283,
+              "rag": 2334,
+              "difference": 51
+            }
+          }
+        },
+        "80 millimeter aortic valve gradient": {
+          "baseline_tokens": 6566,
+          "rag_tokens": 7334,
+          "difference": 768,
+          "api_breakdown": {
+            "deepseek": {
+              "baseline": 2151,
+              "rag": 2396,
+              "difference": 245
+            },
+            "gemini": {
+              "baseline": 2129,
+              "rag": 2332,
+              "difference": 203
+            },
+            "moonshot": {
+              "baseline": 2286,
+              "rag": 2606,
+              "difference": 320
+            }
+          }
+        },
+        "moderate to severe mitral regurgitation": {
+          "baseline_tokens": 6417,
+          "rag_tokens": 7346,
+          "difference": 929,
+          "api_breakdown": {
+            "deepseek": {
+              "baseline": 2105,
+              "rag": 2379,
+              "difference": 274
+            },
+            "gemini": {
+              "baseline": 2076,
+              "rag": 2362,
+              "difference": 286
+            },
+            "moonshot": {
+              "baseline": 2236,
+              "rag": 2605,
+              "difference": 369
+            }
+          }
+        },
+        "the heart has a systolic ejection murmur": {
+          "baseline_tokens": 6410,
+          "rag_tokens": 7412,
+          "difference": 1002,
+          "api_breakdown": {
+            "deepseek": {
+              "baseline": 2104,
+              "rag": 2394,
+              "difference": 290
+            },
+            "gemini": {
+              "baseline": 2072,
+              "rag": 2383,
+              "difference": 311
+            },
+            "moonshot": {
+              "baseline": 2234,
+              "rag": 2635,
+              "difference": 401
+            }
+          }
+        },
+        "no jugular venous distention, no carotid bruits": {
+          "baseline_tokens": 6678,
+          "rag_tokens": 8011,
+          "difference": 1333,
+          "api_breakdown": {
+            "deepseek": {
+              "baseline": 2220,
+              "rag": 2628,
+              "difference": 408
+            },
+            "gemini": {
+              "baseline": 2153,
+              "rag": 2593,
+              "difference": 440
+            },
+            "moonshot": {
+              "baseline": 2305,
+              "rag": 2790,
+              "difference": 485
+            }
+          }
+        },
+        "four episodes of loss of consciousness over the past six months": {
+          "baseline_tokens": 6653,
+          "rag_tokens": 7405,
+          "difference": 752,
+          "api_breakdown": {
+            "deepseek": {
+              "baseline": 2213,
+              "rag": 2395,
+              "difference": 182
+            },
+            "gemini": {
+              "baseline": 2149,
+              "rag": 2377,
+              "difference": 228
+            },
+            "moonshot": {
+              "baseline": 2291,
+              "rag": 2633,
+              "difference": 342
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+================================================================================
+📊 Token使用统计报告
+📋 报告范围: 4000 - 4000
+⏰ 生成时间: 2025-09-08 18:00:57
+================================================================================
+
+📈 总体统计:
+   处理报告数: 1
+   总症状数: 8
+   Baseline总tokens: 54,311
+   RAG增强总tokens: 64,247
+   估计缓存读取tokens: 0
+   估计节省prompt tokens: 0
+
+📋 报告 4000:
+   症状数量: 8
+   API数量: 4
+
+   🔵 Baseline Token使用:
+     总计: 54,311 tokens
+     GEMINI    : 16,914 tokens (8次调用, 平均2114)
+     ANTHROPIC : 1,830 tokens (8次调用, 平均229)
+     DEEPSEEK  : 17,380 tokens (8次调用, 平均2172)
+     MOONSHOT  : 18,187 tokens (8次调用, 平均2273)
+
+   🟢 RAG增强 Token使用:
+     总计: 64,247 tokens
+     GEMINI    : 19,123 tokens (8次调用, 平均2390), 缓存读取≈0
+     ANTHROPIC : 4,883 tokens (8次调用, 平均610), 缓存读取≈0
+     DEEPSEEK  : 19,483 tokens (8次调用, 平均2435), 缓存读取≈0
+     MOONSHOT  : 20,758 tokens (8次调用, 平均2595), 缓存读取≈0
+
+   🔍 各症状Token使用:
+     症状: shortness of breath
+       Baseline: 6,879 tokens
+       RAG增强:  7,252 tokens
+       API分解:
+         GEMINI  : Baseline 2,133, RAG 2,232
+         ANTHROPIC: Baseline 247, RAG 398
+         DEEPSEEK: Baseline 2,216, RAG 2,295
+         MOONSHOT: Baseline 2,283, RAG 2,327
+     症状: the heart has a systolic ejection murmur
+       Baseline: 6,667 tokens
+       RAG增强:  8,076 tokens
+       API分解:
+         GEMINI  : Baseline 2,075, RAG 2,390
+         ANTHROPIC: Baseline 197, RAG 638
+         DEEPSEEK: Baseline 2,161, RAG 2,394
+         MOONSHOT: Baseline 2,234, RAG 2,654
+     症状: four episodes of loss of consciousness over the past six months
+       Baseline: 6,905 tokens
+       RAG增强:  8,001 tokens
+       API分解:
+         GEMINI  : Baseline 2,129, RAG 2,377
+         ANTHROPIC: Baseline 273, RAG 640
+         DEEPSEEK: Baseline 2,212, RAG 2,395
+         MOONSHOT: Baseline 2,291, RAG 2,589
+     症状: moderate to severe mitral regurgitation
+       Baseline: 6,599 tokens
+       RAG增强:  7,956 tokens
+       API分解:
+         GEMINI  : Baseline 2,076, RAG 2,362
+         ANTHROPIC: Baseline 182, RAG 539
+         DEEPSEEK: Baseline 2,105, RAG 2,456
+         MOONSHOT: Baseline 2,236, RAG 2,599
+     症状: no jugular venous distention, no carotid bruits
+       Baseline: 6,898 tokens
+       RAG增强:  8,859 tokens
+       API分解:
+         GEMINI  : Baseline 2,153, RAG 2,540
+         ANTHROPIC: Baseline 270, RAG 846
+         DEEPSEEK: Baseline 2,170, RAG 2,628
+         MOONSHOT: Baseline 2,305, RAG 2,845
+     症状: 80 millimeter aortic valve gradient
+       Baseline: 6,734 tokens
+       RAG增强:  7,893 tokens
+       API分解:
+         GEMINI  : Baseline 2,129, RAG 2,390
+         ANTHROPIC: Baseline 180, RAG 562
+         DEEPSEEK: Baseline 2,151, RAG 2,394
+         MOONSHOT: Baseline 2,274, RAG 2,547
+     症状: legally blind for three years
+       Baseline: 6,729 tokens
+       RAG增强:  7,936 tokens
+       API分解:
+         GEMINI  : Baseline 2,094, RAG 2,381
+         ANTHROPIC: Baseline 219, RAG 544
+         DEEPSEEK: Baseline 2,144, RAG 2,441
+         MOONSHOT: Baseline 2,272, RAG 2,570
+     症状: dyspnea on exertion
+       Baseline: 6,900 tokens
+       RAG增强:  8,274 tokens
+       API分解:
+         GEMINI  : Baseline 2,125, RAG 2,451
+         ANTHROPIC: Baseline 262, RAG 716
+         DEEPSEEK: Baseline 2,221, RAG 2,480
+         MOONSHOT: Baseline 2,292, RAG 2,627
+
+================================================================================
+🏁 统计完成
+================================================================================

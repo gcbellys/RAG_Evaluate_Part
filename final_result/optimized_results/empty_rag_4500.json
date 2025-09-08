@@ -1,0 +1,41 @@
+{
+  "report_id": "4500",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4500_symptom_0",
+      "symptom_text": "shortness of breath",
+      "rag_context": "",
+      "expected_results": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ]
+    },
+    {
+      "symptom_id": "diagnostic_4500_symptom_1",
+      "symptom_text": "chest pressure",
+      "rag_context": "",
+      "expected_results": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Left Anterior Descending Artery (LAD)",
+            "Circumflex Artery"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Circumflex Artery"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,897 @@
+{
+  "timestamp": "2025-09-08T18:34:34.445183",
+  "report_range": "4001-4003",
+  "reports": {
+    "report_4001": {
+      "report_id": 4001,
+      "summary": {
+        "total_symptoms": 15,
+        "total_apis": 4,
+        "baseline_total_tokens": 101367,
+        "rag_total_tokens": 238734,
+        "token_difference": 137367,
+        "percentage_change": 135.51451655864335,
+        "cache_read_tokens_total": 0,
+        "cache_creation_tokens_total": 0
+      },
+      "api_comparison": {
+        "gemini": {
+          "baseline_tokens": 31775,
+          "rag_tokens": 70377,
+          "difference": 38602,
+          "baseline_calls": 15,
+          "rag_calls": 15
+        },
+        "moonshot": {
+          "baseline_tokens": 34094,
+          "rag_tokens": 48605,
+          "difference": 14511,
+          "baseline_calls": 15,
+          "rag_calls": 13
+        },
+        "anthropic": {
+          "baseline_tokens": 3059,
+          "rag_tokens": 49844,
+          "difference": 46785,
+          "baseline_calls": 15,
+          "rag_calls": 15
+        },
+        "deepseek": {
+          "baseline_tokens": 32439,
+          "rag_tokens": 69908,
+          "difference": 37469,
+          "baseline_calls": 15,
+          "rag_calls": 15
+        }
+      },
+      "symptom_comparison": {
+        "left ventricular systolic function is moderately depressed": {
+          "baseline_tokens": 6609,
+          "rag_tokens": 11527,
+          "difference": 4918,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2072,
+              "rag": 3234,
+              "difference": 1162
+            },
+            "moonshot": {
+              "baseline": 2239,
+              "rag": 3581,
+              "difference": 1342
+            },
+            "anthropic": {
+              "baseline": 196,
+              "rag": 1549,
+              "difference": 1353
+            },
+            "deepseek": {
+              "baseline": 2102,
+              "rag": 3163,
+              "difference": 1061
+            }
+          }
+        },
+        "no minimal pericardial effusion, no evidence of tamponade": {
+          "baseline_tokens": 6477,
+          "rag_tokens": 18238,
+          "difference": 11761,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2055,
+              "rag": 4692,
+              "difference": 2637
+            },
+            "moonshot": {
+              "baseline": 2223,
+              "rag": 5260,
+              "difference": 3037
+            },
+            "anthropic": {
+              "baseline": 94,
+              "rag": 3552,
+              "difference": 3458
+            },
+            "deepseek": {
+              "baseline": 2105,
+              "rag": 4734,
+              "difference": 2629
+            }
+          }
+        },
+        "temperature 97.7, heart rate 98, respirations 13, 94% on room air saturations, blood pressure 141/71": {
+          "baseline_tokens": 7016,
+          "rag_tokens": 10648,
+          "difference": 3632,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2150,
+              "rag": 3025,
+              "difference": 875
+            },
+            "moonshot": {
+              "baseline": 2306,
+              "rag": 3267,
+              "difference": 961
+            },
+            "anthropic": {
+              "baseline": 281,
+              "rag": 1367,
+              "difference": 1086
+            },
+            "deepseek": {
+              "baseline": 2279,
+              "rag": 2989,
+              "difference": 710
+            }
+          }
+        },
+        "right coronary artery had a 70% stenosis": {
+          "baseline_tokens": 6758,
+          "rag_tokens": 20983,
+          "difference": 14225,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2141,
+              "rag": 5451,
+              "difference": 3310
+            },
+            "moonshot": {
+              "baseline": 2285,
+              "rag": 5809,
+              "difference": 3524
+            },
+            "anthropic": {
+              "baseline": 179,
+              "rag": 4305,
+              "difference": 4126
+            },
+            "deepseek": {
+              "baseline": 2153,
+              "rag": 5418,
+              "difference": 3265
+            }
+          }
+        },
+        "resting regional wall motion abnormalities include septal, anterior akinesis": {
+          "baseline_tokens": 6660,
+          "rag_tokens": 12464,
+          "difference": 5804,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2094,
+              "rag": 3452,
+              "difference": 1358
+            },
+            "moonshot": {
+              "baseline": 2248,
+              "rag": 3734,
+              "difference": 1486
+            },
+            "anthropic": {
+              "baseline": 198,
+              "rag": 1900,
+              "difference": 1702
+            },
+            "deepseek": {
+              "baseline": 2120,
+              "rag": 3378,
+              "difference": 1258
+            }
+          }
+        },
+        "no jugulovenous distension appreciated": {
+          "baseline_tokens": 6709,
+          "rag_tokens": 10407,
+          "difference": 3698,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2138,
+              "rag": 3000,
+              "difference": 862
+            },
+            "moonshot": {
+              "baseline": 2236,
+              "rag": 3207,
+              "difference": 971
+            },
+            "anthropic": {
+              "baseline": 176,
+              "rag": 1264,
+              "difference": 1088
+            },
+            "deepseek": {
+              "baseline": 2159,
+              "rag": 2936,
+              "difference": 777
+            }
+          }
+        },
+        "the right-sided filling pressures were normal. the preliminary capillary wedge pressure was 12 mm of mercury. the left ventricular end diastolic pressure was elevated about 30 mm of mercury. cardiac index depressed at 2.2 liters/min meter squared": {
+          "baseline_tokens": 6977,
+          "rag_tokens": 46106,
+          "difference": 39129,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2171,
+              "rag": 15340,
+              "difference": 13169
+            },
+            "moonshot": {
+              "baseline": 2275,
+              "rag": 0,
+              "difference": -2275
+            },
+            "anthropic": {
+              "baseline": 339,
+              "rag": 15848,
+              "difference": 15509
+            },
+            "deepseek": {
+              "baseline": 2192,
+              "rag": 14918,
+              "difference": 12726
+            }
+          }
+        },
+        "large right inguinal hematoma": {
+          "baseline_tokens": 6850,
+          "rag_tokens": 8203,
+          "difference": 1353,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2114,
+              "rag": 2460,
+              "difference": 346
+            },
+            "moonshot": {
+              "baseline": 2307,
+              "rag": 2558,
+              "difference": 251
+            },
+            "anthropic": {
+              "baseline": 216,
+              "rag": 630,
+              "difference": 414
+            },
+            "deepseek": {
+              "baseline": 2213,
+              "rag": 2555,
+              "difference": 342
+            }
+          }
+        },
+        "left ventricular end diastolic pressure was elevated about 30 mm of mercury": {
+          "baseline_tokens": 6668,
+          "rag_tokens": 18518,
+          "difference": 11850,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2082,
+              "rag": 4967,
+              "difference": 2885
+            },
+            "moonshot": {
+              "baseline": 2240,
+              "rag": 5211,
+              "difference": 2971
+            },
+            "anthropic": {
+              "baseline": 180,
+              "rag": 3421,
+              "difference": 3241
+            },
+            "deepseek": {
+              "baseline": 2166,
+              "rag": 4919,
+              "difference": 2753
+            }
+          }
+        },
+        "sinus rhythm with left bundle branch block": {
+          "baseline_tokens": 6586,
+          "rag_tokens": 10520,
+          "difference": 3934,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2080,
+              "rag": 2946,
+              "difference": 866
+            },
+            "moonshot": {
+              "baseline": 2230,
+              "rag": 3279,
+              "difference": 1049
+            },
+            "anthropic": {
+              "baseline": 169,
+              "rag": 1253,
+              "difference": 1084
+            },
+            "deepseek": {
+              "baseline": 2107,
+              "rag": 3042,
+              "difference": 935
+            }
+          }
+        },
+        "selective coronary angiography revealed a right dominant system. the left main coronary artery, left anterior descending and left circumflex were angiographically normal. the right coronary artery had a 70% stenosis. the neostented gap was seen on the previously placed proximal image stents. there was 90% restenosis placed on the initially placed mid . there was a 60% restenosis on the distal cypher . there was minimal disease of the posterior descending artery, percutaneous transluminal coronary angioplasty site": {
+          "baseline_tokens": 7243,
+          "rag_tokens": 15572,
+          "difference": 8329,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2239,
+              "rag": 4100,
+              "difference": 1861
+            },
+            "moonshot": {
+              "baseline": 2417,
+              "rag": 4505,
+              "difference": 2088
+            },
+            "anthropic": {
+              "baseline": 308,
+              "rag": 2882,
+              "difference": 2574
+            },
+            "deepseek": {
+              "baseline": 2279,
+              "rag": 4085,
+              "difference": 1806
+            }
+          }
+        },
+        "the left atrium is normal in size. left ventricular wall thickness was normal. left ventricular size cavity size is normal. overall left ventricular systolic function is moderately depressed. resting regional wall motion abnormalities include septal, anterior akinesis. though, the views are limited, it appeared that the inferior wall was akinetic. there was a small pericardial effusion. the effusion appears circumferential. there are no echocardiographic signs or tamponade. compared to the previous report of , effusion has not changed. the ejection fraction appears worse than previously reported. previous study is not available for review. ejection fraction of 35% to 40%": {
+          "baseline_tokens": 7085,
+          "rag_tokens": 30659,
+          "difference": 23574,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2214,
+              "rag": 10413,
+              "difference": 8199
+            },
+            "moonshot": {
+              "baseline": 2372,
+              "rag": 0,
+              "difference": -2372
+            },
+            "anthropic": {
+              "baseline": 268,
+              "rag": 9999,
+              "difference": 9731
+            },
+            "deepseek": {
+              "baseline": 2231,
+              "rag": 10247,
+              "difference": 8016
+            }
+          }
+        },
+        "left ventriculography revealed an ejection fraction of 46% with mild global hypokinesis. there was no mitral regurgitation": {
+          "baseline_tokens": 6615,
+          "rag_tokens": 8167,
+          "difference": 1552,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2099,
+              "rag": 2401,
+              "difference": 302
+            },
+            "moonshot": {
+              "baseline": 2248,
+              "rag": 2717,
+              "difference": 469
+            },
+            "anthropic": {
+              "baseline": 148,
+              "rag": 573,
+              "difference": 425
+            },
+            "deepseek": {
+              "baseline": 2120,
+              "rag": 2476,
+              "difference": 356
+            }
+          }
+        },
+        "regular rate and rhythm, no murmurs, rubs or gallops appreciated": {
+          "baseline_tokens": 6573,
+          "rag_tokens": 8782,
+          "difference": 2209,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2078,
+              "rag": 2554,
+              "difference": 476
+            },
+            "moonshot": {
+              "baseline": 2253,
+              "rag": 2870,
+              "difference": 617
+            },
+            "anthropic": {
+              "baseline": 126,
+              "rag": 787,
+              "difference": 661
+            },
+            "deepseek": {
+              "baseline": 2116,
+              "rag": 2571,
+              "difference": 455
+            }
+          }
+        },
+        "small pericardial effusion": {
+          "baseline_tokens": 6541,
+          "rag_tokens": 7940,
+          "difference": 1399,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2048,
+              "rag": 2342,
+              "difference": 294
+            },
+            "moonshot": {
+              "baseline": 2215,
+              "rag": 2607,
+              "difference": 392
+            },
+            "anthropic": {
+              "baseline": 181,
+              "rag": 514,
+              "difference": 333
+            },
+            "deepseek": {
+              "baseline": 2097,
+              "rag": 2477,
+              "difference": 380
+            }
+          }
+        }
+      }
+    },
+    "report_4002": {
+      "report_id": 4002,
+      "summary": {
+        "total_symptoms": 5,
+        "total_apis": 4,
+        "baseline_total_tokens": 33868,
+        "rag_total_tokens": 47224,
+        "token_difference": 13356,
+        "percentage_change": 39.435455297035546,
+        "cache_read_tokens_total": 0,
+        "cache_creation_tokens_total": 0
+      },
+      "api_comparison": {
+        "gemini": {
+          "baseline_tokens": 10559,
+          "rag_tokens": 13776,
+          "difference": 3217,
+          "baseline_calls": 5,
+          "rag_calls": 5
+        },
+        "moonshot": {
+          "baseline_tokens": 11382,
+          "rag_tokens": 14554,
+          "difference": 3172,
+          "baseline_calls": 5,
+          "rag_calls": 5
+        },
+        "anthropic": {
+          "baseline_tokens": 1064,
+          "rag_tokens": 4996,
+          "difference": 3932,
+          "baseline_calls": 5,
+          "rag_calls": 5
+        },
+        "deepseek": {
+          "baseline_tokens": 10863,
+          "rag_tokens": 13898,
+          "difference": 3035,
+          "baseline_calls": 5,
+          "rag_calls": 5
+        }
+      },
+      "symptom_comparison": {
+        "left arm and shoulder pain": {
+          "baseline_tokens": 6900,
+          "rag_tokens": 8092,
+          "difference": 1192,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2124,
+              "rag": 2475,
+              "difference": 351
+            },
+            "moonshot": {
+              "baseline": 2319,
+              "rag": 2563,
+              "difference": 244
+            },
+            "anthropic": {
+              "baseline": 246,
+              "rag": 605,
+              "difference": 359
+            },
+            "deepseek": {
+              "baseline": 2211,
+              "rag": 2449,
+              "difference": 238
+            }
+          }
+        },
+        "interior apical ischemia": {
+          "baseline_tokens": 6595,
+          "rag_tokens": 8591,
+          "difference": 1996,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2064,
+              "rag": 2568,
+              "difference": 504
+            },
+            "moonshot": {
+              "baseline": 2228,
+              "rag": 2753,
+              "difference": 525
+            },
+            "anthropic": {
+              "baseline": 197,
+              "rag": 762,
+              "difference": 565
+            },
+            "deepseek": {
+              "baseline": 2106,
+              "rag": 2508,
+              "difference": 402
+            }
+          }
+        },
+        "40% proximal right coronary artery and 40% mid left anterior descending lesions": {
+          "baseline_tokens": 6792,
+          "rag_tokens": 11068,
+          "difference": 4276,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2121,
+              "rag": 3175,
+              "difference": 1054
+            },
+            "moonshot": {
+              "baseline": 2290,
+              "rag": 3261,
+              "difference": 971
+            },
+            "anthropic": {
+              "baseline": 194,
+              "rag": 1496,
+              "difference": 1302
+            },
+            "deepseek": {
+              "baseline": 2187,
+              "rag": 3136,
+              "difference": 949
+            }
+          }
+        },
+        "in-stent restenosis of a mid right coronary artery stent": {
+          "baseline_tokens": 6714,
+          "rag_tokens": 11382,
+          "difference": 4668,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2118,
+              "rag": 3188,
+              "difference": 1070
+            },
+            "moonshot": {
+              "baseline": 2267,
+              "rag": 3439,
+              "difference": 1172
+            },
+            "anthropic": {
+              "baseline": 173,
+              "rag": 1489,
+              "difference": 1316
+            },
+            "deepseek": {
+              "baseline": 2156,
+              "rag": 3266,
+              "difference": 1110
+            }
+          }
+        },
+        "hypoxia/cough": {
+          "baseline_tokens": 6867,
+          "rag_tokens": 8091,
+          "difference": 1224,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2132,
+              "rag": 2370,
+              "difference": 238
+            },
+            "moonshot": {
+              "baseline": 2278,
+              "rag": 2538,
+              "difference": 260
+            },
+            "anthropic": {
+              "baseline": 254,
+              "rag": 644,
+              "difference": 390
+            },
+            "deepseek": {
+              "baseline": 2203,
+              "rag": 2539,
+              "difference": 336
+            }
+          }
+        }
+      }
+    },
+    "report_4003": {
+      "report_id": 4003,
+      "summary": {
+        "total_symptoms": 8,
+        "total_apis": 4,
+        "baseline_total_tokens": 54477,
+        "rag_total_tokens": 82924,
+        "token_difference": 28447,
+        "percentage_change": 52.21836738440076,
+        "cache_read_tokens_total": 0,
+        "cache_creation_tokens_total": 0
+      },
+      "api_comparison": {
+        "gemini": {
+          "baseline_tokens": 16884,
+          "rag_tokens": 23933,
+          "difference": 7049,
+          "baseline_calls": 8,
+          "rag_calls": 8
+        },
+        "moonshot": {
+          "baseline_tokens": 18287,
+          "rag_tokens": 25361,
+          "difference": 7074,
+          "baseline_calls": 8,
+          "rag_calls": 8
+        },
+        "anthropic": {
+          "baseline_tokens": 1711,
+          "rag_tokens": 9918,
+          "difference": 8207,
+          "baseline_calls": 8,
+          "rag_calls": 8
+        },
+        "deepseek": {
+          "baseline_tokens": 17595,
+          "rag_tokens": 23712,
+          "difference": 6117,
+          "baseline_calls": 8,
+          "rag_calls": 8
+        }
+      },
+      "symptom_comparison": {
+        "abg 7.24/66/62": {
+          "baseline_tokens": 6832,
+          "rag_tokens": 9756,
+          "difference": 2924,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2119,
+              "rag": 2893,
+              "difference": 774
+            },
+            "moonshot": {
+              "baseline": 2286,
+              "rag": 3066,
+              "difference": 780
+            },
+            "anthropic": {
+              "baseline": 233,
+              "rag": 1016,
+              "difference": 783
+            },
+            "deepseek": {
+              "baseline": 2194,
+              "rag": 2781,
+              "difference": 587
+            }
+          }
+        },
+        "progressive sob x7 months and cough x 2 months": {
+          "baseline_tokens": 6861,
+          "rag_tokens": 8205,
+          "difference": 1344,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2140,
+              "rag": 2448,
+              "difference": 308
+            },
+            "moonshot": {
+              "baseline": 2294,
+              "rag": 2684,
+              "difference": 390
+            },
+            "anthropic": {
+              "baseline": 227,
+              "rag": 609,
+              "difference": 382
+            },
+            "deepseek": {
+              "baseline": 2200,
+              "rag": 2464,
+              "difference": 264
+            }
+          }
+        },
+        "wbc rose to >50k": {
+          "baseline_tokens": 6783,
+          "rag_tokens": 10091,
+          "difference": 3308,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2104,
+              "rag": 2947,
+              "difference": 843
+            },
+            "moonshot": {
+              "baseline": 2310,
+              "rag": 3081,
+              "difference": 771
+            },
+            "anthropic": {
+              "baseline": 197,
+              "rag": 1194,
+              "difference": 997
+            },
+            "deepseek": {
+              "baseline": 2172,
+              "rag": 2869,
+              "difference": 697
+            }
+          }
+        },
+        "shortness of breath": {
+          "baseline_tokens": 6926,
+          "rag_tokens": 7377,
+          "difference": 451,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2130,
+              "rag": 2232,
+              "difference": 102
+            },
+            "moonshot": {
+              "baseline": 2283,
+              "rag": 2334,
+              "difference": 51
+            },
+            "anthropic": {
+              "baseline": 247,
+              "rag": 462,
+              "difference": 215
+            },
+            "deepseek": {
+              "baseline": 2266,
+              "rag": 2349,
+              "difference": 83
+            }
+          }
+        },
+        "neutropenic": {
+          "baseline_tokens": 6708,
+          "rag_tokens": 8205,
+          "difference": 1497,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2054,
+              "rag": 2504,
+              "difference": 450
+            },
+            "moonshot": {
+              "baseline": 2303,
+              "rag": 2622,
+              "difference": 319
+            },
+            "anthropic": {
+              "baseline": 221,
+              "rag": 640,
+              "difference": 419
+            },
+            "deepseek": {
+              "baseline": 2130,
+              "rag": 2439,
+              "difference": 309
+            }
+          }
+        },
+        "whe": {
+          "baseline_tokens": 6711,
+          "rag_tokens": 24024,
+          "difference": 17313,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2122,
+              "rag": 6198,
+              "difference": 4076
+            },
+            "moonshot": {
+              "baseline": 2219,
+              "rag": 6631,
+              "difference": 4412
+            },
+            "anthropic": {
+              "baseline": 191,
+              "rag": 5067,
+              "difference": 4876
+            },
+            "deepseek": {
+              "baseline": 2179,
+              "rag": 6128,
+              "difference": 3949
+            }
+          }
+        },
+        "hct >25": {
+          "baseline_tokens": 6898,
+          "rag_tokens": 8184,
+          "difference": 1286,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2129,
+              "rag": 2554,
+              "difference": 425
+            },
+            "moonshot": {
+              "baseline": 2326,
+              "rag": 2617,
+              "difference": 291
+            },
+            "anthropic": {
+              "baseline": 212,
+              "rag": 582,
+              "difference": 370
+            },
+            "deepseek": {
+              "baseline": 2231,
+              "rag": 2431,
+              "difference": 200
+            }
+          }
+        },
+        "low-grade temperature at 100.4": {
+          "baseline_tokens": 6758,
+          "rag_tokens": 7082,
+          "difference": 324,
+          "api_breakdown": {
+            "gemini": {
+              "baseline": 2086,
+              "rag": 2157,
+              "difference": 71
+            },
+            "moonshot": {
+              "baseline": 2266,
+              "rag": 2326,
+              "difference": 60
+            },
+            "anthropic": {
+              "baseline": 183,
+              "rag": 348,
+              "difference": 165
+            },
+            "deepseek": {
+              "baseline": 2223,
+              "rag": 2251,
+              "difference": 28
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,411 @@
+================================================================================
+📊 Token使用统计报告
+📋 报告范围: 4501 - 4503
+⏰ 生成时间: 2025-09-07 23:59:30
+================================================================================
+
+📈 总体统计:
+   处理报告数: 3
+   总症状数: 42
+   Baseline总tokens: 369,086
+   RAG增强总tokens: 509,165
+
+📋 报告 4501:
+   症状数量: 14
+   API数量: 4
+
+   🔵 Baseline Token使用:
+     总计: 124,387 tokens
+     OPENAI    : 31,249 tokens (14次调用, 平均2232)
+     DEEPSEEK  : 31,038 tokens (14次调用, 平均2217)
+     MOONSHOT  : 32,165 tokens (14次调用, 平均2298)
+     GEMINI    : 29,935 tokens (14次调用, 平均2138)
+
+   🟢 RAG增强 Token使用:
+     总计: 181,962 tokens
+     OPENAI    : 41,717 tokens (13次调用, 平均3209)
+     DEEPSEEK  : 49,278 tokens (14次调用, 平均3520)
+     MOONSHOT  : 41,867 tokens (13次调用, 平均3221)
+     GEMINI    : 49,100 tokens (14次调用, 平均3507)
+
+   🔍 各症状Token使用:
+     症状: other chronic pulmonary heart diseases
+       Baseline: 8,915 tokens
+       RAG增强:  9,254 tokens
+       API分解:
+         OPENAI  : Baseline 2,252, RAG 2,443
+         DEEPSEEK: Baseline 2,203, RAG 2,248
+         MOONSHOT: Baseline 2,334, RAG 2,333
+         GEMINI  : Baseline 2,126, RAG 2,230
+     症状: bp was well controlled on this regimen in the 130/80's
+       Baseline: 8,988 tokens
+       RAG增强:  18,802 tokens
+       API分解:
+         OPENAI  : Baseline 2,250, RAG 4,867
+         DEEPSEEK: Baseline 2,216, RAG 4,601
+         MOONSHOT: Baseline 2,338, RAG 4,742
+         GEMINI  : Baseline 2,184, RAG 4,592
+     症状: cardiac arrest
+       Baseline: 8,936 tokens
+       RAG增强:  10,155 tokens
+       API分解:
+         OPENAI  : Baseline 2,275, RAG 2,612
+         DEEPSEEK: Baseline 2,207, RAG 2,425
+         MOONSHOT: Baseline 2,283, RAG 2,654
+         GEMINI  : Baseline 2,171, RAG 2,464
+     症状: patient originally hypertensive when brought to er
+       Baseline: 9,145 tokens
+       RAG增强:  18,530 tokens
+       API分解:
+         OPENAI  : Baseline 2,310, RAG 4,653
+         DEEPSEEK: Baseline 2,261, RAG 4,506
+         MOONSHOT: Baseline 2,336, RAG 4,777
+         GEMINI  : Baseline 2,238, RAG 4,594
+     症状: nausea and vomiting
+       Baseline: 9,074 tokens
+       RAG增强:  10,235 tokens
+       API分解:
+         OPENAI  : Baseline 2,207, RAG 2,613
+         DEEPSEEK: Baseline 2,323, RAG 2,452
+         MOONSHOT: Baseline 2,394, RAG 2,734
+         GEMINI  : Baseline 2,150, RAG 2,436
+     症状: no pain in ruq
+       Baseline: 9,006 tokens
+       RAG增强:  10,555 tokens
+       API分解:
+         OPENAI  : Baseline 2,282, RAG 2,715
+         DEEPSEEK: Baseline 2,305, RAG 2,558
+         MOONSHOT: Baseline 2,307, RAG 2,688
+         GEMINI  : Baseline 2,112, RAG 2,594
+     症状: altered mental status
+       Baseline: 8,924 tokens
+       RAG增强:  10,037 tokens
+       API分解:
+         OPENAI  : Baseline 2,174, RAG 2,573
+         DEEPSEEK: Baseline 2,208, RAG 2,480
+         MOONSHOT: Baseline 2,328, RAG 2,622
+         GEMINI  : Baseline 2,214, RAG 2,362
+     症状: acute kidney failure with lesion of tubular necrosis
+       Baseline: 8,569 tokens
+       RAG增强:  10,021 tokens
+       API分解:
+         OPENAI  : Baseline 2,179, RAG 2,571
+         DEEPSEEK: Baseline 2,100, RAG 2,468
+         MOONSHOT: Baseline 2,229, RAG 2,627
+         GEMINI  : Baseline 2,061, RAG 2,355
+     症状: no evidence of endocarditis on echo
+       Baseline: 8,595 tokens
+       RAG增强:  20,076 tokens
+       API分解:
+         OPENAI  : Baseline 2,186, RAG 0
+         DEEPSEEK: Baseline 2,101, RAG 10,004
+         MOONSHOT: Baseline 2,236, RAG 0
+         GEMINI  : Baseline 2,072, RAG 10,072
+     症状: swollen lip
+       Baseline: 8,738 tokens
+       RAG增强:  9,077 tokens
+       API分解:
+         OPENAI  : Baseline 2,201, RAG 2,346
+         DEEPSEEK: Baseline 2,191, RAG 2,217
+         MOONSHOT: Baseline 2,254, RAG 2,311
+         GEMINI  : Baseline 2,092, RAG 2,203
+     症状: lethargy
+       Baseline: 9,000 tokens
+       RAG增强:  9,947 tokens
+       API分解:
+         OPENAI  : Baseline 2,227, RAG 2,554
+         DEEPSEEK: Baseline 2,250, RAG 2,459
+         MOONSHOT: Baseline 2,376, RAG 2,597
+         GEMINI  : Baseline 2,147, RAG 2,337
+     症状: femoral and internal jugular central line placement
+       Baseline: 8,694 tokens
+       RAG增强:  25,325 tokens
+       API分解:
+         OPENAI  : Baseline 2,226, RAG 6,641
+         DEEPSEEK: Baseline 2,160, RAG 6,015
+         MOONSHOT: Baseline 2,230, RAG 6,596
+         GEMINI  : Baseline 2,078, RAG 6,073
+     症状: endotracheal intubation
+       Baseline: 8,999 tokens
+       RAG增强:  9,990 tokens
+       API分解:
+         OPENAI  : Baseline 2,258, RAG 2,553
+         DEEPSEEK: Baseline 2,309, RAG 2,407
+         MOONSHOT: Baseline 2,253, RAG 2,590
+         GEMINI  : Baseline 2,179, RAG 2,440
+     症状: distended gall bladder on ct
+       Baseline: 8,804 tokens
+       RAG增强:  9,958 tokens
+       API分解:
+         OPENAI  : Baseline 2,222, RAG 2,576
+         DEEPSEEK: Baseline 2,204, RAG 2,438
+         MOONSHOT: Baseline 2,267, RAG 2,596
+         GEMINI  : Baseline 2,111, RAG 2,348
+
+📋 报告 4502:
+   症状数量: 17
+   API数量: 4
+
+   🔵 Baseline Token使用:
+     总计: 149,000 tokens
+     OPENAI    : 37,722 tokens (17次调用, 平均2219)
+     DEEPSEEK  : 37,098 tokens (17次调用, 平均2182)
+     MOONSHOT  : 38,482 tokens (17次调用, 平均2264)
+     GEMINI    : 35,698 tokens (17次调用, 平均2100)
+
+   🟢 RAG增强 Token使用:
+     总计: 174,404 tokens
+     OPENAI    : 44,901 tokens (17次调用, 平均2641)
+     DEEPSEEK  : 42,338 tokens (17次调用, 平均2490)
+     MOONSHOT  : 45,236 tokens (17次调用, 平均2661)
+     GEMINI    : 41,929 tokens (17次调用, 平均2466)
+
+   🔍 各症状Token使用:
+     症状: flat eeg
+       Baseline: 8,561 tokens
+       RAG增强:  9,803 tokens
+       API分解:
+         OPENAI  : Baseline 2,189, RAG 2,520
+         DEEPSEEK: Baseline 2,097, RAG 2,409
+         MOONSHOT: Baseline 2,217, RAG 2,563
+         GEMINI  : Baseline 2,058, RAG 2,311
+     症状: lumbar spinal stenosis
+       Baseline: 8,751 tokens
+       RAG增强:  10,165 tokens
+       API分解:
+         OPENAI  : Baseline 2,182, RAG 2,589
+         DEEPSEEK: Baseline 2,210, RAG 2,467
+         MOONSHOT: Baseline 2,303, RAG 2,641
+         GEMINI  : Baseline 2,056, RAG 2,468
+     症状: Ulcerative colitis, unspecified
+       Baseline: 8,656 tokens
+       RAG增强:  9,952 tokens
+       API分解:
+         OPENAI  : Baseline 2,175, RAG 2,565
+         DEEPSEEK: Baseline 2,195, RAG 2,415
+         MOONSHOT: Baseline 2,225, RAG 2,625
+         GEMINI  : Baseline 2,061, RAG 2,347
+     症状: Gastrostomy status
+       Baseline: 8,792 tokens
+       RAG增强:  10,087 tokens
+       API分解:
+         OPENAI  : Baseline 2,246, RAG 2,564
+         DEEPSEEK: Baseline 2,241, RAG 2,415
+         MOONSHOT: Baseline 2,213, RAG 2,631
+         GEMINI  : Baseline 2,092, RAG 2,477
+     症状: Pneumonia, organism unspecified
+       Baseline: 8,712 tokens
+       RAG增强:  9,892 tokens
+       API分解:
+         OPENAI  : Baseline 2,182, RAG 2,557
+         DEEPSEEK: Baseline 2,180, RAG 2,428
+         MOONSHOT: Baseline 2,225, RAG 2,558
+         GEMINI  : Baseline 2,125, RAG 2,349
+     症状: cardiac arrest
+       Baseline: 8,887 tokens
+       RAG增强:  10,128 tokens
+       API分解:
+         OPENAI  : Baseline 2,275, RAG 2,612
+         DEEPSEEK: Baseline 2,210, RAG 2,428
+         MOONSHOT: Baseline 2,283, RAG 2,676
+         GEMINI  : Baseline 2,119, RAG 2,412
+     症状: Esophageal reflux
+       Baseline: 8,728 tokens
+       RAG增强:  9,875 tokens
+       API分解:
+         OPENAI  : Baseline 2,205, RAG 2,603
+         DEEPSEEK: Baseline 2,185, RAG 2,390
+         MOONSHOT: Baseline 2,268, RAG 2,552
+         GEMINI  : Baseline 2,070, RAG 2,330
+     症状: Other degenerative diseases of the basal ganglia
+       Baseline: 8,552 tokens
+       RAG增强:  9,875 tokens
+       API分解:
+         OPENAI  : Baseline 2,166, RAG 2,545
+         DEEPSEEK: Baseline 2,092, RAG 2,370
+         MOONSHOT: Baseline 2,238, RAG 2,612
+         GEMINI  : Baseline 2,056, RAG 2,348
+     症状: toxic megacolon
+       Baseline: 8,715 tokens
+       RAG增强:  9,149 tokens
+       API分解:
+         OPENAI  : Baseline 2,192, RAG 2,395
+         DEEPSEEK: Baseline 2,194, RAG 2,194
+         MOONSHOT: Baseline 2,259, RAG 2,343
+         GEMINI  : Baseline 2,070, RAG 2,217
+     症状: intact respiratory drive on pressure support
+       Baseline: 8,763 tokens
+       RAG增强:  10,041 tokens
+       API分解:
+         OPENAI  : Baseline 2,225, RAG 2,591
+         DEEPSEEK: Baseline 2,146, RAG 2,401
+         MOONSHOT: Baseline 2,273, RAG 2,598
+         GEMINI  : Baseline 2,119, RAG 2,451
+     症状: Urinary tract infection, site not specified
+       Baseline: 9,088 tokens
+       RAG增强:  10,371 tokens
+       API分解:
+         OPENAI  : Baseline 2,282, RAG 2,672
+         DEEPSEEK: Baseline 2,256, RAG 2,567
+         MOONSHOT: Baseline 2,349, RAG 2,607
+         GEMINI  : Baseline 2,201, RAG 2,525
+     症状: Atrial fibrillation
+       Baseline: 8,596 tokens
+       RAG增强:  9,935 tokens
+       API分解:
+         OPENAI  : Baseline 2,184, RAG 2,551
+         DEEPSEEK: Baseline 2,108, RAG 2,432
+         MOONSHOT: Baseline 2,232, RAG 2,607
+         GEMINI  : Baseline 2,072, RAG 2,345
+     症状: hypokalemic
+       Baseline: 8,948 tokens
+       RAG增强:  16,192 tokens
+       API分解:
+         OPENAI  : Baseline 2,223, RAG 4,081
+         DEEPSEEK: Baseline 2,305, RAG 3,922
+         MOONSHOT: Baseline 2,319, RAG 4,215
+         GEMINI  : Baseline 2,101, RAG 3,974
+     症状: Anoxic brain damage
+       Baseline: 8,814 tokens
+       RAG增强:  9,786 tokens
+       API分解:
+         OPENAI  : Baseline 2,332, RAG 2,532
+         DEEPSEEK: Baseline 2,095, RAG 2,392
+         MOONSHOT: Baseline 2,224, RAG 2,546
+         GEMINI  : Baseline 2,163, RAG 2,316
+     症状: hypoxemic and hypercarbic respiratory failure
+       Baseline: 8,853 tokens
+       RAG增强:  10,185 tokens
+       API分解:
+         OPENAI  : Baseline 2,237, RAG 2,599
+         DEEPSEEK: Baseline 2,214, RAG 2,533
+         MOONSHOT: Baseline 2,278, RAG 2,537
+         GEMINI  : Baseline 2,124, RAG 2,516
+     症状: minimal cortical activity
+       Baseline: 8,536 tokens
+       RAG增强:  9,769 tokens
+       API分解:
+         OPENAI  : Baseline 2,160, RAG 2,519
+         DEEPSEEK: Baseline 2,098, RAG 2,344
+         MOONSHOT: Baseline 2,222, RAG 2,589
+         GEMINI  : Baseline 2,056, RAG 2,317
+     症状: Urinary incontinence, unspecified
+       Baseline: 9,048 tokens
+       RAG增强:  9,199 tokens
+       API分解:
+         OPENAI  : Baseline 2,267, RAG 2,406
+         DEEPSEEK: Baseline 2,272, RAG 2,231
+         MOONSHOT: Baseline 2,354, RAG 2,336
+         GEMINI  : Baseline 2,155, RAG 2,226
+
+📋 报告 4503:
+   症状数量: 11
+   API数量: 4
+
+   🔵 Baseline Token使用:
+     总计: 95,699 tokens
+     OPENAI    : 24,149 tokens (11次调用, 平均2195)
+     DEEPSEEK  : 23,771 tokens (11次调用, 平均2161)
+     MOONSHOT  : 24,719 tokens (11次调用, 平均2247)
+     GEMINI    : 23,060 tokens (11次调用, 平均2096)
+
+   🟢 RAG增强 Token使用:
+     总计: 152,799 tokens
+     OPENAI    : 34,003 tokens (10次调用, 平均3400)
+     DEEPSEEK  : 41,991 tokens (11次调用, 平均3817)
+     MOONSHOT  : 34,598 tokens (10次调用, 平均3460)
+     GEMINI    : 42,207 tokens (11次调用, 平均3837)
+
+   🔍 各症状Token使用:
+     症状: she was monitored on telemetry
+       Baseline: 8,583 tokens
+       RAG增强:  13,965 tokens
+       API分解:
+         OPENAI  : Baseline 2,165, RAG 3,564
+         DEEPSEEK: Baseline 2,107, RAG 3,354
+         MOONSHOT: Baseline 2,234, RAG 3,661
+         GEMINI  : Baseline 2,077, RAG 3,386
+     症状: seizure-like episodes
+       Baseline: 8,669 tokens
+       RAG增强:  9,805 tokens
+       API分解:
+         OPENAI  : Baseline 2,175, RAG 2,522
+         DEEPSEEK: Baseline 2,162, RAG 2,433
+         MOONSHOT: Baseline 2,268, RAG 2,537
+         GEMINI  : Baseline 2,064, RAG 2,313
+     症状: no evidence of af in house
+       Baseline: 8,571 tokens
+       RAG增强:  19,891 tokens
+       API分解:
+         OPENAI  : Baseline 2,185, RAG 0
+         DEEPSEEK: Baseline 2,099, RAG 9,921
+         MOONSHOT: Baseline 2,220, RAG 0
+         GEMINI  : Baseline 2,067, RAG 9,970
+     症状: unresponsiveness
+       Baseline: 8,755 tokens
+       RAG增强:  9,188 tokens
+       API分解:
+         OPENAI  : Baseline 2,172, RAG 2,307
+         DEEPSEEK: Baseline 2,201, RAG 2,283
+         MOONSHOT: Baseline 2,221, RAG 2,323
+         GEMINI  : Baseline 2,161, RAG 2,275
+     症状: patient remained in normal sinus rhythm throughout her hospital course
+       Baseline: 8,613 tokens
+       RAG增强:  21,467 tokens
+       API分解:
+         OPENAI  : Baseline 2,180, RAG 5,539
+         DEEPSEEK: Baseline 2,115, RAG 5,101
+         MOONSHOT: Baseline 2,231, RAG 5,617
+         GEMINI  : Baseline 2,087, RAG 5,210
+     症状: tremulous after trying to get out of a chair
+       Baseline: 8,844 tokens
+       RAG增强:  10,226 tokens
+       API分解:
+         OPENAI  : Baseline 2,237, RAG 2,619
+         DEEPSEEK: Baseline 2,217, RAG 2,474
+         MOONSHOT: Baseline 2,271, RAG 2,605
+         GEMINI  : Baseline 2,119, RAG 2,528
+     症状: monitored on telemetry
+       Baseline: 8,674 tokens
+       RAG增强:  13,949 tokens
+       API分解:
+         OPENAI  : Baseline 2,188, RAG 3,539
+         DEEPSEEK: Baseline 2,178, RAG 3,349
+         MOONSHOT: Baseline 2,233, RAG 3,667
+         GEMINI  : Baseline 2,075, RAG 3,394
+     症状: lopressor was held due to concerns of exacerbating autonomic dysfunction
+       Baseline: 8,894 tokens
+       RAG增强:  17,841 tokens
+       API分解:
+         OPENAI  : Baseline 2,242, RAG 4,558
+         DEEPSEEK: Baseline 2,209, RAG 4,276
+         MOONSHOT: Baseline 2,278, RAG 4,657
+         GEMINI  : Baseline 2,165, RAG 4,350
+     症状: pulm nodules on cta
+       Baseline: 8,623 tokens
+       RAG增强:  10,050 tokens
+       API分解:
+         OPENAI  : Baseline 2,180, RAG 2,549
+         DEEPSEEK: Baseline 2,105, RAG 2,459
+         MOONSHOT: Baseline 2,228, RAG 2,581
+         GEMINI  : Baseline 2,110, RAG 2,461
+     症状: normal sinus rhythm
+       Baseline: 8,594 tokens
+       RAG增强:  16,288 tokens
+       API分解:
+         OPENAI  : Baseline 2,191, RAG 4,177
+         DEEPSEEK: Baseline 2,108, RAG 3,841
+         MOONSHOT: Baseline 2,220, RAG 4,350
+         GEMINI  : Baseline 2,075, RAG 3,920
+     症状: diarrhea
+       Baseline: 8,879 tokens
+       RAG增强:  10,129 tokens
+       API分解:
+         OPENAI  : Baseline 2,234, RAG 2,629
+         DEEPSEEK: Baseline 2,270, RAG 2,500
+         MOONSHOT: Baseline 2,315, RAG 2,600
+         GEMINI  : Baseline 2,060, RAG 2,400
+
+================================================================================
+🏁 统计完成
+================================================================================

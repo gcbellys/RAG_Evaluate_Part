@@ -108,3 +108,39 @@ class MoonshotClient:
         except Exception as e:
             print(f"JSON解析失败: {e}")
             return {'organ_name': '', 'anatomical_locations': []}
+    
+    def generate_response_with_messages(self, 
+                                       messages: list, 
+                                       max_tokens: int = 1000,
+                                       temperature: float = 0.1) -> Dict[str, Any]:
+        """使用消息列表生成回复 - 支持会话复用"""
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                max_tokens=max_tokens,
+                temperature=temperature
+            )
+            
+            raw_response = response.choices[0].message.content
+            
+            # 尝试提取和解析JSON
+            parsed_data = self._extract_and_parse_json(raw_response)
+            
+            return {
+                'success': True,
+                'response': raw_response,
+                'parsed_data': parsed_data,
+                'organ_name': parsed_data.get('organ_name', ''),
+                'anatomical_locations': parsed_data.get('anatomical_locations', []),
+                'usage': response.usage.dict() if response.usage else None,
+                'model': self.model
+            }
+            
+        except Exception as e:
+            return {
+                'success': False,
+                'error': str(e),
+                'model': self.model,
+                'usage': {}
+            }

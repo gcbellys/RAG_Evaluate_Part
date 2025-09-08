@@ -53,7 +53,13 @@ class MainWorkflow:
         report_results = {
             'report_id': report_id,
             'timestamp': datetime.now().isoformat(),
-            'symptoms': []
+            'symptoms': [],
+            'token_summary': {
+                'total_tokens': 0,
+                'total_prompt_tokens': 0,
+                'total_completion_tokens': 0,
+                'api_breakdown': {}
+            }
         }
         
         # 处理每个症状
@@ -92,8 +98,39 @@ class MainWorkflow:
                         'response': response.get('response', ''),
                         'parsed_data': response.get('parsed_data', {}),
                         'organ_name': response.get('organ_name', ''),
-                        'anatomical_locations': response.get('anatomical_locations', [])
+                        'anatomical_locations': response.get('anatomical_locations', []),
+                        'success': response.get('success', False),
+                        'model': response.get('model', ''),
+                        'usage': response.get('usage', {}),  # 关键：保存token使用信息
+                        'error': response.get('error', '')
                     }
+                    
+                    # 统计token使用
+                    if 'usage' in response and response['usage']:
+                        usage = response['usage']
+                        total_tokens = usage.get('total_tokens', 0)
+                        prompt_tokens = usage.get('prompt_tokens', 0)
+                        completion_tokens = usage.get('completion_tokens', 0)
+                        
+                        # 更新总计
+                        report_results['token_summary']['total_tokens'] += total_tokens
+                        report_results['token_summary']['total_prompt_tokens'] += prompt_tokens
+                        report_results['token_summary']['total_completion_tokens'] += completion_tokens
+                        
+                        # 更新API分解
+                        if api_name not in report_results['token_summary']['api_breakdown']:
+                            report_results['token_summary']['api_breakdown'][api_name] = {
+                                'total_tokens': 0,
+                                'prompt_tokens': 0,
+                                'completion_tokens': 0,
+                                'calls': 0
+                            }
+                        
+                        api_breakdown = report_results['token_summary']['api_breakdown'][api_name]
+                        api_breakdown['total_tokens'] += total_tokens
+                        api_breakdown['prompt_tokens'] += prompt_tokens
+                        api_breakdown['completion_tokens'] += completion_tokens
+                        api_breakdown['calls'] += 1
                     
                     # 评估这个API的响应
                     if response.get('success') and response.get('parsed_data'):
@@ -158,6 +195,15 @@ class MainWorkflow:
         
         with open(user_format_path, 'w', encoding='utf-8') as f:
             json.dump(user_format_results, f, ensure_ascii=False, indent=2)
+        
+        # 显示token统计摘要
+        token_summary = report_results.get('token_summary', {})
+        total_tokens = token_summary.get('total_tokens', 0)
+        if total_tokens > 0:
+            print(f"📊 Token使用统计: {total_tokens:,} tokens")
+            for api, stats in token_summary.get('api_breakdown', {}).items():
+                if stats['calls'] > 0:
+                    print(f"  {api.upper():12}: {stats['total_tokens']:,} tokens ({stats['calls']}次调用)")
         
         print(f"结果已保存到:")
         print(f"  详细结果: {detailed_path}")

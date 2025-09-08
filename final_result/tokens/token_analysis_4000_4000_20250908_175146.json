@@ -1,0 +1,267 @@
+{
+  "timestamp": "2025-09-08T17:51:46.645451",
+  "report_range": "4000-4000",
+  "reports": {
+    "report_4000": {
+      "report_id": 4000,
+      "summary": {
+        "total_symptoms": 8,
+        "total_apis": 4,
+        "baseline_total_tokens": 54294,
+        "rag_total_tokens": 64498,
+        "token_difference": 10204,
+        "percentage_change": 18.793973551405312,
+        "cache_read_tokens_total": 0,
+        "cache_creation_tokens_total": 0
+      },
+      "api_comparison": {
+        "anthropic": {
+          "baseline_tokens": 1836,
+          "rag_tokens": 4947,
+          "difference": 3111,
+          "baseline_calls": 8,
+          "rag_calls": 8
+        },
+        "deepseek": {
+          "baseline_tokens": 17373,
+          "rag_tokens": 19543,
+          "difference": 2170,
+          "baseline_calls": 8,
+          "rag_calls": 8
+        },
+        "moonshot": {
+          "baseline_tokens": 18180,
+          "rag_tokens": 20887,
+          "difference": 2707,
+          "baseline_calls": 8,
+          "rag_calls": 8
+        },
+        "gemini": {
+          "baseline_tokens": 16905,
+          "rag_tokens": 19121,
+          "difference": 2216,
+          "baseline_calls": 8,
+          "rag_calls": 8
+        }
+      },
+      "symptom_comparison": {
+        "dyspnea on exertion": {
+          "baseline_tokens": 6957,
+          "rag_tokens": 8398,
+          "difference": 1441,
+          "api_breakdown": {
+            "anthropic": {
+              "baseline": 326,
+              "rag": 716,
+              "difference": 390
+            },
+            "deepseek": {
+              "baseline": 2221,
+              "rag": 2472,
+              "difference": 251
+            },
+            "moonshot": {
+              "baseline": 2286,
+              "rag": 2761,
+              "difference": 475
+            },
+            "gemini": {
+              "baseline": 2124,
+              "rag": 2449,
+              "difference": 325
+            }
+          }
+        },
+        "no jugular venous distention, no carotid bruits": {
+          "baseline_tokens": 6948,
+          "rag_tokens": 8908,
+          "difference": 1960,
+          "api_breakdown": {
+            "anthropic": {
+              "baseline": 270,
+              "rag": 846,
+              "difference": 576
+            },
+            "deepseek": {
+              "baseline": 2220,
+              "rag": 2628,
+              "difference": 408
+            },
+            "moonshot": {
+              "baseline": 2305,
+              "rag": 2841,
+              "difference": 536
+            },
+            "gemini": {
+              "baseline": 2153,
+              "rag": 2593,
+              "difference": 440
+            }
+          }
+        },
+        "the heart has a systolic ejection murmur": {
+          "baseline_tokens": 6601,
+          "rag_tokens": 8061,
+          "difference": 1460,
+          "api_breakdown": {
+            "anthropic": {
+              "baseline": 188,
+              "rag": 638,
+              "difference": 450
+            },
+            "deepseek": {
+              "baseline": 2104,
+              "rag": 2401,
+              "difference": 297
+            },
+            "moonshot": {
+              "baseline": 2234,
+              "rag": 2639,
+              "difference": 405
+            },
+            "gemini": {
+              "baseline": 2075,
+              "rag": 2383,
+              "difference": 308
+            }
+          }
+        },
+        "four episodes of loss of consciousness over the past six months": {
+          "baseline_tokens": 6903,
+          "rag_tokens": 7983,
+          "difference": 1080,
+          "api_breakdown": {
+            "anthropic": {
+              "baseline": 273,
+              "rag": 640,
+              "difference": 367
+            },
+            "deepseek": {
+              "baseline": 2212,
+              "rag": 2399,
+              "difference": 187
+            },
+            "moonshot": {
+              "baseline": 2291,
+              "rag": 2560,
+              "difference": 269
+            },
+            "gemini": {
+              "baseline": 2127,
+              "rag": 2384,
+              "difference": 257
+            }
+          }
+        },
+        "80 millimeter aortic valve gradient": {
+          "baseline_tokens": 6733,
+          "rag_tokens": 7864,
+          "difference": 1131,
+          "api_breakdown": {
+            "anthropic": {
+              "baseline": 180,
+              "rag": 562,
+              "difference": 382
+            },
+            "deepseek": {
+              "baseline": 2151,
+              "rag": 2409,
+              "difference": 258
+            },
+            "moonshot": {
+              "baseline": 2273,
+              "rag": 2561,
+              "difference": 288
+            },
+            "gemini": {
+              "baseline": 2129,
+              "rag": 2332,
+              "difference": 203
+            }
+          }
+        },
+        "legally blind for three years": {
+          "baseline_tokens": 6674,
+          "rag_tokens": 7974,
+          "difference": 1300,
+          "api_breakdown": {
+            "anthropic": {
+              "baseline": 170,
+              "rag": 544,
+              "difference": 374
+            },
+            "deepseek": {
+              "baseline": 2144,
+              "rag": 2461,
+              "difference": 317
+            },
+            "moonshot": {
+              "baseline": 2272,
+              "rag": 2588,
+              "difference": 316
+            },
+            "gemini": {
+              "baseline": 2088,
+              "rag": 2381,
+              "difference": 293
+            }
+          }
+        },
+        "moderate to severe mitral regurgitation": {
+          "baseline_tokens": 6599,
+          "rag_tokens": 7973,
+          "difference": 1374,
+          "api_breakdown": {
+            "anthropic": {
+              "baseline": 182,
+              "rag": 539,
+              "difference": 357
+            },
+            "deepseek": {
+              "baseline": 2105,
+              "rag": 2468,
+              "difference": 363
+            },
+            "moonshot": {
+              "baseline": 2236,
+              "rag": 2603,
+              "difference": 367
+            },
+            "gemini": {
+              "baseline": 2076,
+              "rag": 2363,
+              "difference": 287
+            }
+          }
+        },
+        "shortness of breath": {
+          "baseline_tokens": 6879,
+          "rag_tokens": 7337,
+          "difference": 458,
+          "api_breakdown": {
+            "anthropic": {
+              "baseline": 247,
+              "rag": 462,
+              "difference": 215
+            },
+            "deepseek": {
+              "baseline": 2216,
+              "rag": 2305,
+              "difference": 89
+            },
+            "moonshot": {
+              "baseline": 2283,
+              "rag": 2334,
+              "difference": 51
+            },
+            "gemini": {
+              "baseline": 2133,
+              "rag": 2236,
+              "difference": 103
+            }
+          }
+        }
+      }
+    }
+  }
+}

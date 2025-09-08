@@ -1,0 +1,1269 @@
+{
+  "timestamp": "2025-09-07T23:59:30.327938",
+  "report_range": "4501-4503",
+  "reports": {
+    "report_4501": {
+      "report_id": 4501,
+      "summary": {
+        "total_symptoms": 14,
+        "total_apis": 4,
+        "baseline_total_tokens": 124387,
+        "rag_total_tokens": 181962,
+        "token_difference": 57575,
+        "percentage_change": 46.28699140585431
+      },
+      "api_comparison": {
+        "openai": {
+          "baseline_tokens": 31249,
+          "rag_tokens": 41717,
+          "difference": 10468,
+          "baseline_calls": 14,
+          "rag_calls": 13
+        },
+        "deepseek": {
+          "baseline_tokens": 31038,
+          "rag_tokens": 49278,
+          "difference": 18240,
+          "baseline_calls": 14,
+          "rag_calls": 14
+        },
+        "moonshot": {
+          "baseline_tokens": 32165,
+          "rag_tokens": 41867,
+          "difference": 9702,
+          "baseline_calls": 14,
+          "rag_calls": 13
+        },
+        "gemini": {
+          "baseline_tokens": 29935,
+          "rag_tokens": 49100,
+          "difference": 19165,
+          "baseline_calls": 14,
+          "rag_calls": 14
+        }
+      },
+      "symptom_comparison": {
+        "other chronic pulmonary heart diseases": {
+          "baseline_tokens": 8915,
+          "rag_tokens": 9254,
+          "difference": 339,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2252,
+              "rag": 2443,
+              "difference": 191
+            },
+            "deepseek": {
+              "baseline": 2203,
+              "rag": 2248,
+              "difference": 45
+            },
+            "moonshot": {
+              "baseline": 2334,
+              "rag": 2333,
+              "difference": -1
+            },
+            "gemini": {
+              "baseline": 2126,
+              "rag": 2230,
+              "difference": 104
+            }
+          }
+        },
+        "bp was well controlled on this regimen in the 130/80's": {
+          "baseline_tokens": 8988,
+          "rag_tokens": 18802,
+          "difference": 9814,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2250,
+              "rag": 4867,
+              "difference": 2617
+            },
+            "deepseek": {
+              "baseline": 2216,
+              "rag": 4601,
+              "difference": 2385
+            },
+            "moonshot": {
+              "baseline": 2338,
+              "rag": 4742,
+              "difference": 2404
+            },
+            "gemini": {
+              "baseline": 2184,
+              "rag": 4592,
+              "difference": 2408
+            }
+          }
+        },
+        "cardiac arrest": {
+          "baseline_tokens": 8936,
+          "rag_tokens": 10155,
+          "difference": 1219,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2275,
+              "rag": 2612,
+              "difference": 337
+            },
+            "deepseek": {
+              "baseline": 2207,
+              "rag": 2425,
+              "difference": 218
+            },
+            "moonshot": {
+              "baseline": 2283,
+              "rag": 2654,
+              "difference": 371
+            },
+            "gemini": {
+              "baseline": 2171,
+              "rag": 2464,
+              "difference": 293
+            }
+          }
+        },
+        "patient originally hypertensive when brought to er": {
+          "baseline_tokens": 9145,
+          "rag_tokens": 18530,
+          "difference": 9385,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2310,
+              "rag": 4653,
+              "difference": 2343
+            },
+            "deepseek": {
+              "baseline": 2261,
+              "rag": 4506,
+              "difference": 2245
+            },
+            "moonshot": {
+              "baseline": 2336,
+              "rag": 4777,
+              "difference": 2441
+            },
+            "gemini": {
+              "baseline": 2238,
+              "rag": 4594,
+              "difference": 2356
+            }
+          }
+        },
+        "nausea and vomiting": {
+          "baseline_tokens": 9074,
+          "rag_tokens": 10235,
+          "difference": 1161,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2207,
+              "rag": 2613,
+              "difference": 406
+            },
+            "deepseek": {
+              "baseline": 2323,
+              "rag": 2452,
+              "difference": 129
+            },
+            "moonshot": {
+              "baseline": 2394,
+              "rag": 2734,
+              "difference": 340
+            },
+            "gemini": {
+              "baseline": 2150,
+              "rag": 2436,
+              "difference": 286
+            }
+          }
+        },
+        "no pain in ruq": {
+          "baseline_tokens": 9006,
+          "rag_tokens": 10555,
+          "difference": 1549,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2282,
+              "rag": 2715,
+              "difference": 433
+            },
+            "deepseek": {
+              "baseline": 2305,
+              "rag": 2558,
+              "difference": 253
+            },
+            "moonshot": {
+              "baseline": 2307,
+              "rag": 2688,
+              "difference": 381
+            },
+            "gemini": {
+              "baseline": 2112,
+              "rag": 2594,
+              "difference": 482
+            }
+          }
+        },
+        "altered mental status": {
+          "baseline_tokens": 8924,
+          "rag_tokens": 10037,
+          "difference": 1113,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2174,
+              "rag": 2573,
+              "difference": 399
+            },
+            "deepseek": {
+              "baseline": 2208,
+              "rag": 2480,
+              "difference": 272
+            },
+            "moonshot": {
+              "baseline": 2328,
+              "rag": 2622,
+              "difference": 294
+            },
+            "gemini": {
+              "baseline": 2214,
+              "rag": 2362,
+              "difference": 148
+            }
+          }
+        },
+        "acute kidney failure with lesion of tubular necrosis": {
+          "baseline_tokens": 8569,
+          "rag_tokens": 10021,
+          "difference": 1452,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2179,
+              "rag": 2571,
+              "difference": 392
+            },
+            "deepseek": {
+              "baseline": 2100,
+              "rag": 2468,
+              "difference": 368
+            },
+            "moonshot": {
+              "baseline": 2229,
+              "rag": 2627,
+              "difference": 398
+            },
+            "gemini": {
+              "baseline": 2061,
+              "rag": 2355,
+              "difference": 294
+            }
+          }
+        },
+        "no evidence of endocarditis on echo": {
+          "baseline_tokens": 8595,
+          "rag_tokens": 20076,
+          "difference": 11481,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2186,
+              "rag": 0,
+              "difference": -2186
+            },
+            "deepseek": {
+              "baseline": 2101,
+              "rag": 10004,
+              "difference": 7903
+            },
+            "moonshot": {
+              "baseline": 2236,
+              "rag": 0,
+              "difference": -2236
+            },
+            "gemini": {
+              "baseline": 2072,
+              "rag": 10072,
+              "difference": 8000
+            }
+          }
+        },
+        "swollen lip": {
+          "baseline_tokens": 8738,
+          "rag_tokens": 9077,
+          "difference": 339,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2201,
+              "rag": 2346,
+              "difference": 145
+            },
+            "deepseek": {
+              "baseline": 2191,
+              "rag": 2217,
+              "difference": 26
+            },
+            "moonshot": {
+              "baseline": 2254,
+              "rag": 2311,
+              "difference": 57
+            },
+            "gemini": {
+              "baseline": 2092,
+              "rag": 2203,
+              "difference": 111
+            }
+          }
+        },
+        "lethargy": {
+          "baseline_tokens": 9000,
+          "rag_tokens": 9947,
+          "difference": 947,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2227,
+              "rag": 2554,
+              "difference": 327
+            },
+            "deepseek": {
+              "baseline": 2250,
+              "rag": 2459,
+              "difference": 209
+            },
+            "moonshot": {
+              "baseline": 2376,
+              "rag": 2597,
+              "difference": 221
+            },
+            "gemini": {
+              "baseline": 2147,
+              "rag": 2337,
+              "difference": 190
+            }
+          }
+        },
+        "femoral and internal jugular central line placement": {
+          "baseline_tokens": 8694,
+          "rag_tokens": 25325,
+          "difference": 16631,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2226,
+              "rag": 6641,
+              "difference": 4415
+            },
+            "deepseek": {
+              "baseline": 2160,
+              "rag": 6015,
+              "difference": 3855
+            },
+            "moonshot": {
+              "baseline": 2230,
+              "rag": 6596,
+              "difference": 4366
+            },
+            "gemini": {
+              "baseline": 2078,
+              "rag": 6073,
+              "difference": 3995
+            }
+          }
+        },
+        "endotracheal intubation": {
+          "baseline_tokens": 8999,
+          "rag_tokens": 9990,
+          "difference": 991,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2258,
+              "rag": 2553,
+              "difference": 295
+            },
+            "deepseek": {
+              "baseline": 2309,
+              "rag": 2407,
+              "difference": 98
+            },
+            "moonshot": {
+              "baseline": 2253,
+              "rag": 2590,
+              "difference": 337
+            },
+            "gemini": {
+              "baseline": 2179,
+              "rag": 2440,
+              "difference": 261
+            }
+          }
+        },
+        "distended gall bladder on ct": {
+          "baseline_tokens": 8804,
+          "rag_tokens": 9958,
+          "difference": 1154,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2222,
+              "rag": 2576,
+              "difference": 354
+            },
+            "deepseek": {
+              "baseline": 2204,
+              "rag": 2438,
+              "difference": 234
+            },
+            "moonshot": {
+              "baseline": 2267,
+              "rag": 2596,
+              "difference": 329
+            },
+            "gemini": {
+              "baseline": 2111,
+              "rag": 2348,
+              "difference": 237
+            }
+          }
+        }
+      }
+    },
+    "report_4502": {
+      "report_id": 4502,
+      "summary": {
+        "total_symptoms": 17,
+        "total_apis": 4,
+        "baseline_total_tokens": 149000,
+        "rag_total_tokens": 174404,
+        "token_difference": 25404,
+        "percentage_change": 17.0496644295302
+      },
+      "api_comparison": {
+        "openai": {
+          "baseline_tokens": 37722,
+          "rag_tokens": 44901,
+          "difference": 7179,
+          "baseline_calls": 17,
+          "rag_calls": 17
+        },
+        "deepseek": {
+          "baseline_tokens": 37098,
+          "rag_tokens": 42338,
+          "difference": 5240,
+          "baseline_calls": 17,
+          "rag_calls": 17
+        },
+        "moonshot": {
+          "baseline_tokens": 38482,
+          "rag_tokens": 45236,
+          "difference": 6754,
+          "baseline_calls": 17,
+          "rag_calls": 17
+        },
+        "gemini": {
+          "baseline_tokens": 35698,
+          "rag_tokens": 41929,
+          "difference": 6231,
+          "baseline_calls": 17,
+          "rag_calls": 17
+        }
+      },
+      "symptom_comparison": {
+        "flat eeg": {
+          "baseline_tokens": 8561,
+          "rag_tokens": 9803,
+          "difference": 1242,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2189,
+              "rag": 2520,
+              "difference": 331
+            },
+            "deepseek": {
+              "baseline": 2097,
+              "rag": 2409,
+              "difference": 312
+            },
+            "moonshot": {
+              "baseline": 2217,
+              "rag": 2563,
+              "difference": 346
+            },
+            "gemini": {
+              "baseline": 2058,
+              "rag": 2311,
+              "difference": 253
+            }
+          }
+        },
+        "lumbar spinal stenosis": {
+          "baseline_tokens": 8751,
+          "rag_tokens": 10165,
+          "difference": 1414,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2182,
+              "rag": 2589,
+              "difference": 407
+            },
+            "deepseek": {
+              "baseline": 2210,
+              "rag": 2467,
+              "difference": 257
+            },
+            "moonshot": {
+              "baseline": 2303,
+              "rag": 2641,
+              "difference": 338
+            },
+            "gemini": {
+              "baseline": 2056,
+              "rag": 2468,
+              "difference": 412
+            }
+          }
+        },
+        "Ulcerative colitis, unspecified": {
+          "baseline_tokens": 8656,
+          "rag_tokens": 9952,
+          "difference": 1296,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2175,
+              "rag": 2565,
+              "difference": 390
+            },
+            "deepseek": {
+              "baseline": 2195,
+              "rag": 2415,
+              "difference": 220
+            },
+            "moonshot": {
+              "baseline": 2225,
+              "rag": 2625,
+              "difference": 400
+            },
+            "gemini": {
+              "baseline": 2061,
+              "rag": 2347,
+              "difference": 286
+            }
+          }
+        },
+        "Gastrostomy status": {
+          "baseline_tokens": 8792,
+          "rag_tokens": 10087,
+          "difference": 1295,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2246,
+              "rag": 2564,
+              "difference": 318
+            },
+            "deepseek": {
+              "baseline": 2241,
+              "rag": 2415,
+              "difference": 174
+            },
+            "moonshot": {
+              "baseline": 2213,
+              "rag": 2631,
+              "difference": 418
+            },
+            "gemini": {
+              "baseline": 2092,
+              "rag": 2477,
+              "difference": 385
+            }
+          }
+        },
+        "Pneumonia, organism unspecified": {
+          "baseline_tokens": 8712,
+          "rag_tokens": 9892,
+          "difference": 1180,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2182,
+              "rag": 2557,
+              "difference": 375
+            },
+            "deepseek": {
+              "baseline": 2180,
+              "rag": 2428,
+              "difference": 248
+            },
+            "moonshot": {
+              "baseline": 2225,
+              "rag": 2558,
+              "difference": 333
+            },
+            "gemini": {
+              "baseline": 2125,
+              "rag": 2349,
+              "difference": 224
+            }
+          }
+        },
+        "cardiac arrest": {
+          "baseline_tokens": 8887,
+          "rag_tokens": 10128,
+          "difference": 1241,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2275,
+              "rag": 2612,
+              "difference": 337
+            },
+            "deepseek": {
+              "baseline": 2210,
+              "rag": 2428,
+              "difference": 218
+            },
+            "moonshot": {
+              "baseline": 2283,
+              "rag": 2676,
+              "difference": 393
+            },
+            "gemini": {
+              "baseline": 2119,
+              "rag": 2412,
+              "difference": 293
+            }
+          }
+        },
+        "Esophageal reflux": {
+          "baseline_tokens": 8728,
+          "rag_tokens": 9875,
+          "difference": 1147,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2205,
+              "rag": 2603,
+              "difference": 398
+            },
+            "deepseek": {
+              "baseline": 2185,
+              "rag": 2390,
+              "difference": 205
+            },
+            "moonshot": {
+              "baseline": 2268,
+              "rag": 2552,
+              "difference": 284
+            },
+            "gemini": {
+              "baseline": 2070,
+              "rag": 2330,
+              "difference": 260
+            }
+          }
+        },
+        "Other degenerative diseases of the basal ganglia": {
+          "baseline_tokens": 8552,
+          "rag_tokens": 9875,
+          "difference": 1323,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2166,
+              "rag": 2545,
+              "difference": 379
+            },
+            "deepseek": {
+              "baseline": 2092,
+              "rag": 2370,
+              "difference": 278
+            },
+            "moonshot": {
+              "baseline": 2238,
+              "rag": 2612,
+              "difference": 374
+            },
+            "gemini": {
+              "baseline": 2056,
+              "rag": 2348,
+              "difference": 292
+            }
+          }
+        },
+        "toxic megacolon": {
+          "baseline_tokens": 8715,
+          "rag_tokens": 9149,
+          "difference": 434,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2192,
+              "rag": 2395,
+              "difference": 203
+            },
+            "deepseek": {
+              "baseline": 2194,
+              "rag": 2194,
+              "difference": 0
+            },
+            "moonshot": {
+              "baseline": 2259,
+              "rag": 2343,
+              "difference": 84
+            },
+            "gemini": {
+              "baseline": 2070,
+              "rag": 2217,
+              "difference": 147
+            }
+          }
+        },
+        "intact respiratory drive on pressure support": {
+          "baseline_tokens": 8763,
+          "rag_tokens": 10041,
+          "difference": 1278,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2225,
+              "rag": 2591,
+              "difference": 366
+            },
+            "deepseek": {
+              "baseline": 2146,
+              "rag": 2401,
+              "difference": 255
+            },
+            "moonshot": {
+              "baseline": 2273,
+              "rag": 2598,
+              "difference": 325
+            },
+            "gemini": {
+              "baseline": 2119,
+              "rag": 2451,
+              "difference": 332
+            }
+          }
+        },
+        "Urinary tract infection, site not specified": {
+          "baseline_tokens": 9088,
+          "rag_tokens": 10371,
+          "difference": 1283,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2282,
+              "rag": 2672,
+              "difference": 390
+            },
+            "deepseek": {
+              "baseline": 2256,
+              "rag": 2567,
+              "difference": 311
+            },
+            "moonshot": {
+              "baseline": 2349,
+              "rag": 2607,
+              "difference": 258
+            },
+            "gemini": {
+              "baseline": 2201,
+              "rag": 2525,
+              "difference": 324
+            }
+          }
+        },
+        "Atrial fibrillation": {
+          "baseline_tokens": 8596,
+          "rag_tokens": 9935,
+          "difference": 1339,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2184,
+              "rag": 2551,
+              "difference": 367
+            },
+            "deepseek": {
+              "baseline": 2108,
+              "rag": 2432,
+              "difference": 324
+            },
+            "moonshot": {
+              "baseline": 2232,
+              "rag": 2607,
+              "difference": 375
+            },
+            "gemini": {
+              "baseline": 2072,
+              "rag": 2345,
+              "difference": 273
+            }
+          }
+        },
+        "hypokalemic": {
+          "baseline_tokens": 8948,
+          "rag_tokens": 16192,
+          "difference": 7244,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2223,
+              "rag": 4081,
+              "difference": 1858
+            },
+            "deepseek": {
+              "baseline": 2305,
+              "rag": 3922,
+              "difference": 1617
+            },
+            "moonshot": {
+              "baseline": 2319,
+              "rag": 4215,
+              "difference": 1896
+            },
+            "gemini": {
+              "baseline": 2101,
+              "rag": 3974,
+              "difference": 1873
+            }
+          }
+        },
+        "Anoxic brain damage": {
+          "baseline_tokens": 8814,
+          "rag_tokens": 9786,
+          "difference": 972,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2332,
+              "rag": 2532,
+              "difference": 200
+            },
+            "deepseek": {
+              "baseline": 2095,
+              "rag": 2392,
+              "difference": 297
+            },
+            "moonshot": {
+              "baseline": 2224,
+              "rag": 2546,
+              "difference": 322
+            },
+            "gemini": {
+              "baseline": 2163,
+              "rag": 2316,
+              "difference": 153
+            }
+          }
+        },
+        "hypoxemic and hypercarbic respiratory failure": {
+          "baseline_tokens": 8853,
+          "rag_tokens": 10185,
+          "difference": 1332,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2237,
+              "rag": 2599,
+              "difference": 362
+            },
+            "deepseek": {
+              "baseline": 2214,
+              "rag": 2533,
+              "difference": 319
+            },
+            "moonshot": {
+              "baseline": 2278,
+              "rag": 2537,
+              "difference": 259
+            },
+            "gemini": {
+              "baseline": 2124,
+              "rag": 2516,
+              "difference": 392
+            }
+          }
+        },
+        "minimal cortical activity": {
+          "baseline_tokens": 8536,
+          "rag_tokens": 9769,
+          "difference": 1233,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2160,
+              "rag": 2519,
+              "difference": 359
+            },
+            "deepseek": {
+              "baseline": 2098,
+              "rag": 2344,
+              "difference": 246
+            },
+            "moonshot": {
+              "baseline": 2222,
+              "rag": 2589,
+              "difference": 367
+            },
+            "gemini": {
+              "baseline": 2056,
+              "rag": 2317,
+              "difference": 261
+            }
+          }
+        },
+        "Urinary incontinence, unspecified": {
+          "baseline_tokens": 9048,
+          "rag_tokens": 9199,
+          "difference": 151,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2267,
+              "rag": 2406,
+              "difference": 139
+            },
+            "deepseek": {
+              "baseline": 2272,
+              "rag": 2231,
+              "difference": -41
+            },
+            "moonshot": {
+              "baseline": 2354,
+              "rag": 2336,
+              "difference": -18
+            },
+            "gemini": {
+              "baseline": 2155,
+              "rag": 2226,
+              "difference": 71
+            }
+          }
+        }
+      }
+    },
+    "report_4503": {
+      "report_id": 4503,
+      "summary": {
+        "total_symptoms": 11,
+        "total_apis": 4,
+        "baseline_total_tokens": 95699,
+        "rag_total_tokens": 152799,
+        "token_difference": 57100,
+        "percentage_change": 59.666245206324
+      },
+      "api_comparison": {
+        "openai": {
+          "baseline_tokens": 24149,
+          "rag_tokens": 34003,
+          "difference": 9854,
+          "baseline_calls": 11,
+          "rag_calls": 10
+        },
+        "deepseek": {
+          "baseline_tokens": 23771,
+          "rag_tokens": 41991,
+          "difference": 18220,
+          "baseline_calls": 11,
+          "rag_calls": 11
+        },
+        "moonshot": {
+          "baseline_tokens": 24719,
+          "rag_tokens": 34598,
+          "difference": 9879,
+          "baseline_calls": 11,
+          "rag_calls": 10
+        },
+        "gemini": {
+          "baseline_tokens": 23060,
+          "rag_tokens": 42207,
+          "difference": 19147,
+          "baseline_calls": 11,
+          "rag_calls": 11
+        }
+      },
+      "symptom_comparison": {
+        "she was monitored on telemetry": {
+          "baseline_tokens": 8583,
+          "rag_tokens": 13965,
+          "difference": 5382,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2165,
+              "rag": 3564,
+              "difference": 1399
+            },
+            "deepseek": {
+              "baseline": 2107,
+              "rag": 3354,
+              "difference": 1247
+            },
+            "moonshot": {
+              "baseline": 2234,
+              "rag": 3661,
+              "difference": 1427
+            },
+            "gemini": {
+              "baseline": 2077,
+              "rag": 3386,
+              "difference": 1309
+            }
+          }
+        },
+        "seizure-like episodes": {
+          "baseline_tokens": 8669,
+          "rag_tokens": 9805,
+          "difference": 1136,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2175,
+              "rag": 2522,
+              "difference": 347
+            },
+            "deepseek": {
+              "baseline": 2162,
+              "rag": 2433,
+              "difference": 271
+            },
+            "moonshot": {
+              "baseline": 2268,
+              "rag": 2537,
+              "difference": 269
+            },
+            "gemini": {
+              "baseline": 2064,
+              "rag": 2313,
+              "difference": 249
+            }
+          }
+        },
+        "no evidence of af in house": {
+          "baseline_tokens": 8571,
+          "rag_tokens": 19891,
+          "difference": 11320,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2185,
+              "rag": 0,
+              "difference": -2185
+            },
+            "deepseek": {
+              "baseline": 2099,
+              "rag": 9921,
+              "difference": 7822
+            },
+            "moonshot": {
+              "baseline": 2220,
+              "rag": 0,
+              "difference": -2220
+            },
+            "gemini": {
+              "baseline": 2067,
+              "rag": 9970,
+              "difference": 7903
+            }
+          }
+        },
+        "unresponsiveness": {
+          "baseline_tokens": 8755,
+          "rag_tokens": 9188,
+          "difference": 433,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2172,
+              "rag": 2307,
+              "difference": 135
+            },
+            "deepseek": {
+              "baseline": 2201,
+              "rag": 2283,
+              "difference": 82
+            },
+            "moonshot": {
+              "baseline": 2221,
+              "rag": 2323,
+              "difference": 102
+            },
+            "gemini": {
+              "baseline": 2161,
+              "rag": 2275,
+              "difference": 114
+            }
+          }
+        },
+        "patient remained in normal sinus rhythm throughout her hospital course": {
+          "baseline_tokens": 8613,
+          "rag_tokens": 21467,
+          "difference": 12854,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2180,
+              "rag": 5539,
+              "difference": 3359
+            },
+            "deepseek": {
+              "baseline": 2115,
+              "rag": 5101,
+              "difference": 2986
+            },
+            "moonshot": {
+              "baseline": 2231,
+              "rag": 5617,
+              "difference": 3386
+            },
+            "gemini": {
+              "baseline": 2087,
+              "rag": 5210,
+              "difference": 3123
+            }
+          }
+        },
+        "tremulous after trying to get out of a chair": {
+          "baseline_tokens": 8844,
+          "rag_tokens": 10226,
+          "difference": 1382,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2237,
+              "rag": 2619,
+              "difference": 382
+            },
+            "deepseek": {
+              "baseline": 2217,
+              "rag": 2474,
+              "difference": 257
+            },
+            "moonshot": {
+              "baseline": 2271,
+              "rag": 2605,
+              "difference": 334
+            },
+            "gemini": {
+              "baseline": 2119,
+              "rag": 2528,
+              "difference": 409
+            }
+          }
+        },
+        "monitored on telemetry": {
+          "baseline_tokens": 8674,
+          "rag_tokens": 13949,
+          "difference": 5275,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2188,
+              "rag": 3539,
+              "difference": 1351
+            },
+            "deepseek": {
+              "baseline": 2178,
+              "rag": 3349,
+              "difference": 1171
+            },
+            "moonshot": {
+              "baseline": 2233,
+              "rag": 3667,
+              "difference": 1434
+            },
+            "gemini": {
+              "baseline": 2075,
+              "rag": 3394,
+              "difference": 1319
+            }
+          }
+        },
+        "lopressor was held due to concerns of exacerbating autonomic dysfunction": {
+          "baseline_tokens": 8894,
+          "rag_tokens": 17841,
+          "difference": 8947,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2242,
+              "rag": 4558,
+              "difference": 2316
+            },
+            "deepseek": {
+              "baseline": 2209,
+              "rag": 4276,
+              "difference": 2067
+            },
+            "moonshot": {
+              "baseline": 2278,
+              "rag": 4657,
+              "difference": 2379
+            },
+            "gemini": {
+              "baseline": 2165,
+              "rag": 4350,
+              "difference": 2185
+            }
+          }
+        },
+        "pulm nodules on cta": {
+          "baseline_tokens": 8623,
+          "rag_tokens": 10050,
+          "difference": 1427,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2180,
+              "rag": 2549,
+              "difference": 369
+            },
+            "deepseek": {
+              "baseline": 2105,
+              "rag": 2459,
+              "difference": 354
+            },
+            "moonshot": {
+              "baseline": 2228,
+              "rag": 2581,
+              "difference": 353
+            },
+            "gemini": {
+              "baseline": 2110,
+              "rag": 2461,
+              "difference": 351
+            }
+          }
+        },
+        "normal sinus rhythm": {
+          "baseline_tokens": 8594,
+          "rag_tokens": 16288,
+          "difference": 7694,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2191,
+              "rag": 4177,
+              "difference": 1986
+            },
+            "deepseek": {
+              "baseline": 2108,
+              "rag": 3841,
+              "difference": 1733
+            },
+            "moonshot": {
+              "baseline": 2220,
+              "rag": 4350,
+              "difference": 2130
+            },
+            "gemini": {
+              "baseline": 2075,
+              "rag": 3920,
+              "difference": 1845
+            }
+          }
+        },
+        "diarrhea": {
+          "baseline_tokens": 8879,
+          "rag_tokens": 10129,
+          "difference": 1250,
+          "api_breakdown": {
+            "openai": {
+              "baseline": 2234,
+              "rag": 2629,
+              "difference": 395
+            },
+            "deepseek": {
+              "baseline": 2270,
+              "rag": 2500,
+              "difference": 230
+            },
+            "moonshot": {
+              "baseline": 2315,
+              "rag": 2600,
+              "difference": 285
+            },
+            "gemini": {
+              "baseline": 2060,
+              "rag": 2400,
+              "difference": 340
+            }
+          }
+        }
+      }
+    }
+  }
+}

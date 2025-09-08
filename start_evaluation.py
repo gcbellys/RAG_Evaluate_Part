@@ -20,7 +20,11 @@ RAG评估系统 - 主启动脚本
 import argparse
 import subprocess
 import sys
+import json
+import os
 from pathlib import Path
+from datetime import datetime
+from typing import Dict, Any, List
 
 
 def run_workflow_command(command: str, description: str) -> bool:
@@ -38,6 +42,368 @@ def run_workflow_command(command: str, description: str) -> bool:
         print("=" * 60)
         print(f"❌ {description} - 失败 (错误码: {e.returncode})")
         return False
+
+
+def load_json_file(file_path: str) -> Dict[str, Any]:
+    """加载JSON文件"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"⚠️  无法加载文件 {file_path}: {e}")
+        return {}
+
+
+def find_latest_result_files(report_id: str) -> tuple:
+    """查找最新的baseline和RAG结果文件"""
+    final_result_dir = Path("final_result")
+    
+    # 查找baseline文件
+    baseline_dir = final_result_dir / "baseline_results"
+    baseline_files = list(baseline_dir.glob(f"*{report_id}*.json"))
+    baseline_file = str(max(baseline_files, key=os.path.getctime)) if baseline_files else ""
+    
+    # 查找RAG文件
+    rag_dir = final_result_dir / "rerun_with_rag"
+    rag_files = list(rag_dir.glob(f"*{report_id}*.json"))
+    rag_file = str(max(rag_files, key=os.path.getctime)) if rag_files else ""
+    
+    return baseline_file, rag_file
+
+
+def extract_token_stats(data: Dict[str, Any], data_type: str) -> Dict[str, Any]:
+    """提取token统计信息"""
+    if data_type == "baseline":
+        # Baseline格式
+        token_summary = data.get('token_summary', {})
+        symptoms = data.get('symptoms', [])
+        
+        symptom_stats = {}
+        for symptom in symptoms:
+            diagnosis = symptom.get('diagnosis', '')
+            api_responses = symptom.get('api_responses', {})
+            
+            symptom_tokens = {}
+            for api_name, api_data in api_responses.items():
+                usage = api_data.get('usage', {})
+                if usage:
+                    symptom_tokens[api_name] = usage.get('total_tokens', 0)
+            
+            if symptom_tokens:
+                symptom_stats[diagnosis] = symptom_tokens
+        
+        return {
+            'total_summary': token_summary,
+            'symptom_breakdown': symptom_stats
+        }
+    
+    elif data_type == "rag":
+        # RAG格式 - 检查新格式和旧格式
+        if 'token_summary' in data and 'symptoms' in data:
+            # 新格式 - 确保包含缓存统计字段
+            token_summary = data['token_summary']
+            # 确保新格式也有缓存统计字段
+            if 'cache_read_tokens_total' not in token_summary:
+                token_summary['cache_read_tokens_total'] = 0
+            if 'cache_creation_tokens_total' not in token_summary:
+                token_summary['cache_creation_tokens_total'] = 0
+                
+            # 确保API breakdown也有缓存字段
+            for api_data in token_summary.get('api_breakdown', {}).values():
+                if 'cache_read_tokens' not in api_data:
+                    api_data['cache_read_tokens'] = 0
+                if 'cache_creation_tokens' not in api_data:
+                    api_data['cache_creation_tokens'] = 0
+                    
+            symptoms_data = data['symptoms']
+        else:
+            # 旧格式，手动计算
+            token_summary = {
+                'total_tokens': 0,
+                'total_prompt_tokens': 0,
+                'total_completion_tokens': 0,
+                'cache_read_tokens_total': 0,        # 新增
+                'cache_creation_tokens_total': 0,    # 新增
+                'api_breakdown': {}
+            }
+            symptoms_data = data
+        
+        symptom_stats = {}
+        for diagnosis, symptom_data in symptoms_data.items():
+            if isinstance(symptom_data, dict) and 'api_responses' in symptom_data:
+                api_responses = symptom_data['api_responses']
+                symptom_tokens = {}
+                
+                for api_name, api_data in api_responses.items():
+                    usage = api_data.get('usage', {})
+                    if usage:
+                        tokens = usage.get('total_tokens', 0)
+                        cache_read = usage.get('cache_read_tokens', 0)          # 新增
+                        cache_create = usage.get('cache_creation_tokens', 0)     # 新增
+                        symptom_tokens[api_name] = tokens
+                        
+                        # 如果是旧格式，累加到总计
+                        if 'token_summary' not in data:
+                            token_summary['total_tokens'] += tokens
+                            token_summary['total_prompt_tokens'] += usage.get('prompt_tokens', 0)
+                            token_summary['total_completion_tokens'] += usage.get('completion_tokens', 0)
+                            token_summary['cache_read_tokens_total'] += cache_read        # 新增
+                            token_summary['cache_creation_tokens_total'] += cache_create   # 新增
+                            
+                            if api_name not in token_summary['api_breakdown']:
+                                token_summary['api_breakdown'][api_name] = {
+                                    'total_tokens': 0,
+                                    'prompt_tokens': 0,
+                                    'completion_tokens': 0,
+                                    'cache_read_tokens': 0,           # 新增
+                                    'cache_creation_tokens': 0,       # 新增
+                                    'calls': 0
+                                }
+                            
+                            api_breakdown = token_summary['api_breakdown'][api_name]
+                            api_breakdown['total_tokens'] += tokens
+                            api_breakdown['prompt_tokens'] += usage.get('prompt_tokens', 0)
+                            api_breakdown['completion_tokens'] += usage.get('completion_tokens', 0)
+                            api_breakdown['cache_read_tokens'] += cache_read              # 新增
+                            api_breakdown['cache_creation_tokens'] += cache_create        # 新增
+                            api_breakdown['calls'] += 1
+                
+                if symptom_tokens:
+                    symptom_stats[diagnosis] = symptom_tokens
+        
+        return {
+            'total_summary': token_summary,
+            'symptom_breakdown': symptom_stats
+        }
+    
+    return {}
+
+
+def generate_token_analysis(start_id: int, end_id: int) -> bool:
+    """生成token使用分析报告"""
+    print(f"\n🔍 正在生成Token使用分析报告...")
+    
+    # 创建tokens目录
+    tokens_dir = Path("final_result/tokens")
+    tokens_dir.mkdir(exist_ok=True)
+    
+    all_reports_analysis = {}
+    
+    for report_id in range(start_id, end_id + 1):
+        print(f"\n📊 分析报告 {report_id}...")
+        
+        # 查找文件
+        baseline_file, rag_file = find_latest_result_files(str(report_id))
+        
+        if not baseline_file or not rag_file:
+            print(f"⚠️  报告 {report_id} 缺少必要文件 (baseline: {bool(baseline_file)}, rag: {bool(rag_file)})")
+            continue
+        
+        # 加载数据
+        baseline_data = load_json_file(baseline_file)
+        rag_data = load_json_file(rag_file)
+        
+        if not baseline_data or not rag_data:
+            print(f"⚠️  报告 {report_id} 数据加载失败")
+            continue
+        
+        # 提取token统计
+        baseline_stats = extract_token_stats(baseline_data, "baseline")
+        rag_stats = extract_token_stats(rag_data, "rag")
+        
+        # 生成对比分析
+        baseline_total = baseline_stats['total_summary'].get('total_tokens', 0)
+        rag_total = rag_stats['total_summary'].get('total_tokens', 0)
+        
+        # 统计API和症状数量
+        baseline_apis = set()
+        rag_apis = set()
+        all_symptoms = set(baseline_stats['symptom_breakdown'].keys()) | set(rag_stats['symptom_breakdown'].keys())
+        
+        for symptom_tokens in baseline_stats['symptom_breakdown'].values():
+            baseline_apis.update(symptom_tokens.keys())
+        
+        for symptom_tokens in rag_stats['symptom_breakdown'].values():
+            rag_apis.update(symptom_tokens.keys())
+        
+        all_apis = baseline_apis | rag_apis
+        
+        # 症状级别对比
+        symptom_comparison = {}
+        for symptom in all_symptoms:
+            baseline_symptom_tokens = baseline_stats['symptom_breakdown'].get(symptom, {})
+            rag_symptom_tokens = rag_stats['symptom_breakdown'].get(symptom, {})
+            
+            baseline_symptom_total = sum(baseline_symptom_tokens.values())
+            rag_symptom_total = sum(rag_symptom_tokens.values())
+            
+            symptom_comparison[symptom] = {
+                'baseline_tokens': baseline_symptom_total,
+                'rag_tokens': rag_symptom_total,
+                'difference': rag_symptom_total - baseline_symptom_total,
+                'api_breakdown': {}
+            }
+            
+            # API级别对比
+            for api in all_apis:
+                baseline_api_tokens = baseline_symptom_tokens.get(api, 0)
+                rag_api_tokens = rag_symptom_tokens.get(api, 0)
+                
+                if baseline_api_tokens > 0 or rag_api_tokens > 0:
+                    symptom_comparison[symptom]['api_breakdown'][api] = {
+                        'baseline': baseline_api_tokens,
+                        'rag': rag_api_tokens,
+                        'difference': rag_api_tokens - baseline_api_tokens
+                    }
+        
+        # API总体对比
+        api_comparison = {}
+        baseline_api_breakdown = baseline_stats['total_summary'].get('api_breakdown', {})
+        rag_api_breakdown = rag_stats['total_summary'].get('api_breakdown', {})
+        
+        for api in all_apis:
+            baseline_api_total = baseline_api_breakdown.get(api, {}).get('total_tokens', 0)
+            rag_api_total = rag_api_breakdown.get(api, {}).get('total_tokens', 0)
+            
+            api_comparison[api] = {
+                'baseline_tokens': baseline_api_total,
+                'rag_tokens': rag_api_total,
+                'difference': rag_api_total - baseline_api_total,
+                'baseline_calls': baseline_api_breakdown.get(api, {}).get('calls', 0),
+                'rag_calls': rag_api_breakdown.get(api, {}).get('calls', 0)
+            }
+        
+        # 报告分析结果
+        report_analysis = {
+            'report_id': report_id,
+            'summary': {
+                'total_symptoms': len(all_symptoms),
+                'total_apis': len(all_apis),
+                'baseline_total_tokens': baseline_total,
+                'rag_total_tokens': rag_total,
+                'token_difference': rag_total - baseline_total,
+                'percentage_change': ((rag_total - baseline_total) / baseline_total * 100) if baseline_total > 0 else 0,
+                'cache_read_tokens_total': rag_stats['total_summary'].get('cache_read_tokens_total', 0),  # 新增
+                'cache_creation_tokens_total': rag_stats['total_summary'].get('cache_creation_tokens_total', 0)  # 新增
+            },
+            'api_comparison': api_comparison,
+            'symptom_comparison': symptom_comparison
+        }
+        
+        all_reports_analysis[f'report_{report_id}'] = report_analysis
+        
+        # 显示摘要
+        print(f"   ✅ 报告 {report_id}: {len(all_symptoms)}症状, {len(all_apis)}API")
+        print(f"      Token变化: {baseline_total:,} → {rag_total:,} ({rag_total - baseline_total:+,})")
+    
+    if not all_reports_analysis:
+        print("❌ 没有成功分析任何报告")
+        return False
+    
+    # 保存详细分析结果
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    
+    # 保存JSON格式
+    json_filename = tokens_dir / f"token_analysis_{start_id}_{end_id}_{timestamp}.json"
+    with open(json_filename, 'w', encoding='utf-8') as f:
+        json.dump({
+            'timestamp': datetime.now().isoformat(),
+            'report_range': f"{start_id}-{end_id}",
+            'reports': all_reports_analysis
+        }, f, ensure_ascii=False, indent=2)
+    
+    # 生成简洁的token使用报告
+    txt_filename = tokens_dir / f"token_usage_{start_id}_{end_id}_{timestamp}.txt"
+    
+    report_lines = []
+    report_lines.append("=" * 80)
+    report_lines.append(f"📊 Token使用统计报告")
+    report_lines.append(f"📋 报告范围: {start_id} - {end_id}")
+    report_lines.append(f"⏰ 生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    report_lines.append("=" * 80)
+    
+    # 总体统计
+    total_baseline_tokens = sum(r['summary']['baseline_total_tokens'] for r in all_reports_analysis.values())
+    total_rag_tokens = sum(r['summary']['rag_total_tokens'] for r in all_reports_analysis.values())
+    total_symptoms = sum(r['summary']['total_symptoms'] for r in all_reports_analysis.values())
+    total_cache_read = sum(r['summary'].get('cache_read_tokens_total', 0) for r in all_reports_analysis.values())
+    
+    report_lines.append(f"\n📈 总体统计:")
+    report_lines.append(f"   处理报告数: {len(all_reports_analysis)}")
+    report_lines.append(f"   总症状数: {total_symptoms}")
+    report_lines.append(f"   Baseline总tokens: {total_baseline_tokens:,}")
+    report_lines.append(f"   RAG增强总tokens: {total_rag_tokens:,}")
+    report_lines.append(f"   估计缓存读取tokens: {total_cache_read:,}")
+    report_lines.append(f"   估计节省prompt tokens: {total_cache_read:,}")  # 采用cache_read近似节省量
+    
+    # 各报告详情
+    for report_key, analysis in all_reports_analysis.items():
+        report_id = analysis['report_id']
+        summary = analysis['summary']
+        
+        report_lines.append(f"\n📋 报告 {report_id}:")
+        report_lines.append(f"   症状数量: {summary['total_symptoms']}")
+        report_lines.append(f"   API数量: {summary['total_apis']}")
+        
+        # Baseline API tokens
+        report_lines.append(f"\n   🔵 Baseline Token使用:")
+        report_lines.append(f"     总计: {summary['baseline_total_tokens']:,} tokens")
+        for api, api_data in analysis['api_comparison'].items():
+            if api_data['baseline_tokens'] > 0:
+                calls = api_data['baseline_calls']
+                avg_tokens = api_data['baseline_tokens'] / calls if calls > 0 else 0
+                report_lines.append(f"     {api.upper():10}: {api_data['baseline_tokens']:,} tokens ({calls}次调用, 平均{avg_tokens:.0f})")
+        
+        # RAG API tokens
+        report_lines.append(f"\n   🟢 RAG增强 Token使用:")
+        report_lines.append(f"     总计: {summary['rag_total_tokens']:,} tokens")
+        for api, api_data in analysis['api_comparison'].items():
+            if api_data['rag_tokens'] > 0:
+                calls = api_data['rag_calls']
+                avg_tokens = api_data['rag_tokens'] / calls if calls > 0 else 0
+                cache_read_api = analysis['api_comparison'][api].get('cache_read_tokens', 0)
+                report_lines.append(f"     {api.upper():10}: {api_data['rag_tokens']:,} tokens ({calls}次调用, 平均{avg_tokens:.0f}), 缓存读取≈{cache_read_api:,}")
+        
+        # 缓存统计
+        cache_read_total = summary.get('cache_read_tokens_total', 0)
+        if cache_read_total > 0:
+            report_lines.append(f"\n   💾 缓存效果统计:")
+            report_lines.append(f"     估计缓存读取: {cache_read_total:,} tokens")
+            report_lines.append(f"     估计节省:     {cache_read_total:,} tokens")
+        
+        # 症状级别tokens
+        report_lines.append(f"\n   🔍 各症状Token使用:")
+        for symptom, symptom_data in analysis['symptom_comparison'].items():
+            if symptom_data['baseline_tokens'] > 0 or symptom_data['rag_tokens'] > 0:
+                report_lines.append(f"     症状: {symptom}")
+                report_lines.append(f"       Baseline: {symptom_data['baseline_tokens']:,} tokens")
+                report_lines.append(f"       RAG增强:  {symptom_data['rag_tokens']:,} tokens")
+                
+                # 症状内API分解
+                api_breakdown = symptom_data['api_breakdown']
+                if api_breakdown:
+                    report_lines.append(f"       API分解:")
+                    for api, api_data in api_breakdown.items():
+                        if api_data['baseline'] > 0 or api_data['rag'] > 0:
+                            report_lines.append(f"         {api.upper():8}: Baseline {api_data['baseline']:,}, RAG {api_data['rag']:,}")
+    
+    report_lines.append("\n" + "=" * 80)
+    report_lines.append("🏁 统计完成")
+    report_lines.append("=" * 80)
+    
+    with open(txt_filename, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(report_lines))
+    
+    # 显示结果
+    print(f"\n✅ Token分析完成!")
+    print(f"📁 详细数据: {json_filename}")
+    print(f"📄 可读报告: {txt_filename}")
+    print(f"\n📊 关键统计:")
+    print(f"   处理报告: {len(all_reports_analysis)}个")
+    print(f"   总症状数: {total_symptoms}")
+    print(f"   Token变化: {total_baseline_tokens:,} → {total_rag_tokens:,} ({total_rag_tokens - total_baseline_tokens:+,})")
+    
+    return True
 
 
 def main():
@@ -129,6 +495,13 @@ def main():
         print("   • 基础结果: final_result/baseline_results/")
         print("   • RAG增强结果: final_result/rerun_with_rag/")
         print("   • 对比分析: final_result/rerun_comparisons/")
+        
+        # 如果是完整流程，自动生成token分析
+        if workflow == "full":
+            if generate_token_analysis(start_id, end_id):
+                print("   • Token分析: final_result/tokens/")
+            else:
+                print("   ⚠️  Token分析失败")
     else:
         print("❌ 工作流程执行失败!")
         print("请检查错误信息并重试。")

@@ -1,0 +1,626 @@
+{
+  "report_id": "4500",
+  "evaluation_type": "baseline",
+  "timestamp": "2025-09-08T00:42:19.573604",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4500_symptom_0",
+      "diagnosis": "shortness of breath",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity"
+          ],
+          "success": true,
+          "model": "gpt-4",
+          "usage": {
+            "completion_tokens": 125,
+            "prompt_tokens": 2110,
+            "total_tokens": 2235,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            }
+          },
+          "cache_info": {
+            "system_prompt_cached": true,
+            "estimated_system_tokens": 1852,
+            "actual_prompt_tokens": 2110,
+            "estimated_savings": 0
+          },
+          "error": "",
+          "evaluation": {
+            "overall_score": 81.7,
+            "precision": 66.7,
+            "recall": 100.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pulmonary Capillaries\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Main Pulmonary Artery (MPA)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pulmonary Capillaries",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pulmonary Capillaries",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Main Pulmonary Artery (MPA)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pulmonary Capillaries",
+            "Pleural Cavity"
+          ],
+          "success": true,
+          "model": "gemini-2.0-flash",
+          "usage": {
+            "prompt_tokens": 1985,
+            "completion_tokens": 148,
+            "total_tokens": 2133
+          },
+          "cache_info": {
+            "system_prompt_cached": true,
+            "estimated_system_tokens": 1852,
+            "actual_prompt_tokens": 1985,
+            "estimated_savings": 0
+          },
+          "error": "",
+          "evaluation": {
+            "overall_score": 70.0,
+            "precision": 50.0,
+            "recall": 100.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 50.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity"
+          ],
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "usage": {
+            "completion_tokens": 129,
+            "prompt_tokens": 2154,
+            "total_tokens": 2283,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "cache_info": {
+            "system_prompt_cached": true,
+            "estimated_system_tokens": 1852,
+            "actual_prompt_tokens": 2154,
+            "estimated_savings": 0
+          },
+          "error": "",
+          "evaluation": {
+            "overall_score": 81.7,
+            "precision": 66.7,
+            "recall": 100.0,
+            "overgeneration_penalty": 75.0,
+            "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 75.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pulmonary Capillaries\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Pulmonary Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Brainstem\",\n        \"Medulla Oblongata\",\n        \"Cerebral Cortex\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pulmonary Capillaries",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pulmonary Capillaries",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Pulmonary Valve",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Brainstem",
+                    "Medulla Oblongata",
+                    "Cerebral Cortex"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pulmonary Capillaries",
+            "Pleural Cavity"
+          ],
+          "success": true,
+          "model": "deepseek-chat",
+          "usage": {
+            "completion_tokens": 191,
+            "prompt_tokens": 2025,
+            "total_tokens": 2216,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 41
+          },
+          "cache_info": {
+            "system_prompt_cached": true,
+            "estimated_system_tokens": 1852,
+            "actual_prompt_tokens": 2025,
+            "estimated_savings": 0
+          },
+          "error": "",
+          "evaluation": {
+            "overall_score": 70.0,
+            "precision": 50.0,
+            "recall": 100.0,
+            "overgeneration_penalty": 50.0,
+            "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/2 (100.0%); 过度生成惩罚: 50.0%"
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4500_symptom_1",
+      "diagnosis": "chest pressure",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Left Anterior Descending Artery (LAD)",
+            "Circumflex Artery"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Circumflex Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "openai": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\",\n        \"Mitral Valve\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Right Ventricle (RV)",
+              "Aortic Valve",
+              "Mitral Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve",
+                    "Mitral Valve"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)",
+            "Aortic Valve",
+            "Mitral Valve"
+          ],
+          "success": true,
+          "model": "gpt-4",
+          "usage": {
+            "completion_tokens": 76,
+            "prompt_tokens": 2108,
+            "total_tokens": 2184,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            }
+          },
+          "cache_info": {
+            "system_prompt_cached": true,
+            "estimated_system_tokens": 1852,
+            "actual_prompt_tokens": 2108,
+            "estimated_savings": 0
+          },
+          "error": "",
+          "evaluation": {
+            "overall_score": 40.0,
+            "precision": 25.0,
+            "recall": 33.3,
+            "overgeneration_penalty": 83.3,
+            "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/3 (33.3%); 过度生成惩罚: 83.3%"
+          }
+        },
+        "gemini": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleura\",\n        \"Parietal Pleura\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Root & Ascending Aorta"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Root & Ascending Aorta"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleura",
+                    "Parietal Pleura"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Root & Ascending Aorta"
+          ],
+          "success": true,
+          "model": "gemini-2.0-flash",
+          "usage": {
+            "prompt_tokens": 1984,
+            "completion_tokens": 167,
+            "total_tokens": 2151
+          },
+          "cache_info": {
+            "system_prompt_cached": true,
+            "estimated_system_tokens": 1852,
+            "actual_prompt_tokens": 1984,
+            "estimated_savings": 0
+          },
+          "error": "",
+          "evaluation": {
+            "overall_score": 46.7,
+            "precision": 33.3,
+            "recall": 33.3,
+            "overgeneration_penalty": 100.0,
+            "detailed_analysis": "Precision(精确率): 1/3 (33.3%); Recall(召回率): 1/3 (33.3%); 过度生成惩罚: 100.0%"
+          }
+        },
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleura\",\n        \"Visceral Pleura\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleura",
+                    "Visceral Pleura",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Pericardium"
+          ],
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "usage": {
+            "completion_tokens": 136,
+            "prompt_tokens": 2152,
+            "total_tokens": 2288,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "cache_info": {
+            "system_prompt_cached": true,
+            "estimated_system_tokens": 1852,
+            "actual_prompt_tokens": 2152,
+            "estimated_savings": 0
+          },
+          "error": "",
+          "evaluation": {
+            "overall_score": 46.7,
+            "precision": 33.3,
+            "recall": 33.3,
+            "overgeneration_penalty": 100.0,
+            "detailed_analysis": "Precision(精确率): 1/3 (33.3%); Recall(召回率): 1/3 (33.3%); 过度生成惩罚: 100.0%"
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Pericardium\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Bronchioles\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophagus\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Pericardium",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Pericardium",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Bronchioles",
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophagus"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Pericardium",
+            "Aortic Valve"
+          ],
+          "success": true,
+          "model": "deepseek-chat",
+          "usage": {
+            "completion_tokens": 168,
+            "prompt_tokens": 2024,
+            "total_tokens": 2192,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 40
+          },
+          "cache_info": {
+            "system_prompt_cached": true,
+            "estimated_system_tokens": 1852,
+            "actual_prompt_tokens": 2024,
+            "estimated_savings": 0
+          },
+          "error": "",
+          "evaluation": {
+            "overall_score": 40.0,
+            "precision": 25.0,
+            "recall": 33.3,
+            "overgeneration_penalty": 83.3,
+            "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/3 (33.3%); 过度生成惩罚: 83.3%"
+          }
+        }
+      }
+    }
+  ],
+  "token_summary": {
+    "total_tokens": 17682,
+    "total_prompt_tokens": 16542,
+    "total_completion_tokens": 1140,
+    "api_breakdown": {
+      "openai": {
+        "total_tokens": 4419,
+        "prompt_tokens": 4218,
+        "completion_tokens": 201,
+        "calls": 2,
+        "cache_savings": 0
+      },
+      "gemini": {
+        "total_tokens": 4284,
+        "prompt_tokens": 3969,
+        "completion_tokens": 315,
+        "calls": 2,
+        "cache_savings": 0
+      },
+      "moonshot": {
+        "total_tokens": 4571,
+        "prompt_tokens": 4306,
+        "completion_tokens": 265,
+        "calls": 2,
+        "cache_savings": 0
+      },
+      "deepseek": {
+        "total_tokens": 4408,
+        "prompt_tokens": 4049,
+        "completion_tokens": 359,
+        "calls": 2,
+        "cache_savings": 0
+      }
+    }
+  },
+  "optimization_stats": {
+    "total_savings": 0,
+    "cached_clients": 4,
+    "system_prompt_cached": true
+  }
+}
