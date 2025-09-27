@@ -117,7 +117,7 @@ class RerunWorkflow:
         data_loader = DataLoader()
         
         # 寻找测试文件
-        test_data_path = Path("/home/duojiechen/Projects/Central_Data/RAG_System/test_set")
+        test_data_path = Path("/home/duojiechen/Central_Data/Testset_0_43000-43508/diagnostic_results_normalized")
         test_file = test_data_path / f"diagnostic_{self.report_id}.json"
         
         if not test_file.exists():
@@ -371,6 +371,42 @@ class RerunWorkflow:
         
         return min(avg_quality, 1.0), "; ".join(quality_indicators)
 
+    def _convert_new_rag_format(self, new_results: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """将新的RAG检索格式转换为旧格式兼容的结构"""
+        converted = {}
+        
+        for i, result in enumerate(new_results):
+            if "related_units" not in result:
+                continue
+                
+            # 为每个结果创建一个rag_s_id
+            rag_s_id = f"rag_s_{i+1}_id"
+            
+            # 提取症状文本
+            symptom_text = result.get("symptom_data", {}).get("s_text", "")
+            
+            # 转换related_units为旧格式的units
+            units = []
+            for unit in result.get("related_units", []):
+                converted_unit = {
+                    "u_id": unit.get("u_id", ""),
+                    "u_unit": {
+                        "d_diagnosis": unit.get("diagnosis_text", ""),
+                        "o_organ": unit.get("organ", {}),
+                        "b_textual_basis": {
+                            "medicalInference": unit.get("basis_text", "")
+                        }
+                    }
+                }
+                units.append(converted_unit)
+            
+            converted[rag_s_id] = {
+                "s_text": symptom_text,
+                "units": units
+            }
+        
+        return converted
+
     def _filter_consistent_rag_info(self, rag_results: Dict[str, Any]) -> List[Dict[str, Any]]:
         """过滤掉冲突的RAG信息，保留最一致的信息"""
         if not rag_results:
@@ -544,7 +580,13 @@ class RerunWorkflow:
                     try:
                         data = json.loads(line)
                         original_query = data.get("query", "").strip()
-                        rag_s_block = data.get("s", {})
+                        # 兼容新旧RAG格式：新格式使用rag_results，旧格式使用s
+                        if "rag_results" in data and "results" in data["rag_results"]:
+                            # 新格式：转换为旧格式兼容的结构
+                            rag_s_block = self._convert_new_rag_format(data["rag_results"]["results"])
+                        else:
+                            # 旧格式
+                            rag_s_block = data.get("s", {})
                         
                         if not original_query:
                             print(f"⚠️  第 {i+1} 行缺少 'query' 字段，跳过。")

@@ -43,7 +43,12 @@ def main():
     parser.add_argument("start_id", type=int, help="开始报告ID")
     parser.add_argument("end_id", type=int, nargs='?', help="结束报告ID (可选，默认与start_id相同)")
     parser.add_argument("--top_k", type=int, default=3, help="RAG检索的top_k参数")
-    parser.add_argument("--config", type=str, default="config/config.yaml", help="配置文件路径")
+    parser.add_argument("--config", type=str, default="config/config_cn.yaml", help="配置文件路径")
+    parser.add_argument("--db_type", type=str, default="sequential-block", 
+                       choices=["sequential-block", "report-context", "uniform-random"],
+                       help="使用的数据库类型")
+    parser.add_argument("--use_new_rag", action="store_true", 
+                       help="使用新构建的RAG索引（默认使用原有索引）")
     
     args = parser.parse_args()
     
@@ -56,6 +61,8 @@ def main():
     print("=" * 60)
     print(f"📋 报告范围: {start_id} - {end_id}")
     print(f"🔍 检索参数: top_k={top_k}")
+    print(f"🗄️  数据库类型: {args.db_type}")
+    print(f"🆕 使用新RAG: {'是' if args.use_new_rag else '否'}")
     
     base_dir = Path(__file__).parent.parent  # 项目根目录
     success_count = 0
@@ -67,7 +74,11 @@ def main():
         print(f"{'='*40}")
         
         # Step 1: RAG检索
-        step1_cmd = f"bash {base_dir}/scripts/step1_rag_retrieve.sh {report_id} {report_id} {top_k}"
+        if args.use_new_rag:
+            step1_cmd = f"bash {base_dir}/scripts/step1_rag_retrieve_new.sh {report_id} {report_id} {top_k} {args.db_type}"
+        else:
+            step1_cmd = f"bash {base_dir}/scripts/step1_rag_retrieve.sh {report_id} {report_id} {top_k}"
+        
         if not run_command(step1_cmd, f"RAG检索 (报告 {report_id})"):
             print(f"⚠️  跳过报告 {report_id} 的后续步骤")
             continue

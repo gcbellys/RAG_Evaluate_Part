@@ -25,7 +25,7 @@ api_config:
 # 路径配置
 paths:
   system_prompt: "prompt/system_prompt.txt"
-  input_data: "test_set"
+  input_data: "/home/duojiechen/Central_Data/Testset_0_43000-43508/diagnostic_results_normalized"
   output_results: "results"
 
 # 评估配置
