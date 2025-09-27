@@ -1,0 +1,63 @@
+
+#############################################
+# RAG Evaluate 完整依赖清单
+# 安装方式：
+#   pip install -r requirements.txt
+#
+# 说明：
+# - PyTorch 与 Faiss-GPU 请按注释中的指引分别安装（与本机 CUDA 匹配）
+# - 若仅 CPU 环境，可安装 faiss-cpu 并把模型 device 设为 cpu
+# - 本文件包含 RAG 评估系统的所有必需依赖
+#############################################
+
+# --- 核心依赖（LLM/API 调用 & 通用） ---
+openai>=1.3.0                    # OpenAI API客户端，支持Batch API
+anthropic>=0.18.0                # Anthropic Claude API客户端
+google-generativeai>=0.3.0       # Google Gemini API客户端
+pyyaml>=6.0                      # YAML配置文件解析
+requests>=2.28.0                 # HTTP请求库（Gemini客户端需要）
+python-dotenv>=1.0.0             # 环境变量管理
+
+# --- 数据处理和分析 ---
+pandas>=1.5.0                    # 数据分析和处理（token_analyzer需要）
+numpy>=1.26.0                    # 数值计算基础库
+packaging>=21.0                  # 版本比较（setup_batch需要）
+
+# --- 网络请求增强 ---
+urllib3>=1.26.0                  # HTTP客户端库（requests依赖）
+
+# --- NLP/Embedding/RAG 必需 ---
+transformers==4.44.0             # Hugging Face transformers
+sentence-transformers==3.0.0     # 句子嵌入模型
+scikit-learn>=1.3.0              # 机器学习工具
+scipy>=1.11.0                    # 科学计算库
+
+# --- Faiss（相似度检索）---
+# 请选择其一安装：
+# 1) GPU（推荐，使用 conda 安装，需与本机 CUDA 匹配）
+#    conda install -y -c conda-forge "faiss-gpu=1.8.0=py310_*"
+# 2) CPU（使用 pip 安装）
+#    pip install faiss-cpu>=1.7.2
+
+# 如需在纯 pip 下尝试 GPU 版（不同 CUDA 版本 wheel 名称不同，可能不可用）：
+#    pip install faiss-gpu==1.7.2
+
+# --- PyTorch（需与 CUDA 匹配，单独安装，不放入 pip 依赖）---
+# 建议使用官方版本（示例，按需调整 CUDA 版本）：
+#    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+# 或使用 conda：
+#    conda install -y -c pytorch -c nvidia pytorch torchvision torchaudio pytorch-cuda
+
+# --- 开发和测试工具（可选）---
+# pytest>=7.0.0                  # 单元测试框架
+# jupyter>=1.0.0                 # Jupyter notebook支持
+
+# --- 特殊说明 ---
+# 1. Moonshot 和 Deepseek 通过 openai 包的兼容接口调用
+# 2. 本项目需要访问 /home/duojiechen/Projects/Rag_system/Rag_Build/src 中的 enhanced_search_engine
+# 3. 确保设置正确的 API 密钥环境变量：
+#    - OPENAI_API_KEY
+#    - ANTHROPIC_API_KEY  
+#    - GEMINI_API_KEY
+#    - MOONSHOT_API_KEY
+#    - DEEPSEEK_API_KEY

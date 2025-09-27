@@ -1,0 +1,245 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# 用户指定的特定目录
+data/test_set/
+config/.env
+results/
+results_0/
+
+# 日志文件
+logs/
+*.log
+
+# 临时文件
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# ============ RAG评估系统特定忽略规则 ============
+
+# 临时文件和调试文件 - 完全忽略
+tmp/
+temp/
+debug/
+*.tmp
+*.temp
+
+# 测试文件和测试结果 - 完全忽略
+tests/
+test_*/
+*_test.py
+*_tests.py
+
+# 配置文件 - 包含API密钥等隐私信息，完全忽略
+config/
+*.env
+*.env.*
+.env*
+
+# 评估结果目录 - 包含所有API响应和评估结果
+results/
+results_*/
+final_result/
+baseline_results/
+rerun_comparisons/
+rerun_with_rag/
+results_of_apis/
+rag_search_output/
+rag_output/
+Evaluate_output/
+
+# 数据文件 - 避免上传大量测试数据和结果
+data/
+test_set/
+train_set/
+diag_data_*/
+*.jsonl
+report_*.json
+diagnostic_*.json
+*_evaluation_*.json
+*_comparison_*.json
+*_summary_*.txt
+*_score_report.txt
+*_ragoutcome*.jsonl
+*_search_results*.jsonl
+*_baseline.json
+*_rag.json
+*_with_rag.json
+*_without_rag.json
+batch_*.json
+batch_*.txt
+
+# 模型和索引文件
+*.index
+*.model
+*.bin
+*.tar.gz
+*.pkl
+*.pickle
+enhanced_faiss_indexes/
+bio_lm_models.tar.gz
+faiss_indexes/
+
+# 分析报告和CSV文件
+analysis_reports/
+*.csv
+*.xlsx
+*.xls
+
+# 日志和输出文件
+logs/
+*.log
+output/
+outputs/
+
+# ============ 项目保留文件说明 ============
+# 保留的重要文件:
+# - 所有Python源代码 (*.py)
+# - 配置文件模板 (config/*.yaml)
+# - 文档文件 (*.md, *.txt 说明文件)
+# - 需求文件 (requirements.txt)
+# - 脚本文件 (*.sh)
+# - 项目结构文件
