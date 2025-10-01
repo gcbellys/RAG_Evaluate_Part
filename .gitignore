@@ -160,13 +160,9 @@ Thumbs.db
 
 # ============ RAG评估系统特定忽略规则 ============
 
-# 评估结果目录 - 包含所有API响应和评估结果
-final_result/baseline_results/
-final_result/rerun_comparisons/
-final_result/rerun_with_rag/
-final_result/results_of_apis/
-final_result/rag_search_output/
-# 保留 final_result/ 下的脚本文件
+# 评估结果目录 - 包含所有API响应和评估结果（完全忽略）
+final_result/
+final_result_*/
 
 # RAG检索结果
 rag_search_output/

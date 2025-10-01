@@ -39,8 +39,9 @@ except ImportError as e:
 class RerunWorkflow:
     """使用已有RAG结果重新运行LLM的工作流"""
 
-    def __init__(self, report_id: int, config_path: str = "config/config.yaml"):
+    def __init__(self, report_id: int, config_path: str = "config/config.yaml", db_type: str = None):
         self.report_id = report_id
+        self.db_type = db_type
         self.config = ConfigLoader(config_path)
         self.api_manager = APIManager()
         self.evaluator = Evaluator()
@@ -49,17 +50,28 @@ class RerunWorkflow:
         # --- 路径定义 ---
         # 获取项目根目录（从workflows/向上一级）
         self.project_root = Path(__file__).resolve().parent.parent
-        # RAG缓存文件的存放位置
-        self.rag_output_dir = self.project_root / "final_result" / "rag_search_output"
         
-        # 统一在final_result下管理所有结果
-        self.final_result_dir = self.project_root / "final_result"
-        self.baseline_results_dir = self.final_result_dir / "baseline_results"
-        self.rerun_results_dir = self.final_result_dir / "rerun_with_rag"
-        self.comparison_results_dir = self.final_result_dir / "rerun_comparisons"
+        # 根据数据库类型设置不同的目录结构
+        if self.db_type:
+            # 数据库特定的结果目录
+            self.db_result_dir = self.project_root / "final_result" / f"{self.db_type}_results"
+            # RAG检索结果按数据库类型分开存储
+            self.rag_output_dir = self.db_result_dir / "rag_search_output"
+            # RAG增强评估结果也按数据库类型分开
+            self.rerun_results_dir = self.db_result_dir / "rerun_with_rag"
+            self.comparison_results_dir = self.db_result_dir / "rerun_comparisons"
+            # baseline结果共享（所有数据库类型使用同一个baseline）
+            self.baseline_results_dir = self.project_root / "final_result" / "baseline_results"
+        else:
+            # 兼容旧版本：不指定数据库类型时使用原来的目录结构
+            self.final_result_dir = self.project_root / "final_result"
+            self.rag_output_dir = self.final_result_dir / "rag_search_output"
+            self.baseline_results_dir = self.final_result_dir / "baseline_results"
+            self.rerun_results_dir = self.final_result_dir / "rerun_with_rag"
+            self.comparison_results_dir = self.final_result_dir / "rerun_comparisons"
         
         # 创建所有必要的目录
-        for dir_path in [self.baseline_results_dir, self.rerun_results_dir, self.comparison_results_dir]:
+        for dir_path in [self.rag_output_dir, self.baseline_results_dir, self.rerun_results_dir, self.comparison_results_dir]:
             dir_path.mkdir(parents=True, exist_ok=True)
         
         print(f"🎯 报告ID: {self.report_id}")
@@ -1192,7 +1204,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="使用已有的RAG检索结果重新运行LLM评估。")
     parser.add_argument("report_id", type=int, help="需要处理的报告ID (例如: 4000)")
     parser.add_argument("--config", default="config/config.yaml", help="配置文件路径")
+    parser.add_argument("--db_type", type=str, help="数据库类型 (sequential-block, report-context, uniform-random)")
     args = parser.parse_args()
 
-    workflow = RerunWorkflow(args.report_id, args.config)
+    workflow = RerunWorkflow(args.report_id, args.config, args.db_type)
     workflow.run()

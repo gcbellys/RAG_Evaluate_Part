@@ -15,7 +15,7 @@ DB_TYPE=${4:-sequential-block}
 # 路径配置
 TEST_DIR="/home/duojiechen/Central_Data/Testset_0_43000-43508/diagnostic_results_normalized"
 INDEX_DIR="/home/duojiechen/projects/Rag_system/Rag_Build/${DB_TYPE}_indexes"
-OUT_DIR="/home/duojiechen/projects/Rag_system/Rag_Evaluate_feature/final_result/rag_search_output"
+OUT_DIR="/home/duojiechen/projects/Rag_system/Rag_Evaluate_feature/final_result/${DB_TYPE}_results/rag_search_output"
 mkdir -p "${OUT_DIR}"
 
 # 检查测试集目录是否存在

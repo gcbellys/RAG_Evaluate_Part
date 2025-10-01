@@ -84,7 +84,10 @@ def main():
             continue
         
         # Step 2: RAG增强评估
-        step2_cmd = f"python {base_dir}/workflows/rerun_with_rag.py {report_id} --config {args.config}"
+        if args.use_new_rag:
+            step2_cmd = f"python {base_dir}/workflows/rerun_with_rag.py {report_id} --config {args.config} --db_type {args.db_type}"
+        else:
+            step2_cmd = f"python {base_dir}/workflows/rerun_with_rag.py {report_id} --config {args.config}"
         if not run_command(step2_cmd, f"RAG增强评估 (报告 {report_id})"):
             print(f"⚠️  报告 {report_id} 的RAG增强评估失败")
             continue
